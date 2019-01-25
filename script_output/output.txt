@@ -1,0 +1,90 @@
+User Information
+satya:
+
+OS Type
+Linux satya-Inspiron-7370 4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+
+
+OS Distribution
+LSB Version:	core-9.20170808ubuntu1-noarch:security-9.20170808ubuntu1-noarch
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.1 LTS
+Release:	18.04
+Codename:	bionic
+
+
+OS Version
+4.15.0-43-generic
+
+
+Kernel Version
+4.15.0-43-generic
+
+
+GCC Version
+gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+
+Build Time
+#46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+
+
+System Arch Info
+x86_64
+
+
+Info on File System Memory
+MemTotal:        7901956 kB
+MemFree:          365180 kB
+MemAvailable:    4143188 kB
+Buffers:          172216 kB
+Cached:          4334608 kB
+SwapCached:            0 kB
+Active:          4371700 kB
+Inactive:        2763984 kB
+Active(anon):    2630808 kB
+Inactive(anon):   613456 kB
+Active(file):    1740892 kB
+Inactive(file):  2150528 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       2097148 kB
+SwapFree:        2097148 kB
+Dirty:                76 kB
+Writeback:             0 kB
+AnonPages:       2628620 kB
+Mapped:           632672 kB
+Shmem:            615404 kB
+Slab:             257584 kB
+SReclaimable:     193500 kB
+SUnreclaim:        64084 kB
+KernelStack:       16092 kB
+PageTables:        58452 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6048124 kB
+Committed_AS:    9498744 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      211976 kB
+DirectMap2M:     5814272 kB
+DirectMap1G:     3145728 kB
+
+
