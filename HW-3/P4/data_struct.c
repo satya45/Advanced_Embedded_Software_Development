@@ -83,6 +83,10 @@ static int satya_init(void)
 	INIT_LIST_HEAD((&a.mylist));
 	INIT_LIST_HEAD((&a1.mylist1));
 	printk("Data Structure module\r\n");
+	for(i = 0; i<size; i++)
+	{
+		printk("Seed Array: %s\n", animal[i]);
+	}
 	sort(animal, size, sizeof(animal[0]), cmp, NULL);
 	for(i = 0; i<size; i++)
 	{
@@ -164,7 +168,7 @@ static int satya_init(void)
 		{
 			list_for_each_entry(new, &(a.mylist), mylist)
 			{
-				if((strcmp(param1, new->name)==0) || param2 < new->count)
+				if((strcmp(param1, new->name)==0))
 				{
 					final = kmalloc(sizeof(struct anim1), GFP_KERNEL);
 					count_final++;
