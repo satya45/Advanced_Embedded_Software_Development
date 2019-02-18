@@ -1,0 +1,11 @@
+LDIR=$(HOME)/Satya/Spring19/AESD/buildroot/output/build/linux-4796173fc58688055a99a1cef19a839174067220/
+
+CDIR=$(HOME)/Satya/Spring19/AESD/buildroot/output/host/bin/
+
+obj-m +=data_struct.o
+
+all:
+	make ARCH=arm CROSS_COMPILE=$(CDIR)arm-buildroot-linux-uclibcgnueabihf- -C $(LDIR) M=$(shell pwd) modules
+
+clean:
+	make -C $(LDIR) M=$(shell pwd) clean

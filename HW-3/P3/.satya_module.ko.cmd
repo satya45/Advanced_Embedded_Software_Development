@@ -1,0 +1,1 @@
+cmd_/home/satya/Satya/Spring19/AESD/HW-3/P3/satya_module.ko := /home/satya/Satya/Spring19/AESD/buildroot/output/host/bin/arm-buildroot-linux-uclibcgnueabihf-ld -EL -r  -T ./scripts/module-common.lds   -o /home/satya/Satya/Spring19/AESD/HW-3/P3/satya_module.ko /home/satya/Satya/Spring19/AESD/HW-3/P3/satya_module.o /home/satya/Satya/Spring19/AESD/HW-3/P3/satya_module.mod.o ;  true

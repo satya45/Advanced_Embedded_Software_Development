@@ -1,0 +1,9 @@
+target extended-remote 192.168.0.41:5000
+remote put main	main
+set remote exec-file main
+file main
+b main
+run
+s
+c
+-
