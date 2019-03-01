@@ -1,3 +1,9 @@
+/****************************************************************************************************************************************
+*				File Name : Inter Process Communication using PIPES		
+				Author : Satya Mehta	
+                Referred signals part from http://devarea.com/linux-handling-signals-in-a-multithreaded-application/#.XHR3doVlDrI
+*/
+
 #include <stdio.h> 
 #include <stdint.h>
 #include <stdlib.h> 

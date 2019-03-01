@@ -3,7 +3,7 @@
 				Author : Satya Mehta	
 				Two threads are created one counts alphapbets from a file and second thread checks
 				cpu utilization every time interval
-
+				Referred signals part from http://devarea.com/linux-handling-signals-in-a-multithreaded-application/#.XHR3doVlDrI
 */
 #include <stdio.h>
 #include <pthread.h>
