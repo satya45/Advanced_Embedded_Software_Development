@@ -1,0 +1,24 @@
+TimeStamp: - 1551479572717 and message sent from producer to consumer World and length 5
+TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
+TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
+TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
+TimeStamp: - 1551479575866 and message sent from producer to consumer World and length 5
+TimeStamp: - 1551479575866 and message received from consumer World and length 5
+TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
+TimeStamp: - 1551479575866 and message sent from producer to consumer World and length 5
+TimeStamp: - 1551479575866 and message received from consumer World and length 5
+TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
+TimeStamp: - 1551479575866 and message sent from producer to consumer Hello and length 5
+TimeStamp: - 1551479575866 and message received from consumer Hello and length 5
+TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
+TimeStamp: - 1551479575866 and message sent from producer to consumer World and length 5
+TimeStamp: - 1551479575866 and message received from consumer World and length 5
+TimeStamp: - 1551479585587 and message sent from producer to consumer World and length 5
+TimeStamp: - 1551479588194 and Thread EXITED 
+TimeStamp: - 1551479593989 and message sent from producer to consumer World and length 5
+TimeStamp: - 1551479601655 and Thread EXITED 
