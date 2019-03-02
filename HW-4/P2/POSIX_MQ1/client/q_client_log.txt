@@ -1,0 +1,120 @@
+TimeStamp: - 1551488539887 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488611743 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488714587 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488714587 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551488714587 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488714587 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488714587 and message received from server Hello,  length 5, LED status 0
+TimeStamp: - 1551488714587 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488766588 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488766588 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551488766588 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551488766588 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488766588 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551488766990 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488767991 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551488768995 and message received from server Hello,  length 5, LED status 0
+TimeStamp: - 1551488770005 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551488771006 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551488771006 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551488771006 and message sent from client to server Hello,  length 5, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551488771006 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489397275 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489398281 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551489399281 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489400282 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489401282 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489402291 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489403291 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551489404298 and message received from server Hello,  length 5, LED status 0
+TimeStamp: - 1551489405299 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489406300 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489406300 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489406300 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489406300 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489406300 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489406300 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489406301 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489406301 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489406301 and message sent from client to server Hello,  length 5, LED status 0
+TimeStamp: - 1551489406301 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489406301 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489457248 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489458249 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551489459250 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489460251 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489461252 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489462253 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489463254 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551489464254 and message received from server Hello,  length 5, LED status 0
+TimeStamp: - 1551489465255 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489466256 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489466256 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489466256 and message sent from client to server Hello,  length 5, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489466256 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489541036 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489542036 and message received from server World,  length 9, LED status 1
+TimeStamp: - 1551489543037 and message received from server World,  length 9, LED status 0
+TimeStamp: - 1551489544043 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489545044 and message received from server World,  length 9, LED status 0
+TimeStamp: - 1551489546045 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489547046 and message received from server World,  length 9, LED status 1
+TimeStamp: - 1551489548049 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489549050 and message received from server World,  length 9, LED status 0
+TimeStamp: - 1551489550051 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489550051 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489550051 and message sent from client to server Hello,  length 5, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489550051 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489601381 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489602382 and message received from server World,  length 9, LED status 1
+TimeStamp: - 1551489603383 and message received from server World,  length 9, LED status 0
+TimeStamp: - 1551489604383 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489605384 and message received from server World,  length 9, LED status 0
+TimeStamp: - 1551489606385 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489607397 and message received from server World,  length 9, LED status 1
+TimeStamp: - 1551489608399 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489609400 and message received from server World,  length 9, LED status 0
+TimeStamp: - 1551489610402 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489610402 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489611403 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489612404 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489613404 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489614406 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489615409 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489616410 and message sent from client to server I am user,  length 9, LED status 1
+TimeStamp: - 1551489617411 and message sent from client to server Hello,  length 5, LED status 0
+TimeStamp: - 1551489618414 and message sent from client to server I am user,  length 9, LED status 0
+TimeStamp: - 1551489619414 and message sent from client to server World,  length 5, LED status 0
+TimeStamp: - 1551489697621 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489698623 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551489699625 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489700627 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489793156 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489794160 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551489795161 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489796162 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489897188 and message received from server World,  length 5, LED status 0
+TimeStamp: - 1551489898188 and message received from server I am user,  length 9, LED status 1
+TimeStamp: - 1551489899190 and message received from server I am user,  length 9, LED status 0
+TimeStamp: - 1551489900192 and message received from server World,  length 5, LED status 0
