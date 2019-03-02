@@ -1,24 +1,22 @@
-TimeStamp: - 1551479572717 and message sent from producer to consumer World and length 5
-TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
-TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
-TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
-TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
-TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
-TimeStamp: - 1551479575866 and message sent from producer to consumer World and length 5
-TimeStamp: - 1551479575866 and message received from consumer World and length 5
-TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
-TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
-TimeStamp: - 1551479575866 and message sent from producer to consumer World and length 5
-TimeStamp: - 1551479575866 and message received from consumer World and length 5
-TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
-TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
-TimeStamp: - 1551479575866 and message sent from producer to consumer Hello and length 5
-TimeStamp: - 1551479575866 and message received from consumer Hello and length 5
-TimeStamp: - 1551479575866 and message sent from producer to consumer I am user and length 9
-TimeStamp: - 1551479575866 and message received from consumer I am user and length 9
-TimeStamp: - 1551479575866 and message sent from producer to consumer World and length 5
-TimeStamp: - 1551479575866 and message received from consumer World and length 5
-TimeStamp: - 1551479585587 and message sent from producer to consumer World and length 5
-TimeStamp: - 1551479588194 and Thread EXITED 
-TimeStamp: - 1551479593989 and message sent from producer to consumer World and length 5
-TimeStamp: - 1551479601655 and Thread EXITED 
+TimeStamp: - 5703562 and message sent from producer to consumer World and length 5
+TimeStamp: - 5728168 and Thread EXITED 
+TimeStamp: - 5734572 and message sent from producer to consumer World and length 5
+TimeStamp: - 5745201 and message received from consumer LED Control and length 11
+TimeStamp: - 5745201 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 5745204 and message received from consumer I am user and length 9
+TimeStamp: - 5745204 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 5745206 and message received from consumer Hello and length 5
+TimeStamp: - 5745207 and message sent from producer to consumer World and length 5
+TimeStamp: - 5745209 and message received from consumer I am user and length 9
+TimeStamp: - 5745209 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 5745213 and message received from consumer Hello and length 5
+TimeStamp: - 5745213 and message sent from producer to consumer World and length 5
+TimeStamp: - 5745216 and message received from consumer I am user and length 9
+TimeStamp: - 5745216 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 5745219 and message received from consumer Hello and length 5
+TimeStamp: - 5745219 and message sent from producer to consumer Hello and length 5
+TimeStamp: - 5745222 and message received from consumer I am user and length 9
+TimeStamp: - 5745223 and message sent from producer to consumer I am user and length 9
+TimeStamp: - 5745226 and message received from consumer I am user and length 9
+TimeStamp: - 5745226 and message sent from producer to consumer World and length 5
+TimeStamp: - 5745229 and message received from consumer Hello and length 5

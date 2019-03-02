@@ -1,0 +1,90 @@
+Timestamp: 6368993 Sent from Parent
+String: World and string length 5 and LED status: 0
+Timestamp: 6368993 Received from Parent
+String: World and string length 5 and LED status: 0
+Timestamp: 6368995 Sent from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 6368996 Received from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 6369004 Sent from Child
+String: World and string length 5 and LED status: 0
+Timestamp: 8869442 Sent from Parent
+String: Hello and string length 5 and LED status: 0
+Timestamp: 8869442 Received from Parent
+String: Hello and string length 5 and LED status: 0
+Timestamp: 8869444 Sent from Parent
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869445 Received from Parent
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869446 Sent from Parent
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869446 Received from Parent
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869448 Sent from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869448 Received from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869450 Sent from Parent
+String: World and string length 5 and LED status: 0
+Timestamp: 8869451 Received from Parent
+String: World and string length 5 and LED status: 0
+Timestamp: 8869452 Sent from Parent
+String: World and string length 5 and LED status: 0
+Timestamp: 8869453 Received from Parent
+String: World and string length 5 and LED status: 0
+Timestamp: 8869454 Sent from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869454 Received from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869456 Sent from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869456 Received from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869458 Sent from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869458 Received from Parent
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869460 Sent from Parent
+String: Hello and string length 5 and LED status: 0
+Timestamp: 8869460 Received from Parent
+String: Hello and string length 5 and LED status: 0
+Timestamp: 8869467 Sent from Child
+String: Hello and string length 5 and LED status: 0
+Timestamp: 8869471 Received from Child
+String: Hello and string length 5 and LED status: 0
+Timestamp: 8869475 Sent from Child
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869476 Received from Child
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869483 Sent from Child
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869484 Received from Child
+String: LED Control and string length 11 and LED status: 0
+Timestamp: 8869491 Sent from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869491 Received from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869498 Sent from Child
+String: World and string length 5 and LED status: 0
+Timestamp: 8869499 Received from Child
+String: World and string length 5 and LED status: 0
+Timestamp: 8869506 Sent from Child
+String: World and string length 5 and LED status: 0
+Timestamp: 8869506 Received from Child
+String: World and string length 5 and LED status: 0
+Timestamp: 8869513 Sent from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869514 Received from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869521 Sent from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869521 Received from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869528 Sent from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869529 Received from Child
+String: I am user and string length 9 and LED status: 0
+Timestamp: 8869536 Sent from Child
+String: Hello and string length 5 and LED status: 0
+Timestamp: 8869536 Received from Child
+String: Hello and string length 5 and LED status: 0

@@ -1,59 +1,20 @@
-Timestamp : 0 Sending from client to server I am user
-Timestamp : 0 Sending from client to server World
-Timestamp : 0 Sending from client to server LED ON
-Timestamp : 0 Sending from client to server LED Control
-Timestamp : 0 Sending from client to server LED OFF
-Timestamp : 0 Sending from client to server LED OFF
-Timestamp : 0 Sending from client to server Hello
-Timestamp : 0 Sending from client to server Hello
-Timestamp : 0 Sending from client to server LED ON
-Timestamp : 0 Sending from client to server Hello
-Timestamp : 1551427975729 Received  from  client: World
-Timestamp : 1551427976740 Received  from  client: LED ON
-Timestamp : 1551427977752 Received  from  client: I am user
-Timestamp : 1551427978771 Received  from  client: World
-Timestamp : 1551427979788 Received  from  client: LED OFF
-Timestamp : 1551427980800 Received  from  client: World
-Timestamp : 1551427981816 Received  from  client: LED ON
-Timestamp : 1551427982829 Received  from  client: Hello
-Timestamp : 1551427983814 Thread EXITING 
-Timestamp : 1551428404968 Sending from client to server World
-Timestamp : 1551428404979 Sending from client to server LED Control
-Timestamp : 1551428404990 Sending from client to server I am user
-Timestamp : 1551428405001 Sending from client to server LED OFF
-Timestamp : 1551428405012 Sending from client to server LED Control
-Timestamp : 1551428405022 Sending from client to server Hello
-Timestamp : 1551428405033 Sending from client to server LED Control
-Timestamp : 1551428405044 Sending from client to server LED ON
-Timestamp : 1551428405055 Sending from client to server LED Control
-Timestamp : 1551428405066 Sending from client to server World
-Timestamp : 1551428406068 Received  from  client: World
-Timestamp : 1551428407079 Received  from  client: LED ON
-Timestamp : 1551428408093 Received  from  client: I am user
-Timestamp : 1551428409106 Received  from  client: World
-Timestamp : 1551428410127 Received  from  client: LED OFF
-Timestamp : 1551428411139 Received  from  client: World
-Timestamp : 1551428412151 Received  from  client: LED ON
-Timestamp : 1551428413162 Received  from  client: Hello
-Timestamp : 1551428414174 Received  from  client: I am user
-Timestamp : 1551428415184 Received  from  client: World
-Timestamp : 1551428434086 Sending from client to server World
-Timestamp : 1551428434096 Sending from client to server Hello
-Timestamp : 1551428434107 Sending from client to server LED Control
-Timestamp : 1551428434117 Sending from client to server LED ON
-Timestamp : 1551428434128 Sending from client to server LED Control
-Timestamp : 1551428434138 Sending from client to server Hello
-Timestamp : 1551428434149 Sending from client to server Hello
-Timestamp : 1551428434160 Sending from client to server LED ON
-Timestamp : 1551428434170 Sending from client to server I am user
-Timestamp : 1551428434181 Sending from client to server LED ON
-Timestamp : 1551428435182 Received  from  client: World
-Timestamp : 1551428436193 Received  from  client: LED ON
-Timestamp : 1551428437204 Received  from  client: I am user
-Timestamp : 1551428438220 Received  from  client: World
-Timestamp : 1551428439234 Received  from  client: LED OFF
-Timestamp : 1551428440246 Received  from  client: World
-Timestamp : 1551428441257 Received  from  client: LED ON
-Timestamp : 1551428442268 Received  from  client: Hello
-Timestamp : 1551428442617 Received  from  client: Hello
-Timestamp : 1551428442617 Received  from  client: Hello
+Timestamp : 5366048 Sending from client to server World
+Timestamp : 5366062 Sending from client to server Hello
+Timestamp : 5366075 Sending from client to server LED Control
+Timestamp : 5366087 Sending from client to server I am user
+Timestamp : 5366100 Sending from client to server LED Control
+Timestamp : 5366112 Sending from client to server LED Control
+Timestamp : 5366124 Sending from client to server Hello
+Timestamp : 5366137 Sending from client to server LED OFF
+Timestamp : 5366149 Sending from client to server LED ON
+Timestamp : 5366161 Sending from client to server World
+Timestamp : 5367164 Received  from  client: World
+Timestamp : 5368175 Received  from  client: LED ON
+Timestamp : 5369186 Received  from  client: I am user
+Timestamp : 5370197 Received  from  client: World
+Timestamp : 5371209 Received  from  client: LED OFF
+Timestamp : 5372220 Received  from  client: World
+Timestamp : 5373231 Received  from  client: LED ON
+Timestamp : 5374242 Received  from  client: Hello
+Timestamp : 5375253 Received  from  client: I am user
+Timestamp : 5376265 Received  from  client: World
