@@ -51,8 +51,8 @@ void handler(int signo, siginfo_t *info, void *extra)
 	unsigned long int timevalue =  timestamp.tv_sec*1000;
 	timevalue += timestamp.tv_nsec/1000000;
 	fptr = fopen("socket_server.txt", "a");
-    fprintf(fptr,"Timestamp : %ld Thread EXITING \n",timevalue);
-    fclose(fptr);
+   	fprintf(fptr,"Timestamp : %ld Thread EXITING \n",timevalue);
+   	fclose(fptr);
 	close(serv);
 	exit(0);
 }
@@ -102,15 +102,14 @@ void send_message()
             x.string = strings[5];
         }
         sleep(1);
-
         clock_gettime(CLOCK_REALTIME, &timestamp);
-	    unsigned long int timevalue =  timestamp.tv_sec*1000;
-	    timevalue += timestamp.tv_nsec/1000000;
-		fptr = fopen("socket_server.txt", "a");
+	unsigned long int timevalue =  timestamp.tv_sec*1000;
+	timevalue += timestamp.tv_nsec/1000000;
+	fptr = fopen("socket_server.txt", "a");
         fprintf(fptr,"Timestamp : %ld Sending from  server to client: %s\n",timevalue, x.string);
         fclose(fptr);
-		write(ser, x.string, 10);
-		usleep(usec);
+	write(ser, x.string, 10);
+	usleep(usec);
     }
 
 }
@@ -126,37 +125,36 @@ int main(int argc, char* argv[])
 	{
 		perror("SOCKET FAILED");
 		exit(EXIT_FAILURE);
-    }
-    bzero((char *) &serv_addr, sizeof(serv_addr));
+	}
+    	bzero((char *) &serv_addr, sizeof(serv_addr));
 	serv_addr.sin_family = AF_INET;
 	serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
-    serv_addr.sin_port = htons(port);
+    	serv_addr.sin_port = htons(port);
     
-    if(bind(serv, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) 
-	{
+    	if(bind(serv, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) 
+    	{
 		perror("can't bind local address");
 		exit(1);
-    }
+    	}
 
-    listen(serv, 5); 
-    client_len = sizeof(client_addr);
-    ser = accept(serv, (struct sockaddr *) &client_addr, &client_len);
-	for(int i=0; i<10; i++)
-	{
-		len = read(ser, string, MAX_SIZE);		// read a message from the client  
+    	listen(serv, 5); 
+    	client_len = sizeof(client_addr);
+    	ser = accept(serv, (struct sockaddr *) &client_addr, &client_len);
+    	for(int i=0; i<10; i++)
+    	{
+		len = read(ser, string, MAX_SIZE);		  
 		if (len < 0)
 		{
 			printf("\nReceiving Read failed\n");
-		}
-		string[len] = 0;		//make sure it's a proper string
+		}		
 		clock_gettime(CLOCK_REALTIME, &timestamp);
-	    unsigned long int timevalue =  timestamp.tv_sec*1000;
-	    timevalue += timestamp.tv_nsec/1000000;
+	        unsigned long int timevalue =  timestamp.tv_sec*1000;
+	    	timevalue += timestamp.tv_nsec/1000000;
 		fptr = fopen("socket_server.txt", "a");
-        fprintf(fptr,"Timestamp : %ld Received  from  client: %s\n",timevalue, string);
-        fclose(fptr);
+        	fprintf(fptr,"Timestamp : %ld Received  from  client: %s\n",timevalue, string);
+        	fclose(fptr);
 		printf("%s\n", string);
 	}
-	send_message();
+		send_message();
 
 }
