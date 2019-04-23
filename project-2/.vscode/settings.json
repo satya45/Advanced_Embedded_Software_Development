@@ -9,6 +9,7 @@
         "gpio.h": "c",
         "sockets.h": "c",
         "logger.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "nrf.h": "c"
     }
 }

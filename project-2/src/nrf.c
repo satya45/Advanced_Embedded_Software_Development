@@ -71,41 +71,52 @@ uint8_t nrf_set_addr()
 {
     int ret;
     struct rx_pipe_p0 a;
-	a.rx_address[0] = 1;
-	a.rx_address[1] = 0;
-	a.rx_address[2] = 0;
-	a.rx_address[3] = 0;
-	a.rx_address[4] = 0;
+	a.rx_address[0] = 0x06;
+	a.rx_address[1] = 0x00;
+	a.rx_address[2] = 0x00;
+	a.rx_address[3] = 0x00;
+	a.rx_address[4] = 0x00;
 	spi_write_mul_bytes(RX_PIPE, (a.rx_address), 5);
 	ret = spi_read_mul_bytes(RX_PIPE, 5);
-   // printf("RX Pipe Address 0 set as ");
-    // for(int i = 4; i >=0; i--)
-    // {
-    //    // printf("%d",rx_buff[i]);
-    // }
-   // printf("\n");
+    printf("RX Pipe Address 0 set as ");
+    for(int i = 4; i >=0; i--)
+    {
+        printf("%c",rx_buff[i]);
+    }
+    printf("\n");
     struct tx_pipe b;
-	b.tx_address[0] = 2;
-	b.tx_address[1] = 0;
-	b.tx_address[2] = 0;
-	b.tx_address[3] = 0;
-	b.tx_address[4] = 0;
+	b.tx_address[0] = 0x06;
+	b.tx_address[1] = 0x00;
+	b.tx_address[2] = 0x00;
+	b.tx_address[3] = 0x00;
+	b.tx_address[4] = 0x00;
 	spi_write_mul_bytes(TX_PIPE, (b.tx_address), 5);
 	ret = spi_read_mul_bytes(TX_PIPE, 5);
- //   printf("TX Pipe Address set as ");
-    // for(int i = 4; i >=0; i--)
-    // {
-    //     printf("%d",rx_buff[i]);
-    // }
-  //  printf("\n");
+    printf("TX Pipe Address set as ");
+    for(int i = 4; i >=0; i--)
+    {
+        printf("%d",rx_buff[i]);
+    }
+   printf("\n");
 
 }
 
 uint8_t nrf_init()
 {
-    spi_write(0x06, 0x06);    //Power and Speed
-    spi_write(0x05, 0x22); //set frequency channel;
-
+    // spi_write(0x00, 0x00);
+    // spi_write(0x01, 0x01);
+    spi_write(0x07, 0x70);
+    spi_write(0x02, 0x01);
+    // spi_write(0x03, 0x03);
+    // spi_write(0x04, 0x08);
+    // spi_write(0x06, 0x26);
+    nrf_set_addr();
+    spi_write(0x11, 0x04);
+   // spi_write(0x06, 0x06);    //Power and Speed
+  //  spi_write(0x05, 0x22); //set frequency channel;
+    spi_write(0x00, 0x0A);
+    command_nrf(TX_PAYLOAD);
+    gpio_ctrl(GPIO51, GPIO51_V, 1); //set CE low
 }
 
 
@@ -127,7 +138,7 @@ uint32_t rx_packet()
         ret =  command_nrf(RX_PAYLOAD);
         if(ret == 2)
         {
-            for(int  i = 0; i < 32; i++)
+            for(int  i = 0; i < 10; i++)
             {
                 printf("Bytes rcvd %d\n", rx_buff[i]);
             }   
@@ -163,7 +174,7 @@ uint8_t command_nrf(uint8_t comm)
     }
     if(comm == RX_PAYLOAD)
     {
-	    ret = read(spi_fd, rx_buff, 1);
+	    ret = read(spi_fd, rx_buff, 4);
         if(ret < 1)
         {
             perror("Read failed\n");
@@ -171,6 +182,11 @@ uint8_t command_nrf(uint8_t comm)
         }
         return 2;
         gpio60_l2h();
+    }
+    if(comm == TX_PAYLOAD)
+    {
+        uint8_t data[4] = {0x10, 0x04, 0x50, 0x60};
+        ret = write(spi_fd, &data, 4);
     }
 	
 }
@@ -182,15 +198,24 @@ uint8_t nrf_configure_mode(mode_t mode)
 
         command_nrf(RX_FLUSH);
         spi_write(0x00, 0x0B); //PRIM_RX =1, and PWR_UP = 1
-        spi_read(0x00);
-        spi_write(0x01, 0x00); //disable ACK
-        spi_read(0x01);
-        spi_write(0x11, 0x01); //set RX_PW_P0
-        spi_read(0x11);
-        nrf_set_addr();
+       // spi_write(0x01, 0x00); //disable ACK
+       // spi_write(0x11, 0x01); //set RX_PW_P0
+      //  spi_read(0x11);
+      //  nrf_set_addr();
         gpio_ctrl(GPIO51, GPIO51_V, 1); //set CE high
         usleep(130);
     }
+    if(mode == mode_tx)
+    {
+        spi_write(0x00, 0x0A); //Tx mode
+        
+    }
+}
+
+uint8_t config_tx(void)
+{
+    spi_write(0x01, 0x01); //Enable acknowledge
+    
 }
 
 uint8_t spi_read(uint8_t reg)

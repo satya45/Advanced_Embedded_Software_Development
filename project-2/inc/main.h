@@ -58,6 +58,21 @@
 #define P1		(1)
 #define P2		(2)
 
+//Packet formats
+#define PREAMBLE 0xAB
+#define POSTAMBLE 0xBA
+#define ACK (0x01)
+
+//ID's # to be sent in the packet
+#define FINGER_PRINT_ID (1)
+#define OTP_SEND (2)
+#define OTP_RECEIVE (3)
+#define ACCESS_STATUS (4)
+#define LOG_MSG (5)
+
+//
+#define FINGERPRINT_SUCCESS (1)
+#define FINGERINT_FAILURE (0)
 //Mutex declarations
 pthread_mutex_t mutex_a;
 pthread_mutex_t mutex_b;
@@ -129,6 +144,17 @@ typedef struct
 
 } sensor_struct;
 
+struct __attribute__((__packed__)) packet_struct
+{
+	uint8_t preamble;
+	uint8_t id;
+	uint8_t size;
+	uint8_t* payload;
+	uint8_t ack;
+	uint8_t crc;
+	uint8_t postamble;
+};
+
 //Function Declarations
 err_t create_threads(char *filename);
 void *temp_thread(void *);
@@ -140,8 +166,10 @@ sensor_struct read_error(char *error_str);
 sensor_struct read_msg(char *msg_str);
 void error_log(char *error_str, uint8_t loglevel, uint8_t prio);
 void msg_log(char *msg_str, uint8_t loglevel, uint8_t prio);
+struct packet_struct make_packet(uint8_t id, uint8_t size, uint8_t *payload, uint8_t crc, uint8_t ack);
 void hb_send(uint8_t hb_value);
 uint8_t hb_receive(void);
+uint32_t otp_generate(void);
 void hb_handle(uint8_t hb_rcv);
 err_t mutex_init(void);
 err_t mutex_destroy(void);

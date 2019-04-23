@@ -7,7 +7,7 @@ ifeq 	($(PLATFORM),HOST)
 	CC = gcc
 	FLAGS= -D$(TARGET)
 	LDFLAGS = -lpthread -lrt -lm
-	SRC := main.c logger.c temp.c light.c sockets.c queue.c my_signal.c gpio.c timer.c nrf.c
+	SRC := main.c logger.c temp.c light.c sockets.c queue.c my_signal.c gpio.c timer.c nrf.c uart.c
 	OBJ := $(SRC:.c=.o)
 	CFLAGS = -g $(INCLUDES_COMMON)
 endif
@@ -16,7 +16,7 @@ ifeq 	($(PLATFORM),BBG)
 	CC=arm-linux-gnueabihf-gcc
 	FLAGS= -D$(TARGET)
 	LDFLAGS = -lpthread -lrt -lm
-	SRC := main.c logger.c temp.c light.c sockets.c queue.c my_signal.c gpio.c timer.c nrf.c
+	SRC := main.c logger.c temp.c light.c sockets.c queue.c my_signal.c gpio.c timer.c nrf.c uart.c
 	OBJ := $(SRC:.c=.o)
 	CFLAGS = -g $(INCLUDES_COMMON)
 

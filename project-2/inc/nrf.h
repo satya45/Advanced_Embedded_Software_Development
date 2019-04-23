@@ -31,6 +31,7 @@ typedef enum {
 #define TX_FLUSH 0xE1
 #define RX_FLUSH 0xE2
 #define RX_PAYLOAD (0x61)
+#define TX_PAYLOAD (0xA0)
 
 
 

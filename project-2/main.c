@@ -31,6 +31,7 @@
 #include "gpio.h"
 #include "timer.h"
 #include "nrf.h"
+#include "uart.h"
 
 //Global Variables
 pthread_t my_thread[4];
@@ -177,7 +178,7 @@ void *nrf_thread(void *filename)
 	while (1)
 	{
 		usleep(10);
-		nrf_configure_mode(mode_rx);
+	//	nrf_configure_mode(mode_rx);
 		ret = gpio_poll();
 		if (ret == 2)
 		{
@@ -203,6 +204,52 @@ void *logger_thread(void *filename)
 		usleep(1);
 		log_data(queue_receive(log_mq));
 		hb_send(LOGGER_HB);
+	}
+}
+
+void *uart_thread(void *filename)
+{
+	//msg_log("Entered UART Thread.\n", DEBUG, P0);
+	printf("Entered uart thread\n");
+	uart_init();
+	struct packet_struct obj;
+	uint8_t * payload = "0101";
+	obj = make_packet(FINGER_PRINT_ID, 30, payload, 0x20, 0);
+	send_uart((int *)&obj, 30);
+	int rcv;
+	struct packet_struct obj1;
+	//rcv = rcv_byte_uart();
+	rcv_uart((int *)&obj1, 30);
+	if(obj1.preamble == PREAMBLE)
+	{
+		switch(obj1.id)
+		{
+			case FINGER_PRINT_ID:
+			{
+				int pay;
+				pay = atoi(obj1.payload);
+				printf("Inside finger print id\n");
+				printf("Payload %d\n", pay & FINGERPRINT_SUCCESS);
+				printf("Payload %d\n", pay);
+				if((pay & FINGERPRINT_SUCCESS) == 1)
+				{
+					int fingerprint_id = (pay) % 100;
+					printf("Finger print id %d\n", fingerprint_id);
+					if(fingerprint_id == 1)
+					{
+						printf("Satya is trying to access the door\n");
+					}
+					//Generate OTP 
+				}
+				break;
+			}
+		}	
+	}
+
+	close(uart_fd);
+	while(1)
+	{
+		
 	}
 }
 
@@ -236,6 +283,25 @@ err_t create_threads(char *filename)
 	if (pthread_create(&my_thread[1],		   // pointer to thread descriptor
 					   (void *)&my_attributes, // use default attributes
 					   logger_thread,		   // thread function entry point
+					   (void *)filename))	  // parameters to pass in
+
+	{
+		perror("ERROR: pthread_create(); in create_threads function, logger_thread not created");
+		/*Closing all the previous resources and freeing memory uptil failure*/
+		mq_close(heartbeat_mq);
+		mq_unlink(HEARTBEAT_QUEUE);
+		mq_close(log_mq);
+		mq_unlink(LOG_QUEUE);
+		pthread_mutex_destroy(&mutex_a);
+		pthread_mutex_destroy(&mutex_b);
+		pthread_mutex_destroy(&mutex_error);
+		pthread_cancel(my_thread[0]);
+		exit(EXIT_FAILURE);
+	}
+
+	if (pthread_create(&my_thread[2],		   // pointer to thread descriptor
+					   (void *)&my_attributes, // use default attributes
+					   uart_thread,		   // thread function entry point
 					   (void *)filename))	  // parameters to pass in
 
 	{
@@ -557,10 +623,29 @@ err_t destroy_all(void)
 	mutex_destroy();
 	queues_close();
 	queues_unlink();
-
 	FILE *fptr = fopen(filename, "a");
+	close(uart_fd);
 	fprintf(fptr, "Terminating gracefully due to signal.\n");
 	printf("\nTerminating gracefully due to signal\n");
 	fclose(fptr);
 	return OK;
 }
+
+uint32_t otp_generate(void)
+{
+    srand(time(0));
+    uint32_t random = (uint32_t)rand();
+    return random;
+}
+
+struct packet_struct make_packet(uint8_t id, uint8_t size, uint8_t *payload, uint8_t crc, uint8_t ack)
+{
+	struct packet_struct obj;
+	obj.preamble = 0xAB;
+	obj.id = id;
+	obj.payload = payload;
+	obj.size = strlen((obj.payload));
+	obj.postamble = 0xBA;
+	obj.crc = crc;
+    return obj;
+}  
