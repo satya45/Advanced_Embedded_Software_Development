@@ -1,0 +1,1339 @@
+\hypertarget{fingerprint_8h}{}\section{inc/fingerprint.h File Reference}
+\label{fingerprint_8h}\index{inc/fingerprint.\+h@{inc/fingerprint.\+h}}
+
+
+Header file for \hyperlink{fingerprint_8c}{fingerprint.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/myuart.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fingerprint_8h_a87738054f9a89f0ac29c6ee1fb7da08d}{C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE}~(12)
+\item 
+\#define \hyperlink{fingerprint_8h_a48c115751f544f6dc2232111ecf30708}{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE}~(12)
+\item 
+\#define \hyperlink{fingerprint_8h_a168e9f15badd23f82af4bf8f820d6452}{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1}~(0x55)
+\item 
+\#define \hyperlink{fingerprint_8h_ab49143e1ba9f4208313c5493d4da11b0}{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2}~(0x\+A\+A)
+\item 
+\#define \hyperlink{fingerprint_8h_ae4e52ab76909bf4b1528c2bb62e5797f}{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE}~(0x01)
+\item 
+\#define \hyperlink{fingerprint_8h_ab0af00c633898f1256be665b611bec92}{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE}~(0x00)
+\item 
+\#define \hyperlink{fingerprint_8h_af05fa8f0edab68b0462ec0055dab0e42}{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES}~(0x00)
+\item 
+\#define \hyperlink{fingerprint_8h_a470f1fa1af5fb8e91a2470412dbeff52}{C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE}~(0x00)
+\item 
+\#define \hyperlink{fingerprint_8h_ab0b7565efe6045bdf8da57c2824308e2}{C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES}~(0x00)
+\item 
+\#define \hyperlink{fingerprint_8h_a6daa644b54183af11bd5ba6728dcf45f}{F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD}~(0x01)
+\item 
+\#define \hyperlink{fingerprint_8h_acb2715a1dc9626e1779e5d8f72dfef06}{F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD}~(0x02)
+\item 
+\#define \hyperlink{fingerprint_8h_a98dc181fd39da59f54276d6affaf5ec6}{F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD}~(0x04)
+\item 
+\#define \hyperlink{fingerprint_8h_a879745450faea1cb049b5924f2fc52b1}{F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD}~(0x12)
+\item 
+\#define \hyperlink{fingerprint_8h_a37bc24bdcdef0ac72c309d21d6902c60}{F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD}~(0x20)
+\item 
+\#define \hyperlink{fingerprint_8h_a7d389a7afaac2358c744393933875eeb}{F\+P\+\_\+\+C\+H\+E\+C\+K\+E\+N\+R\+O\+L\+L\+E\+D\+\_\+\+C\+MD}~(0x21)
+\item 
+\#define \hyperlink{fingerprint_8h_a731103141229680d51ce9d50e4c23b9f}{F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD}~(0x22)
+\item 
+\#define \hyperlink{fingerprint_8h_a6cb5ded2918cbd34ee28a019e480e158}{F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD}~(0x23)
+\item 
+\#define \hyperlink{fingerprint_8h_a8a197fab928395178ff626ff40658c2d}{F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD}~(0x24)
+\item 
+\#define \hyperlink{fingerprint_8h_a15b28eee5aa3493864fc818cfe507e84}{F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD}~(0x25)
+\item 
+\#define \hyperlink{fingerprint_8h_a72c08e2eefbd7a62cd85d2eaee45af80}{F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}~(0x26)
+\item 
+\#define \hyperlink{fingerprint_8h_a71db213e20732713a4b82bfaec4f898c}{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD}~(0x40)
+\item 
+\#define \hyperlink{fingerprint_8h_ac902570531d686f76b6b20ab9605eeb2}{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD}~(0x41)
+\item 
+\#define \hyperlink{fingerprint_8h_a50b367caebc7bc8c3928a7a4e7ef6cc5}{F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD}~(0x50)
+\item 
+\#define \hyperlink{fingerprint_8h_a554bd8ca00d7e88c88fc5ab120e2abb3}{F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD}~(0x51)
+\item 
+\#define \hyperlink{fingerprint_8h_af1aa398fd166faba867b50ecf8a1590b}{F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}~(0x60)
+\item 
+\#define \hyperlink{fingerprint_8h_a622d78b66654083bd177326770fd3566}{F\+P\+\_\+\+G\+E\+T\+I\+M\+A\+G\+E\+\_\+\+C\+MD}~(0x62)
+\item 
+\#define \hyperlink{fingerprint_8h_ac561f42565ee8b1001ef3e5f314330e3}{F\+P\+\_\+\+G\+E\+T\+R\+A\+W\+I\+M\+A\+G\+E\+\_\+\+C\+MD}~(0x63)
+\item 
+\#define \hyperlink{fingerprint_8h_a6f6489887e08bff4887d0bc5dcf214d8}{A\+CK}~(0x30)
+\item 
+\#define \hyperlink{fingerprint_8h_a958518a45b12053ae33606ee7cb68a55}{N\+A\+CK}~(0x31)
+\item 
+\#define \hyperlink{fingerprint_8h_ae703e44ee0e0884873c15af5fec16201}{F\+P\+\_\+\+L\+E\+D\+ON}~(1)
+\item 
+\#define \hyperlink{fingerprint_8h_a7dedb2454be727696efa0defcac5a936}{F\+P\+\_\+\+L\+E\+D\+O\+FF}~(0)
+\item 
+\#define \hyperlink{fingerprint_8h_a4e883b3edf265d67b29166abb8fc14e7}{F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO}~(0)
+\item 
+\#define \hyperlink{fingerprint_8h_ad7b60a6ef422b745ee1d402f14af10ec}{F\+P\+\_\+\+N\+O\+P\+A\+R\+AM}~(0)
+\item 
+\#define \hyperlink{fingerprint_8h_a57b60815dc4b22b61f97cb11e27a98f5}{F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE}~(1)
+\item 
+\#define \hyperlink{fingerprint_8h_a5309b2e1a5b0e5d229fd41b4176e682c}{F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE}~(0)
+\item 
+\#define \hyperlink{fingerprint_8h_a1ba01d67a24986b8a217cb743f15cc3d}{F\+P\+\_\+\+F\+I\+N\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED}~(0)
+\item 
+\#define \hyperlink{fingerprint_8h_af9c8d88638f3e3567eab3c85c0a20e95}{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY}~(0x100\+A)
+\item 
+\#define \hyperlink{fingerprint_8h_aa20f92d339fbc9833e3c70071b60838f}{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}~(0x1008)
+\item 
+\#define \hyperlink{fingerprint_8h_a491bc2695a6e235259800ff9fffff065}{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+L\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{fingerprint_8h_a30987257b023e966dd3865c1861f288e}{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fingerprint_8h_ad9158c1c6810eb171aee0517bb3bc126}{fp\+\_\+interrupt\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes and enables the required G\+P\+IO pins interrupts for fingerprint sensor G\+T-\/521\+F32. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_a65e09b053939131c095fb82cc723e28c}{fp\+\_\+cmdsend} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t cmd, uint8\+\_\+t param)
+\begin{DoxyCompactList}\small\item\em This function sends the command to the Fingerprint Sensor G\+T-\/521\+F32 via U\+A\+RT. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_a5b00dcaa19cb946dad89d5c051deca00}{fp\+\_\+responsercv} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function receives the response packet from the Fingerprint Sensor G\+T-\/521\+F32 and returns the output parameter/error code. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_aa9be54c87e43aa5ede07d9a96d7964ee}{fp\+\_\+checksum\+\_\+calc} (uint8\+\_\+t \hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet}\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function calculates the checksum as specfied in the datasheet of Fingerprint G\+T-\/521\+F32. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_a34b4f03157b0766076568fa9dcb71397}{fp\+\_\+baudrate} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t baudrate)
+\begin{DoxyCompactList}\small\item\em This function changes the baudrate. The default baudrate is 9600. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_ac70f7e86b9c763060e4a937e61aa15ec}{fp\+\_\+start\+\_\+enroll} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t new\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function Starts the fingerprint Enrollment process. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_af7949bb7358448b3a0c0c35bb38b1ca2}{fp\+\_\+enroll} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t enroll\+\_\+cmd)
+\begin{DoxyCompactList}\small\item\em This function enrolls the fingerprint. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_ac8412349e97b97b387766256715c0900}{add\+\_\+fingerprint} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function adds a fingerprint. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_af8e8a5f9d9c3c4d20e04f196fac6319e}{fp\+\_\+deleteid} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em This function deletes the specified Fingerprint ID. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_a5bb490d64570008a03cc184ed1ad6b48}{fp\+\_\+verify} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em This function verifies the latest captured fingerprint. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_a0a7d3becac1489871c2b61c3c7a19a9d}{fp\+\_\+identify} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function identifies the captured fingerprint from the stored fingerprints and returns the ID. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_a44c7746e37315b87870038bbceb4a541}{fp\+\_\+irqhandler} (void)
+\begin{DoxyCompactList}\small\item\em Callback function for Fingerprint Interrupt Handler. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_a28aefaf0e8f95d8c810bfa27fb1fbe3a}{fingerprint\+\_\+test} (void)
+\begin{DoxyCompactList}\small\item\em This function was used for testing purposes. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_ab15d9084b914762817b40f9ce7d40ece}{fp\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes the Scanner and turns L\+ED on. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_af8269bb21652fd71e3141a623864b500}{fp\+\_\+interrupt\+\_\+enable} (void)
+\begin{DoxyCompactList}\small\item\em This function enables the interrupts for fingerprint sensor. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8h_a28d51c222960c7653bdd80d7c1a3c200}{fp\+\_\+interrupt\+\_\+disable} (void)
+\begin{DoxyCompactList}\small\item\em This function disables the interrupts for fingerprint sensor. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_aa1e5a486d5f3370e22f7725844ffd246}{fp\+\_\+open} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function is used to initialize and get the device\textquotesingle{}s static information. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_ab7a05c4857d34313b6e83e0541e437ea}{fp\+\_\+led\+\_\+status} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t status)
+\begin{DoxyCompactList}\small\item\em This function switches the L\+ED on or off. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_ac692333519487b67009defb2ae7e09e3}{fp\+\_\+get\+\_\+enrollcount} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function return the Number of Fingerprints enrolled in the Fingerprint Sensor G\+T-\/521\+F32. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_a9fcdba00bf7eff18a36591276751ed7c}{fp\+\_\+isfingerpress} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function checks whether the finger is pressed against the scanner. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_acfa8296078e1af7644d9a3449662cf4b}{fp\+\_\+capture} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t resolution)
+\begin{DoxyCompactList}\small\item\em This function Captures the fingerprint. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_a171d64dc5eb22f6eb3058026b2d9969a}{fp\+\_\+deleteall} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function deletes all the Registered Fingerprints. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8h_a81815358d35a7c56c246e99adb08a300}{fp\+\_\+close} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function terminates. Virtually does nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{fingerprint_8c}{fingerprint.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to Fingerprint functionality. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/19/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fingerprint_8h_a6f6489887e08bff4887d0bc5dcf214d8}\label{fingerprint_8h_a6f6489887e08bff4887d0bc5dcf214d8}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!A\+CK@{A\+CK}}
+\index{A\+CK@{A\+CK}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{A\+CK}{ACK}}
+{\footnotesize\ttfamily \#define A\+CK~(0x30)}
+
+
+
+Definition at line 65 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+responsercv().
+
+\mbox{\Hypertarget{fingerprint_8h_ab0b7565efe6045bdf8da57c2824308e2}\label{fingerprint_8h_ab0b7565efe6045bdf8da57c2824308e2}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES@{C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES}}
+\index{C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES@{C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES}{CHECKSUM\_BYTES}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES~(0x00)}
+
+
+
+Definition at line 41 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_a470f1fa1af5fb8e91a2470412dbeff52}\label{fingerprint_8h_a470f1fa1af5fb8e91a2470412dbeff52}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE@{C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE}}
+\index{C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE@{C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE}{CMD\_CODE\_MSBYTE}}
+{\footnotesize\ttfamily \#define C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE~(0x00)}
+
+
+
+Definition at line 40 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_a87738054f9a89f0ac29c6ee1fb7da08d}\label{fingerprint_8h_a87738054f9a89f0ac29c6ee1fb7da08d}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE@{C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE}}
+\index{C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE@{C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE}{COMMAND\_SIZE}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE~(12)}
+
+Size of the Command Packet 
+
+Definition at line 27 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_ae4e52ab76909bf4b1528c2bb62e5797f}\label{fingerprint_8h_ae4e52ab76909bf4b1528c2bb62e5797f}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE@{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE}}
+\index{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE@{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE}{DEVICEID\_LSBYTE}}
+{\footnotesize\ttfamily \#define D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE~(0x01)}
+
+
+
+Definition at line 37 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_ab0af00c633898f1256be665b611bec92}\label{fingerprint_8h_ab0af00c633898f1256be665b611bec92}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE@{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE}}
+\index{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE@{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE}{DEVICEID\_MSBYTE}}
+{\footnotesize\ttfamily \#define D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE~(0x00)}
+
+
+
+Definition at line 38 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_a98dc181fd39da59f54276d6affaf5ec6}\label{fingerprint_8h_a98dc181fd39da59f54276d6affaf5ec6}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD}{FP\_BAUDRATE\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD~(0x04)}
+
+
+
+Definition at line 49 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate().
+
+\mbox{\Hypertarget{fingerprint_8h_a57b60815dc4b22b61f97cb11e27a98f5}\label{fingerprint_8h_a57b60815dc4b22b61f97cb11e27a98f5}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE@{F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE}}
+\index{F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE@{F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE}{FP\_BEST\_IMAGE}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE~(1)}
+
+Parameter Value to get High Resolution Fingerprint Image, Use at the time of enrolling fingerprint 
+
+Definition at line 76 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+enroll().
+
+\mbox{\Hypertarget{fingerprint_8h_af1aa398fd166faba867b50ecf8a1590b}\label{fingerprint_8h_af1aa398fd166faba867b50ecf8a1590b}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}{FP\_CAPTUREFINGER\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD~(0x60)}
+
+
+
+Definition at line 62 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+capture().
+
+\mbox{\Hypertarget{fingerprint_8h_a7d389a7afaac2358c744393933875eeb}\label{fingerprint_8h_a7d389a7afaac2358c744393933875eeb}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+C\+H\+E\+C\+K\+E\+N\+R\+O\+L\+L\+E\+D\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+H\+E\+C\+K\+E\+N\+R\+O\+L\+L\+E\+D\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+C\+H\+E\+C\+K\+E\+N\+R\+O\+L\+L\+E\+D\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+H\+E\+C\+K\+E\+N\+R\+O\+L\+L\+E\+D\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+C\+H\+E\+C\+K\+E\+N\+R\+O\+L\+L\+E\+D\+\_\+\+C\+MD}{FP\_CHECKENROLLED\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+C\+H\+E\+C\+K\+E\+N\+R\+O\+L\+L\+E\+D\+\_\+\+C\+MD~(0x21)}
+
+
+
+Definition at line 52 of file fingerprint.\+h.
+
+\mbox{\Hypertarget{fingerprint_8h_acb2715a1dc9626e1779e5d8f72dfef06}\label{fingerprint_8h_acb2715a1dc9626e1779e5d8f72dfef06}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD}{FP\_CLOSE\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD~(0x02)}
+
+
+
+Definition at line 48 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+close().
+
+\mbox{\Hypertarget{fingerprint_8h_a879745450faea1cb049b5924f2fc52b1}\label{fingerprint_8h_a879745450faea1cb049b5924f2fc52b1}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD@{F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD}{FP\_CMOSLED\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD~(0x12)}
+
+
+
+Definition at line 50 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+led\+\_\+status().
+
+\mbox{\Hypertarget{fingerprint_8h_ac902570531d686f76b6b20ab9605eeb2}\label{fingerprint_8h_ac902570531d686f76b6b20ab9605eeb2}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD@{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD@{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD}{FP\_DELETEALL\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD~(0x41)}
+
+
+
+Definition at line 59 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+deleteall().
+
+\mbox{\Hypertarget{fingerprint_8h_a71db213e20732713a4b82bfaec4f898c}\label{fingerprint_8h_a71db213e20732713a4b82bfaec4f898c}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD@{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD@{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD}{FP\_DELETEID\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD~(0x40)}
+
+
+
+Definition at line 58 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+deleteid().
+
+\mbox{\Hypertarget{fingerprint_8h_a6cb5ded2918cbd34ee28a019e480e158}\label{fingerprint_8h_a6cb5ded2918cbd34ee28a019e480e158}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD}{FP\_ENROLL1\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD~(0x23)}
+
+
+
+Definition at line 54 of file fingerprint.\+h.
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8h_a8a197fab928395178ff626ff40658c2d}\label{fingerprint_8h_a8a197fab928395178ff626ff40658c2d}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD}{FP\_ENROLL2\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD~(0x24)}
+
+
+
+Definition at line 55 of file fingerprint.\+h.
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8h_a15b28eee5aa3493864fc818cfe507e84}\label{fingerprint_8h_a15b28eee5aa3493864fc818cfe507e84}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD}{FP\_ENROLL3\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD~(0x25)}
+
+
+
+Definition at line 56 of file fingerprint.\+h.
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8h_a731103141229680d51ce9d50e4c23b9f}\label{fingerprint_8h_a731103141229680d51ce9d50e4c23b9f}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD@{F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD}{FP\_ENROLLSTART\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD~(0x22)}
+
+
+
+Definition at line 53 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+start\+\_\+enroll().
+
+\mbox{\Hypertarget{fingerprint_8h_a1ba01d67a24986b8a217cb743f15cc3d}\label{fingerprint_8h_a1ba01d67a24986b8a217cb743f15cc3d}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+F\+I\+N\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED@{F\+P\+\_\+\+F\+I\+N\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED}}
+\index{F\+P\+\_\+\+F\+I\+N\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED@{F\+P\+\_\+\+F\+I\+N\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+F\+I\+N\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED}{FP\_FINGER\_PRESSED}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+F\+I\+N\+G\+E\+R\+\_\+\+P\+R\+E\+S\+S\+ED~(0)}
+
+Parameter Value in response indicating finger is pressed. 
+
+Definition at line 78 of file fingerprint.\+h.
+
+\mbox{\Hypertarget{fingerprint_8h_a37bc24bdcdef0ac72c309d21d6902c60}\label{fingerprint_8h_a37bc24bdcdef0ac72c309d21d6902c60}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD@{F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD@{F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD}{FP\_GETENROLLCOUNT\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD~(0x20)}
+
+
+
+Definition at line 51 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+get\+\_\+enrollcount().
+
+\mbox{\Hypertarget{fingerprint_8h_a622d78b66654083bd177326770fd3566}\label{fingerprint_8h_a622d78b66654083bd177326770fd3566}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+G\+E\+T\+I\+M\+A\+G\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+G\+E\+T\+I\+M\+A\+G\+E\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+G\+E\+T\+I\+M\+A\+G\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+G\+E\+T\+I\+M\+A\+G\+E\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+G\+E\+T\+I\+M\+A\+G\+E\+\_\+\+C\+MD}{FP\_GETIMAGE\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+G\+E\+T\+I\+M\+A\+G\+E\+\_\+\+C\+MD~(0x62)}
+
+
+
+Definition at line 63 of file fingerprint.\+h.
+
+\mbox{\Hypertarget{fingerprint_8h_ac561f42565ee8b1001ef3e5f314330e3}\label{fingerprint_8h_ac561f42565ee8b1001ef3e5f314330e3}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+G\+E\+T\+R\+A\+W\+I\+M\+A\+G\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+G\+E\+T\+R\+A\+W\+I\+M\+A\+G\+E\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+G\+E\+T\+R\+A\+W\+I\+M\+A\+G\+E\+\_\+\+C\+MD@{F\+P\+\_\+\+G\+E\+T\+R\+A\+W\+I\+M\+A\+G\+E\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+G\+E\+T\+R\+A\+W\+I\+M\+A\+G\+E\+\_\+\+C\+MD}{FP\_GETRAWIMAGE\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+G\+E\+T\+R\+A\+W\+I\+M\+A\+G\+E\+\_\+\+C\+MD~(0x63)}
+
+
+
+Definition at line 64 of file fingerprint.\+h.
+
+\mbox{\Hypertarget{fingerprint_8h_a554bd8ca00d7e88c88fc5ab120e2abb3}\label{fingerprint_8h_a554bd8ca00d7e88c88fc5ab120e2abb3}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD@{F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD@{F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD}{FP\_IDENTIFY\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD~(0x51)}
+
+
+
+Definition at line 61 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+identify().
+
+\mbox{\Hypertarget{fingerprint_8h_a30987257b023e966dd3865c1861f288e}\label{fingerprint_8h_a30987257b023e966dd3865c1861f288e}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN@{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}}
+\index{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN@{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN}{FP\_IRQ\_PIN}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3)}
+
+Pin for Fingerprint sensor interrupt 
+
+Definition at line 93 of file fingerprint.\+h.
+
+
+
+Referenced by add\+\_\+fingerprint(), fp\+\_\+interrupt\+\_\+config(), fp\+\_\+interrupt\+\_\+disable(), fp\+\_\+interrupt\+\_\+enable(), and fp\+\_\+irqhandler().
+
+\mbox{\Hypertarget{fingerprint_8h_a491bc2695a6e235259800ff9fffff065}\label{fingerprint_8h_a491bc2695a6e235259800ff9fffff065}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT@{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT}}
+\index{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT@{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT}{FP\_IRQ\_PORT}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+L\+\_\+\+B\+A\+SE)}
+
+Port for Fingerprint sensor interrupt 
+
+Definition at line 92 of file fingerprint.\+h.
+
+
+
+Referenced by add\+\_\+fingerprint(), fp\+\_\+interrupt\+\_\+config(), fp\+\_\+interrupt\+\_\+disable(), fp\+\_\+interrupt\+\_\+enable(), and fp\+\_\+irqhandler().
+
+\mbox{\Hypertarget{fingerprint_8h_a72c08e2eefbd7a62cd85d2eaee45af80}\label{fingerprint_8h_a72c08e2eefbd7a62cd85d2eaee45af80}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD@{F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD@{F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD}{FP\_ISPRESSFINGER\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD~(0x26)}
+
+
+
+Definition at line 57 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+isfingerpress().
+
+\mbox{\Hypertarget{fingerprint_8h_a7dedb2454be727696efa0defcac5a936}\label{fingerprint_8h_a7dedb2454be727696efa0defcac5a936}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+L\+E\+D\+O\+FF@{F\+P\+\_\+\+L\+E\+D\+O\+FF}}
+\index{F\+P\+\_\+\+L\+E\+D\+O\+FF@{F\+P\+\_\+\+L\+E\+D\+O\+FF}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+L\+E\+D\+O\+FF}{FP\_LEDOFF}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+L\+E\+D\+O\+FF~(0)}
+
+Parameter Value to switch off the L\+ED 
+
+Definition at line 73 of file fingerprint.\+h.
+
+\mbox{\Hypertarget{fingerprint_8h_ae703e44ee0e0884873c15af5fec16201}\label{fingerprint_8h_ae703e44ee0e0884873c15af5fec16201}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+L\+E\+D\+ON@{F\+P\+\_\+\+L\+E\+D\+ON}}
+\index{F\+P\+\_\+\+L\+E\+D\+ON@{F\+P\+\_\+\+L\+E\+D\+ON}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+L\+E\+D\+ON}{FP\_LEDON}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+L\+E\+D\+ON~(1)}
+
+Parameter Value to switch on the L\+ED 
+
+Definition at line 72 of file fingerprint.\+h.
+
+
+
+Referenced by fingerprint\+\_\+test(), fp\+\_\+init(), and fp\+\_\+led\+\_\+status().
+
+\mbox{\Hypertarget{fingerprint_8h_a5309b2e1a5b0e5d229fd41b4176e682c}\label{fingerprint_8h_a5309b2e1a5b0e5d229fd41b4176e682c}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE@{F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE}}
+\index{F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE@{F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE}{FP\_LOW\_IMAGE}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE~(0)}
+
+Parameter Value to get fast but low Resolution Fingerprint Image, Use at the time of verifying fingerprint 
+
+Definition at line 77 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{fingerprint_8h_af9c8d88638f3e3567eab3c85c0a20e95}\label{fingerprint_8h_af9c8d88638f3e3567eab3c85c0a20e95}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY@{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY}}
+\index{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY@{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY}{FP\_NACK\_DB\_IS\_EMPTY}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY~(0x100\+A)}
+
+
+
+Definition at line 85 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{fingerprint_8h_aa20f92d339fbc9833e3c70071b60838f}\label{fingerprint_8h_aa20f92d339fbc9833e3c70071b60838f}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED@{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}}
+\index{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED@{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED}{FP\_NACK\_IDENTIFY\_FAILED}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED~(0x1008)}
+
+
+
+Definition at line 86 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{fingerprint_8h_a4e883b3edf265d67b29166abb8fc14e7}\label{fingerprint_8h_a4e883b3edf265d67b29166abb8fc14e7}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO@{F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO}}
+\index{F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO@{F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO}{FP\_NOEXTRA\_INFO}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO~(0)}
+
+Parameter Value for O\+P\+EN command 
+
+Definition at line 74 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+open().
+
+\mbox{\Hypertarget{fingerprint_8h_ad7b60a6ef422b745ee1d402f14af10ec}\label{fingerprint_8h_ad7b60a6ef422b745ee1d402f14af10ec}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+N\+O\+P\+A\+R\+AM@{F\+P\+\_\+\+N\+O\+P\+A\+R\+AM}}
+\index{F\+P\+\_\+\+N\+O\+P\+A\+R\+AM@{F\+P\+\_\+\+N\+O\+P\+A\+R\+AM}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+N\+O\+P\+A\+R\+AM}{FP\_NOPARAM}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+N\+O\+P\+A\+R\+AM~(0)}
+
+Parameter Value for no parameter 
+
+Definition at line 75 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+close(), fp\+\_\+deleteall(), fp\+\_\+enroll(), fp\+\_\+get\+\_\+enrollcount(), fp\+\_\+identify(), and fp\+\_\+isfingerpress().
+
+\mbox{\Hypertarget{fingerprint_8h_a6daa644b54183af11bd5ba6728dcf45f}\label{fingerprint_8h_a6daa644b54183af11bd5ba6728dcf45f}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD@{F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD@{F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD}{FP\_OPEN\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD~(0x01)}
+
+
+
+Definition at line 47 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+open().
+
+\mbox{\Hypertarget{fingerprint_8h_a50b367caebc7bc8c3928a7a4e7ef6cc5}\label{fingerprint_8h_a50b367caebc7bc8c3928a7a4e7ef6cc5}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD@{F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD}}
+\index{F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD@{F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD}{FP\_VERIFY\_CMD}}
+{\footnotesize\ttfamily \#define F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD~(0x50)}
+
+
+
+Definition at line 60 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_a958518a45b12053ae33606ee7cb68a55}\label{fingerprint_8h_a958518a45b12053ae33606ee7cb68a55}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!N\+A\+CK@{N\+A\+CK}}
+\index{N\+A\+CK@{N\+A\+CK}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{N\+A\+CK}{NACK}}
+{\footnotesize\ttfamily \#define N\+A\+CK~(0x31)}
+
+
+
+Definition at line 66 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+responsercv().
+
+\mbox{\Hypertarget{fingerprint_8h_af05fa8f0edab68b0462ec0055dab0e42}\label{fingerprint_8h_af05fa8f0edab68b0462ec0055dab0e42}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES@{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES}}
+\index{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES@{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES}{PARAMETER\_BYTES}}
+{\footnotesize\ttfamily \#define P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES~(0x00)}
+
+
+
+Definition at line 39 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_a48c115751f544f6dc2232111ecf30708}\label{fingerprint_8h_a48c115751f544f6dc2232111ecf30708}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE@{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE}}
+\index{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE@{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE}{RESPONSE\_SIZE}}
+{\footnotesize\ttfamily \#define R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE~(12)}
+
+Size of the Response Packet 
+
+Definition at line 28 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+responsercv().
+
+\mbox{\Hypertarget{fingerprint_8h_a168e9f15badd23f82af4bf8f820d6452}\label{fingerprint_8h_a168e9f15badd23f82af4bf8f820d6452}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1@{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1}}
+\index{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1@{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1}{START\_CODE1}}
+{\footnotesize\ttfamily \#define S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1~(0x55)}
+
+
+
+Definition at line 35 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_ab49143e1ba9f4208313c5493d4da11b0}\label{fingerprint_8h_ab49143e1ba9f4208313c5493d4da11b0}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2@{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2}}
+\index{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2@{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2}{START\_CODE2}}
+{\footnotesize\ttfamily \#define S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2~(0x\+A\+A)}
+
+
+
+Definition at line 36 of file fingerprint.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fingerprint_8h_ac8412349e97b97b387766256715c0900}\label{fingerprint_8h_ac8412349e97b97b387766256715c0900}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!add\+\_\+fingerprint@{add\+\_\+fingerprint}}
+\index{add\+\_\+fingerprint@{add\+\_\+fingerprint}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{add\+\_\+fingerprint()}{add\_fingerprint()}}
+{\footnotesize\ttfamily void add\+\_\+fingerprint (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function adds a fingerprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+enroll(), F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD, fp\+\_\+get\+\_\+enrollcount(), F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, fp\+\_\+start\+\_\+enroll(), and printf.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{fingerprint_8h_a28aefaf0e8f95d8c810bfa27fb1fbe3a}\label{fingerprint_8h_a28aefaf0e8f95d8c810bfa27fb1fbe3a}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fingerprint\+\_\+test@{fingerprint\+\_\+test}}
+\index{fingerprint\+\_\+test@{fingerprint\+\_\+test}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fingerprint\+\_\+test()}{fingerprint\_test()}}
+{\footnotesize\ttfamily void fingerprint\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function was used for testing purposes. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 400 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+led\+\_\+status(), F\+P\+\_\+\+L\+E\+D\+ON, fp\+\_\+open(), and U\+A\+R\+T\+\_\+\+FP.
+
+\mbox{\Hypertarget{fingerprint_8h_a34b4f03157b0766076568fa9dcb71397}\label{fingerprint_8h_a34b4f03157b0766076568fa9dcb71397}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+baudrate@{fp\+\_\+baudrate}}
+\index{fp\+\_\+baudrate@{fp\+\_\+baudrate}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+baudrate()}{fp\_baudrate()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+baudrate (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+This function changes the baudrate. The default baudrate is 9600. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em baudrate} & The baudrate M\+A\+C\+RO\+: \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 225 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD, fp\+\_\+checksum\+\_\+calc(), fp\+\_\+responsercv(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+\mbox{\Hypertarget{fingerprint_8h_acfa8296078e1af7644d9a3449662cf4b}\label{fingerprint_8h_acfa8296078e1af7644d9a3449662cf4b}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+capture@{fp\+\_\+capture}}
+\index{fp\+\_\+capture@{fp\+\_\+capture}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+capture()}{fp\_capture()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+capture (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{resolution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function Captures the fingerprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em resolution} & The resolution for the fingerprint scan. The macros are\+: F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE, F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 302 of file fingerprint.\+h.
+
+
+
+References F\+P\+\_\+\+C\+A\+P\+T\+U\+R\+E\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD, fp\+\_\+cmdsend(), and fp\+\_\+responsercv().
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle(), and fp\+\_\+enroll().
+
+\mbox{\Hypertarget{fingerprint_8h_aa9be54c87e43aa5ede07d9a96d7964ee}\label{fingerprint_8h_aa9be54c87e43aa5ede07d9a96d7964ee}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+checksum\+\_\+calc@{fp\+\_\+checksum\+\_\+calc}}
+\index{fp\+\_\+checksum\+\_\+calc@{fp\+\_\+checksum\+\_\+calc}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+checksum\+\_\+calc()}{fp\_checksum\_calc()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+checksum\+\_\+calc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{packet\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function calculates the checksum as specfied in the datasheet of Fingerprint G\+T-\/521\+F32. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The Response/\+Command packet array as per the datasheet of G\+T-\/521\+F32. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The calculated checksum value. 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file fingerprint.\+c.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_a81815358d35a7c56c246e99adb08a300}\label{fingerprint_8h_a81815358d35a7c56c246e99adb08a300}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+close@{fp\+\_\+close}}
+\index{fp\+\_\+close@{fp\+\_\+close}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+close()}{fp\_close()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+close (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function terminates. Virtually does nothing. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK. 
+\end{DoxyReturn}
+
+
+Definition at line 326 of file fingerprint.\+h.
+
+
+
+References F\+P\+\_\+\+C\+L\+O\+S\+E\+\_\+\+C\+MD, fp\+\_\+cmdsend(), F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, and fp\+\_\+responsercv().
+
+\mbox{\Hypertarget{fingerprint_8h_a65e09b053939131c095fb82cc723e28c}\label{fingerprint_8h_a65e09b053939131c095fb82cc723e28c}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+cmdsend@{fp\+\_\+cmdsend}}
+\index{fp\+\_\+cmdsend@{fp\+\_\+cmdsend}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+cmdsend()}{fp\_cmdsend()}}
+{\footnotesize\ttfamily void fp\+\_\+cmdsend (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{cmd,  }\item[{uint8\+\_\+t}]{param }\end{DoxyParamCaption})}
+
+
+
+This function sends the command to the Fingerprint Sensor G\+T-\/521\+F32 via U\+A\+RT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em cmd} & The Command macro defined in \hyperlink{fingerprint_8h}{fingerprint.\+h} \\
+\hline
+{\em param} & The parameter value required while sending the particular command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+
+
+Referenced by fp\+\_\+capture(), fp\+\_\+close(), fp\+\_\+deleteall(), fp\+\_\+enroll(), fp\+\_\+get\+\_\+enrollcount(), fp\+\_\+identify(), fp\+\_\+isfingerpress(), fp\+\_\+led\+\_\+status(), and fp\+\_\+open().
+
+\mbox{\Hypertarget{fingerprint_8h_a171d64dc5eb22f6eb3058026b2d9969a}\label{fingerprint_8h_a171d64dc5eb22f6eb3058026b2d9969a}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+deleteall@{fp\+\_\+deleteall}}
+\index{fp\+\_\+deleteall@{fp\+\_\+deleteall}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+deleteall()}{fp\_deleteall()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+deleteall (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function deletes all the Registered Fingerprints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 315 of file fingerprint.\+h.
+
+
+
+References fp\+\_\+cmdsend(), F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+A\+L\+L\+\_\+\+C\+MD, F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, and fp\+\_\+responsercv().
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{fingerprint_8h_af8e8a5f9d9c3c4d20e04f196fac6319e}\label{fingerprint_8h_af8e8a5f9d9c3c4d20e04f196fac6319e}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+deleteid@{fp\+\_\+deleteid}}
+\index{fp\+\_\+deleteid@{fp\+\_\+deleteid}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+deleteid()}{fp\_deleteid()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+deleteid (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+This function deletes the specified Fingerprint ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em id} & The fingerprint ID number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 258 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD, fp\+\_\+responsercv(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+\mbox{\Hypertarget{fingerprint_8h_af7949bb7358448b3a0c0c35bb38b1ca2}\label{fingerprint_8h_af7949bb7358448b3a0c0c35bb38b1ca2}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+enroll@{fp\+\_\+enroll}}
+\index{fp\+\_\+enroll@{fp\+\_\+enroll}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+enroll()}{fp\_enroll()}}
+{\footnotesize\ttfamily void fp\+\_\+enroll (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{enroll\+\_\+cmd }\end{DoxyParamCaption})}
+
+
+
+This function enrolls the fingerprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em enroll\+\_\+cmd} & The Enrollment Command Macro\+: F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file fingerprint.\+c.
+
+
+
+References F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE, fp\+\_\+capture(), fp\+\_\+cmdsend(), fp\+\_\+isfingerpress(), F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, fp\+\_\+responsercv(), and printf.
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8h_ac692333519487b67009defb2ae7e09e3}\label{fingerprint_8h_ac692333519487b67009defb2ae7e09e3}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+get\+\_\+enrollcount@{fp\+\_\+get\+\_\+enrollcount}}
+\index{fp\+\_\+get\+\_\+enrollcount@{fp\+\_\+get\+\_\+enrollcount}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+get\+\_\+enrollcount()}{fp\_get\_enrollcount()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+get\+\_\+enrollcount (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function return the Number of Fingerprints enrolled in the Fingerprint Sensor G\+T-\/521\+F32. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+Rt line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 273 of file fingerprint.\+h.
+
+
+
+References fp\+\_\+cmdsend(), F\+P\+\_\+\+G\+E\+T\+E\+N\+R\+O\+L\+L\+C\+O\+U\+N\+T\+\_\+\+C\+MD, F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, fp\+\_\+responsercv(), and printf.
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8h_a0a7d3becac1489871c2b61c3c7a19a9d}\label{fingerprint_8h_a0a7d3becac1489871c2b61c3c7a19a9d}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+identify@{fp\+\_\+identify}}
+\index{fp\+\_\+identify@{fp\+\_\+identify}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+identify()}{fp\_identify()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+identify (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function identifies the captured fingerprint from the stored fingerprints and returns the ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+Rt line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 324 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+cmdsend(), F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD, F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, and fp\+\_\+responsercv().
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{fingerprint_8h_ab15d9084b914762817b40f9ce7d40ece}\label{fingerprint_8h_ab15d9084b914762817b40f9ce7d40ece}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+init@{fp\+\_\+init}}
+\index{fp\+\_\+init@{fp\+\_\+init}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+init()}{fp\_init()}}
+{\footnotesize\ttfamily void fp\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function initializes the Scanner and turns L\+ED on. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 214 of file fingerprint.\+h.
+
+
+
+References fp\+\_\+led\+\_\+status(), F\+P\+\_\+\+L\+E\+D\+ON, fp\+\_\+open(), and U\+A\+R\+T\+\_\+\+FP.
+
+\mbox{\Hypertarget{fingerprint_8h_ad9158c1c6810eb171aee0517bb3bc126}\label{fingerprint_8h_ad9158c1c6810eb171aee0517bb3bc126}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+interrupt\+\_\+config@{fp\+\_\+interrupt\+\_\+config}}
+\index{fp\+\_\+interrupt\+\_\+config@{fp\+\_\+interrupt\+\_\+config}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+interrupt\+\_\+config()}{fp\_interrupt\_config()}}
+{\footnotesize\ttfamily void fp\+\_\+interrupt\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes and enables the required G\+P\+IO pins interrupts for fingerprint sensor G\+T-\/521\+F32. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+interrupt\+\_\+enable(), F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, and fp\+\_\+irqhandler().
+
+\mbox{\Hypertarget{fingerprint_8h_a28d51c222960c7653bdd80d7c1a3c200}\label{fingerprint_8h_a28d51c222960c7653bdd80d7c1a3c200}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+interrupt\+\_\+disable@{fp\+\_\+interrupt\+\_\+disable}}
+\index{fp\+\_\+interrupt\+\_\+disable@{fp\+\_\+interrupt\+\_\+disable}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+interrupt\+\_\+disable()}{fp\_interrupt\_disable()}}
+{\footnotesize\ttfamily void fp\+\_\+interrupt\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function disables the interrupts for fingerprint sensor. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 236 of file fingerprint.\+h.
+
+
+
+References F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, and F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{fingerprint_8h_af8269bb21652fd71e3141a623864b500}\label{fingerprint_8h_af8269bb21652fd71e3141a623864b500}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+interrupt\+\_\+enable@{fp\+\_\+interrupt\+\_\+enable}}
+\index{fp\+\_\+interrupt\+\_\+enable@{fp\+\_\+interrupt\+\_\+enable}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+interrupt\+\_\+enable()}{fp\_interrupt\_enable()}}
+{\footnotesize\ttfamily void fp\+\_\+interrupt\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function enables the interrupts for fingerprint sensor. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 225 of file fingerprint.\+h.
+
+
+
+References F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, and F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by fp\+\_\+interrupt\+\_\+config(), timer1handler(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{fingerprint_8h_a44c7746e37315b87870038bbceb4a541}\label{fingerprint_8h_a44c7746e37315b87870038bbceb4a541}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+irqhandler@{fp\+\_\+irqhandler}}
+\index{fp\+\_\+irqhandler@{fp\+\_\+irqhandler}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+irqhandler()}{fp\_irqhandler()}}
+{\footnotesize\ttfamily void fp\+\_\+irqhandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Callback function for Fingerprint Interrupt Handler. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 379 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+access\+\_\+handle(), F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, and printf.
+
+
+
+Referenced by fp\+\_\+interrupt\+\_\+config().
+
+\mbox{\Hypertarget{fingerprint_8h_a9fcdba00bf7eff18a36591276751ed7c}\label{fingerprint_8h_a9fcdba00bf7eff18a36591276751ed7c}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+isfingerpress@{fp\+\_\+isfingerpress}}
+\index{fp\+\_\+isfingerpress@{fp\+\_\+isfingerpress}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+isfingerpress()}{fp\_isfingerpress()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+isfingerpress (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function checks whether the finger is pressed against the scanner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 289 of file fingerprint.\+h.
+
+
+
+References fp\+\_\+cmdsend(), F\+P\+\_\+\+I\+S\+P\+R\+E\+S\+S\+F\+I\+N\+G\+E\+R\+\_\+\+C\+MD, F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, and fp\+\_\+responsercv().
+
+
+
+Referenced by fp\+\_\+enroll().
+
+\mbox{\Hypertarget{fingerprint_8h_ab7a05c4857d34313b6e83e0541e437ea}\label{fingerprint_8h_ab7a05c4857d34313b6e83e0541e437ea}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+led\+\_\+status@{fp\+\_\+led\+\_\+status}}
+\index{fp\+\_\+led\+\_\+status@{fp\+\_\+led\+\_\+status}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+led\+\_\+status()}{fp\_led\_status()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+led\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function switches the L\+ED on or off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em status} & The F\+P\+\_\+\+L\+E\+D\+ON or F\+P\+\_\+\+L\+E\+D\+O\+FF Macro to switch the L\+ED on or off. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK. 
+\end{DoxyReturn}
+
+
+Definition at line 260 of file fingerprint.\+h.
+
+
+
+References fp\+\_\+cmdsend(), F\+P\+\_\+\+C\+M\+O\+S\+L\+E\+D\+\_\+\+C\+MD, F\+P\+\_\+\+L\+E\+D\+ON, fp\+\_\+responsercv(), and U\+A\+R\+T\+\_\+\+FP.
+
+
+
+Referenced by fingerprint\+\_\+test(), and fp\+\_\+init().
+
+\mbox{\Hypertarget{fingerprint_8h_aa1e5a486d5f3370e22f7725844ffd246}\label{fingerprint_8h_aa1e5a486d5f3370e22f7725844ffd246}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+open@{fp\+\_\+open}}
+\index{fp\+\_\+open@{fp\+\_\+open}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+open()}{fp\_open()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is used to initialize and get the device\textquotesingle{}s static information. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK. 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file fingerprint.\+h.
+
+
+
+References fp\+\_\+cmdsend(), F\+P\+\_\+\+N\+O\+E\+X\+T\+R\+A\+\_\+\+I\+N\+FO, F\+P\+\_\+\+O\+P\+E\+N\+\_\+\+C\+MD, and fp\+\_\+responsercv().
+
+
+
+Referenced by fingerprint\+\_\+test(), and fp\+\_\+init().
+
+\mbox{\Hypertarget{fingerprint_8h_a5b00dcaa19cb946dad89d5c051deca00}\label{fingerprint_8h_a5b00dcaa19cb946dad89d5c051deca00}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+responsercv@{fp\+\_\+responsercv}}
+\index{fp\+\_\+responsercv@{fp\+\_\+responsercv}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+responsercv()}{fp\_responsercv()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+responsercv (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function receives the response packet from the Fingerprint Sensor G\+T-\/521\+F32 and returns the output parameter/error code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line being used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file fingerprint.\+c.
+
+
+
+References A\+CK, N\+A\+CK, R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE, and temp().
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+capture(), fp\+\_\+close(), fp\+\_\+deleteall(), fp\+\_\+deleteid(), fp\+\_\+enroll(), fp\+\_\+get\+\_\+enrollcount(), fp\+\_\+identify(), fp\+\_\+isfingerpress(), fp\+\_\+led\+\_\+status(), fp\+\_\+open(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8h_ac70f7e86b9c763060e4a937e61aa15ec}\label{fingerprint_8h_ac70f7e86b9c763060e4a937e61aa15ec}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+start\+\_\+enroll@{fp\+\_\+start\+\_\+enroll}}
+\index{fp\+\_\+start\+\_\+enroll@{fp\+\_\+start\+\_\+enroll}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+start\+\_\+enroll()}{fp\_start\_enroll()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+start\+\_\+enroll (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{new\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+This function Starts the fingerprint Enrollment process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT lune used. \\
+\hline
+{\em new\+\_\+id} & The ID number for the fingerprint. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD, fp\+\_\+responsercv(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8h_a5bb490d64570008a03cc184ed1ad6b48}\label{fingerprint_8h_a5bb490d64570008a03cc184ed1ad6b48}} 
+\index{fingerprint.\+h@{fingerprint.\+h}!fp\+\_\+verify@{fp\+\_\+verify}}
+\index{fp\+\_\+verify@{fp\+\_\+verify}!fingerprint.\+h@{fingerprint.\+h}}
+\subsubsection{\texorpdfstring{fp\+\_\+verify()}{fp\_verify()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+verify (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+This function verifies the latest captured fingerprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em id} & The ID to be compared with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 291 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), fp\+\_\+responsercv(), F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD, P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+

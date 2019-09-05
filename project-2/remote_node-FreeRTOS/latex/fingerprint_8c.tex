@@ -1,0 +1,444 @@
+\hypertarget{fingerprint_8c}{}\section{src/fingerprint.c File Reference}
+\label{fingerprint_8c}\index{src/fingerprint.\+c@{src/fingerprint.\+c}}
+
+
+This file consists of all the functions required for the Fingerprint Scanner G\+T-\/521\+F32.  
+
+
+{\ttfamily \#include \char`\"{}inc/fingerprint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/packet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/timer.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fingerprint_8c_ad9158c1c6810eb171aee0517bb3bc126}{fp\+\_\+interrupt\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes and enables the required G\+P\+IO pins interrupts for fingerprint sensor G\+T-\/521\+F32. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8c_a65e09b053939131c095fb82cc723e28c}{fp\+\_\+cmdsend} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t cmd, uint8\+\_\+t param)
+\begin{DoxyCompactList}\small\item\em This function sends the command to the Fingerprint Sensor G\+T-\/521\+F32 via U\+A\+RT. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8c_a5b00dcaa19cb946dad89d5c051deca00}{fp\+\_\+responsercv} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function receives the response packet from the Fingerprint Sensor G\+T-\/521\+F32 and returns the output parameter/error code. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8c_aa9be54c87e43aa5ede07d9a96d7964ee}{fp\+\_\+checksum\+\_\+calc} (uint8\+\_\+t \hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet}\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function calculates the checksum as specfied in the datasheet of Fingerprint G\+T-\/521\+F32. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8c_ac70f7e86b9c763060e4a937e61aa15ec}{fp\+\_\+start\+\_\+enroll} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t new\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function Starts the fingerprint Enrollment process. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8c_af7949bb7358448b3a0c0c35bb38b1ca2}{fp\+\_\+enroll} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t enroll\+\_\+cmd)
+\begin{DoxyCompactList}\small\item\em This function enrolls the fingerprint. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8c_ac8412349e97b97b387766256715c0900}{add\+\_\+fingerprint} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function adds a fingerprint. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8c_a34b4f03157b0766076568fa9dcb71397}{fp\+\_\+baudrate} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t baudrate)
+\begin{DoxyCompactList}\small\item\em This function changes the baudrate. The default baudrate is 9600. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8c_af8e8a5f9d9c3c4d20e04f196fac6319e}{fp\+\_\+deleteid} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em This function deletes the specified Fingerprint ID. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8c_a5bb490d64570008a03cc184ed1ad6b48}{fp\+\_\+verify} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint16\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em This function verifies the latest captured fingerprint. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{fingerprint_8c_a0a7d3becac1489871c2b61c3c7a19a9d}{fp\+\_\+identify} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function identifies the captured fingerprint from the stored fingerprints and returns the ID. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8c_a05dbfdb483bf35144c6b8098a4c33731}{fp\+\_\+access\+\_\+handle} (void)
+\item 
+void \hyperlink{fingerprint_8c_a44c7746e37315b87870038bbceb4a541}{fp\+\_\+irqhandler} (void)
+\begin{DoxyCompactList}\small\item\em Callback function for Fingerprint Interrupt Handler. \end{DoxyCompactList}\item 
+void \hyperlink{fingerprint_8c_a28aefaf0e8f95d8c810bfa27fb1fbe3a}{fingerprint\+\_\+test} (void)
+\begin{DoxyCompactList}\small\item\em This function was used for testing purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for the Fingerprint Scanner G\+T-\/521\+F32. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/19/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fingerprint_8c_ac8412349e97b97b387766256715c0900}\label{fingerprint_8c_ac8412349e97b97b387766256715c0900}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!add\+\_\+fingerprint@{add\+\_\+fingerprint}}
+\index{add\+\_\+fingerprint@{add\+\_\+fingerprint}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{add\+\_\+fingerprint()}{add\_fingerprint()}}
+{\footnotesize\ttfamily void add\+\_\+fingerprint (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function adds a fingerprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+enroll(), F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD, fp\+\_\+get\+\_\+enrollcount(), F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, fp\+\_\+start\+\_\+enroll(), and printf.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{fingerprint_8c_a28aefaf0e8f95d8c810bfa27fb1fbe3a}\label{fingerprint_8c_a28aefaf0e8f95d8c810bfa27fb1fbe3a}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fingerprint\+\_\+test@{fingerprint\+\_\+test}}
+\index{fingerprint\+\_\+test@{fingerprint\+\_\+test}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fingerprint\+\_\+test()}{fingerprint\_test()}}
+{\footnotesize\ttfamily void fingerprint\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function was used for testing purposes. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 400 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+led\+\_\+status(), F\+P\+\_\+\+L\+E\+D\+ON, fp\+\_\+open(), and U\+A\+R\+T\+\_\+\+FP.
+
+\mbox{\Hypertarget{fingerprint_8c_a05dbfdb483bf35144c6b8098a4c33731}\label{fingerprint_8c_a05dbfdb483bf35144c6b8098a4c33731}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+access\+\_\+handle@{fp\+\_\+access\+\_\+handle}}
+\index{fp\+\_\+access\+\_\+handle@{fp\+\_\+access\+\_\+handle}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+access\+\_\+handle()}{fp\_access\_handle()}}
+{\footnotesize\ttfamily void fp\+\_\+access\+\_\+handle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 332 of file fingerprint.\+c.
+
+
+
+References D\+O\+N\+T\+\_\+\+C\+A\+RE, F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID, F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED, F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED, fp\+\_\+capture(), fp\+\_\+identify(), F\+P\+\_\+\+L\+O\+W\+\_\+\+I\+M\+A\+GE, F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+D\+B\+\_\+\+I\+S\+\_\+\+E\+M\+P\+TY, F\+P\+\_\+\+N\+A\+C\+K\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+F\+A\+I\+L\+ED, L\+C\+D\+\_\+write(), packet\+\_\+make(), packet\+\_\+send\+\_\+uart(), printf, T\+R\+UE, U\+A\+R\+T\+\_\+\+B\+BG, and U\+A\+R\+T\+\_\+\+FP.
+
+
+
+Referenced by fp\+\_\+irqhandler().
+
+\mbox{\Hypertarget{fingerprint_8c_a34b4f03157b0766076568fa9dcb71397}\label{fingerprint_8c_a34b4f03157b0766076568fa9dcb71397}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+baudrate@{fp\+\_\+baudrate}}
+\index{fp\+\_\+baudrate@{fp\+\_\+baudrate}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+baudrate()}{fp\_baudrate()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+baudrate (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+This function changes the baudrate. The default baudrate is 9600. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em baudrate} & The baudrate M\+A\+C\+RO\+: \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 225 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, F\+P\+\_\+\+B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+C\+MD, fp\+\_\+checksum\+\_\+calc(), fp\+\_\+responsercv(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+\mbox{\Hypertarget{fingerprint_8c_aa9be54c87e43aa5ede07d9a96d7964ee}\label{fingerprint_8c_aa9be54c87e43aa5ede07d9a96d7964ee}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+checksum\+\_\+calc@{fp\+\_\+checksum\+\_\+calc}}
+\index{fp\+\_\+checksum\+\_\+calc@{fp\+\_\+checksum\+\_\+calc}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+checksum\+\_\+calc()}{fp\_checksum\_calc()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+checksum\+\_\+calc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{packet\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function calculates the checksum as specfied in the datasheet of Fingerprint G\+T-\/521\+F32. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The Response/\+Command packet array as per the datasheet of G\+T-\/521\+F32. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The calculated checksum value. 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file fingerprint.\+c.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8c_a65e09b053939131c095fb82cc723e28c}\label{fingerprint_8c_a65e09b053939131c095fb82cc723e28c}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+cmdsend@{fp\+\_\+cmdsend}}
+\index{fp\+\_\+cmdsend@{fp\+\_\+cmdsend}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+cmdsend()}{fp\_cmdsend()}}
+{\footnotesize\ttfamily void fp\+\_\+cmdsend (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{cmd,  }\item[{uint8\+\_\+t}]{param }\end{DoxyParamCaption})}
+
+
+
+This function sends the command to the Fingerprint Sensor G\+T-\/521\+F32 via U\+A\+RT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em cmd} & The Command macro defined in \hyperlink{fingerprint_8h}{fingerprint.\+h} \\
+\hline
+{\em param} & The parameter value required while sending the particular command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+
+
+Referenced by fp\+\_\+capture(), fp\+\_\+close(), fp\+\_\+deleteall(), fp\+\_\+enroll(), fp\+\_\+get\+\_\+enrollcount(), fp\+\_\+identify(), fp\+\_\+isfingerpress(), fp\+\_\+led\+\_\+status(), and fp\+\_\+open().
+
+\mbox{\Hypertarget{fingerprint_8c_af8e8a5f9d9c3c4d20e04f196fac6319e}\label{fingerprint_8c_af8e8a5f9d9c3c4d20e04f196fac6319e}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+deleteid@{fp\+\_\+deleteid}}
+\index{fp\+\_\+deleteid@{fp\+\_\+deleteid}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+deleteid()}{fp\_deleteid()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+deleteid (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+This function deletes the specified Fingerprint ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em id} & The fingerprint ID number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 258 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), F\+P\+\_\+\+D\+E\+L\+E\+T\+E\+I\+D\+\_\+\+C\+MD, fp\+\_\+responsercv(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+\mbox{\Hypertarget{fingerprint_8c_af7949bb7358448b3a0c0c35bb38b1ca2}\label{fingerprint_8c_af7949bb7358448b3a0c0c35bb38b1ca2}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+enroll@{fp\+\_\+enroll}}
+\index{fp\+\_\+enroll@{fp\+\_\+enroll}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+enroll()}{fp\_enroll()}}
+{\footnotesize\ttfamily void fp\+\_\+enroll (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{enroll\+\_\+cmd }\end{DoxyParamCaption})}
+
+
+
+This function enrolls the fingerprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em enroll\+\_\+cmd} & The Enrollment Command Macro\+: F\+P\+\_\+\+E\+N\+R\+O\+L\+L1\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L2\+\_\+\+C\+MD, F\+P\+\_\+\+E\+N\+R\+O\+L\+L3\+\_\+\+C\+MD. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file fingerprint.\+c.
+
+
+
+References F\+P\+\_\+\+B\+E\+S\+T\+\_\+\+I\+M\+A\+GE, fp\+\_\+capture(), fp\+\_\+cmdsend(), fp\+\_\+isfingerpress(), F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, fp\+\_\+responsercv(), and printf.
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8c_a0a7d3becac1489871c2b61c3c7a19a9d}\label{fingerprint_8c_a0a7d3becac1489871c2b61c3c7a19a9d}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+identify@{fp\+\_\+identify}}
+\index{fp\+\_\+identify@{fp\+\_\+identify}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+identify()}{fp\_identify()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+identify (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function identifies the captured fingerprint from the stored fingerprints and returns the ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+Rt line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 324 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+cmdsend(), F\+P\+\_\+\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+MD, F\+P\+\_\+\+N\+O\+P\+A\+R\+AM, and fp\+\_\+responsercv().
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{fingerprint_8c_ad9158c1c6810eb171aee0517bb3bc126}\label{fingerprint_8c_ad9158c1c6810eb171aee0517bb3bc126}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+interrupt\+\_\+config@{fp\+\_\+interrupt\+\_\+config}}
+\index{fp\+\_\+interrupt\+\_\+config@{fp\+\_\+interrupt\+\_\+config}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+interrupt\+\_\+config()}{fp\_interrupt\_config()}}
+{\footnotesize\ttfamily void fp\+\_\+interrupt\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes and enables the required G\+P\+IO pins interrupts for fingerprint sensor G\+T-\/521\+F32. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+interrupt\+\_\+enable(), F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, and fp\+\_\+irqhandler().
+
+\mbox{\Hypertarget{fingerprint_8c_a44c7746e37315b87870038bbceb4a541}\label{fingerprint_8c_a44c7746e37315b87870038bbceb4a541}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+irqhandler@{fp\+\_\+irqhandler}}
+\index{fp\+\_\+irqhandler@{fp\+\_\+irqhandler}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+irqhandler()}{fp\_irqhandler()}}
+{\footnotesize\ttfamily void fp\+\_\+irqhandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Callback function for Fingerprint Interrupt Handler. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 379 of file fingerprint.\+c.
+
+
+
+References fp\+\_\+access\+\_\+handle(), F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, F\+P\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, and printf.
+
+
+
+Referenced by fp\+\_\+interrupt\+\_\+config().
+
+\mbox{\Hypertarget{fingerprint_8c_a5b00dcaa19cb946dad89d5c051deca00}\label{fingerprint_8c_a5b00dcaa19cb946dad89d5c051deca00}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+responsercv@{fp\+\_\+responsercv}}
+\index{fp\+\_\+responsercv@{fp\+\_\+responsercv}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+responsercv()}{fp\_responsercv()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+responsercv (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function receives the response packet from the Fingerprint Sensor G\+T-\/521\+F32 and returns the output parameter/error code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line being used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file fingerprint.\+c.
+
+
+
+References A\+CK, N\+A\+CK, R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE, and temp().
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+capture(), fp\+\_\+close(), fp\+\_\+deleteall(), fp\+\_\+deleteid(), fp\+\_\+enroll(), fp\+\_\+get\+\_\+enrollcount(), fp\+\_\+identify(), fp\+\_\+isfingerpress(), fp\+\_\+led\+\_\+status(), fp\+\_\+open(), fp\+\_\+start\+\_\+enroll(), and fp\+\_\+verify().
+
+\mbox{\Hypertarget{fingerprint_8c_ac70f7e86b9c763060e4a937e61aa15ec}\label{fingerprint_8c_ac70f7e86b9c763060e4a937e61aa15ec}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+start\+\_\+enroll@{fp\+\_\+start\+\_\+enroll}}
+\index{fp\+\_\+start\+\_\+enroll@{fp\+\_\+start\+\_\+enroll}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+start\+\_\+enroll()}{fp\_start\_enroll()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+start\+\_\+enroll (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{new\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+This function Starts the fingerprint Enrollment process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT lune used. \\
+\hline
+{\em new\+\_\+id} & The ID number for the fingerprint. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), F\+P\+\_\+\+E\+N\+R\+O\+L\+L\+S\+T\+A\+R\+T\+\_\+\+C\+MD, fp\+\_\+responsercv(), P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+
+
+
+Referenced by add\+\_\+fingerprint().
+
+\mbox{\Hypertarget{fingerprint_8c_a5bb490d64570008a03cc184ed1ad6b48}\label{fingerprint_8c_a5bb490d64570008a03cc184ed1ad6b48}} 
+\index{fingerprint.\+c@{fingerprint.\+c}!fp\+\_\+verify@{fp\+\_\+verify}}
+\index{fp\+\_\+verify@{fp\+\_\+verify}!fingerprint.\+c@{fingerprint.\+c}}
+\subsubsection{\texorpdfstring{fp\+\_\+verify()}{fp\_verify()}}
+{\footnotesize\ttfamily uint16\+\_\+t fp\+\_\+verify (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint16\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+This function verifies the latest captured fingerprint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em id} & The ID to be compared with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The error code or output parameter in case of N\+A\+C\+K/\+A\+CK respectively. 
+\end{DoxyReturn}
+
+
+Definition at line 291 of file fingerprint.\+c.
+
+
+
+References C\+H\+E\+C\+K\+S\+U\+M\+\_\+\+B\+Y\+T\+ES, C\+M\+D\+\_\+\+C\+O\+D\+E\+\_\+\+M\+S\+B\+Y\+TE, C\+O\+M\+M\+A\+N\+D\+\_\+\+S\+I\+ZE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+L\+S\+B\+Y\+TE, D\+E\+V\+I\+C\+E\+I\+D\+\_\+\+M\+S\+B\+Y\+TE, fp\+\_\+checksum\+\_\+calc(), fp\+\_\+responsercv(), F\+P\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+MD, P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+Y\+T\+ES, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E1, S\+T\+A\+R\+T\+\_\+\+C\+O\+D\+E2, and uart\+\_\+busy().
+

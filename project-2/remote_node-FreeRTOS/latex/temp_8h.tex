@@ -1,0 +1,161 @@
+\hypertarget{temp_8h}{}\section{inc/temp.h File Reference}
+\label{temp_8h}\index{inc/temp.\+h@{inc/temp.\+h}}
+
+
+Header file for \hyperlink{temp_8c}{temp.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{temp_8h_a2675eee3a5655765963703bb567ae5d0}{C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP}~(0x00)
+\item 
+\#define \hyperlink{temp_8h_a5ac6094b45fdc3c394b2c6170e4fb15f}{S\+L\+A\+V\+E\+\_\+\+A\+D\+DR}~(0x48)
+\item 
+\#define \hyperlink{temp_8h_a4679d8ea8690999a6c6c7c0cb245c879}{T\+H\+R\+E\+S\+H\+O\+LD}~(25)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{temp_8h_aa9201c454ce559008000b0e7c63d920d}{temptask\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em This function creates Temperature Task. \end{DoxyCompactList}\item 
+static void \hyperlink{temp_8h_a41c3eb9071828956881e95910ef6b274}{temp} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{temp_8h_a29ac068fa7284a104f9b6552f4778504}{temp\+\_\+send} (void)
+\begin{DoxyCompactList}\small\item\em The function receives data from the temperature sensor and sends it to the logger task via message queue. \end{DoxyCompactList}\item 
+float \hyperlink{temp_8h_ae8d9420e1c899877c46e57e70502336e}{temp\+\_\+read} (void)
+\begin{DoxyCompactList}\small\item\em This function reads 2 byte Temperature register using I2C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{temp_8c}{temp.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to Temperature functionality. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Satya Mehta 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/14/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{temp_8h_a2675eee3a5655765963703bb567ae5d0}\label{temp_8h_a2675eee3a5655765963703bb567ae5d0}} 
+\index{temp.\+h@{temp.\+h}!C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP@{C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP}}
+\index{C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP@{C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP}!temp.\+h@{temp.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP}{CONFIG\_TEMP}}
+{\footnotesize\ttfamily \#define C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP~(0x00)}
+
+
+
+Definition at line 20 of file temp.\+h.
+
+
+
+Referenced by temp\+\_\+write().
+
+\mbox{\Hypertarget{temp_8h_a5ac6094b45fdc3c394b2c6170e4fb15f}\label{temp_8h_a5ac6094b45fdc3c394b2c6170e4fb15f}} 
+\index{temp.\+h@{temp.\+h}!S\+L\+A\+V\+E\+\_\+\+A\+D\+DR@{S\+L\+A\+V\+E\+\_\+\+A\+D\+DR}}
+\index{S\+L\+A\+V\+E\+\_\+\+A\+D\+DR@{S\+L\+A\+V\+E\+\_\+\+A\+D\+DR}!temp.\+h@{temp.\+h}}
+\subsubsection{\texorpdfstring{S\+L\+A\+V\+E\+\_\+\+A\+D\+DR}{SLAVE\_ADDR}}
+{\footnotesize\ttfamily \#define S\+L\+A\+V\+E\+\_\+\+A\+D\+DR~(0x48)}
+
+
+
+Definition at line 21 of file temp.\+h.
+
+
+
+Referenced by temp\+\_\+read(), and temp\+\_\+write().
+
+\mbox{\Hypertarget{temp_8h_a4679d8ea8690999a6c6c7c0cb245c879}\label{temp_8h_a4679d8ea8690999a6c6c7c0cb245c879}} 
+\index{temp.\+h@{temp.\+h}!T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{T\+H\+R\+E\+S\+H\+O\+LD@{T\+H\+R\+E\+S\+H\+O\+LD}!temp.\+h@{temp.\+h}}
+\subsubsection{\texorpdfstring{T\+H\+R\+E\+S\+H\+O\+LD}{THRESHOLD}}
+{\footnotesize\ttfamily \#define T\+H\+R\+E\+S\+H\+O\+LD~(25)}
+
+
+
+Definition at line 22 of file temp.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{temp_8h_a41c3eb9071828956881e95910ef6b274}\label{temp_8h_a41c3eb9071828956881e95910ef6b274}} 
+\index{temp.\+h@{temp.\+h}!temp@{temp}}
+\index{temp@{temp}!temp.\+h@{temp.\+h}}
+\subsubsection{\texorpdfstring{temp()}{temp()}}
+{\footnotesize\ttfamily static void \hyperlink{structtemp}{temp} (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{temp_8h_ae8d9420e1c899877c46e57e70502336e}\label{temp_8h_ae8d9420e1c899877c46e57e70502336e}} 
+\index{temp.\+h@{temp.\+h}!temp\+\_\+read@{temp\+\_\+read}}
+\index{temp\+\_\+read@{temp\+\_\+read}!temp.\+h@{temp.\+h}}
+\subsubsection{\texorpdfstring{temp\+\_\+read()}{temp\_read()}}
+{\footnotesize\ttfamily float temp\+\_\+read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function reads 2 byte Temperature register using I2C. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file temp.\+c.
+
+
+
+References S\+L\+A\+V\+E\+\_\+\+A\+D\+DR, temp(), and temp\+\_\+write().
+
+
+
+Referenced by temp\+\_\+send().
+
+\mbox{\Hypertarget{temp_8h_a29ac068fa7284a104f9b6552f4778504}\label{temp_8h_a29ac068fa7284a104f9b6552f4778504}} 
+\index{temp.\+h@{temp.\+h}!temp\+\_\+send@{temp\+\_\+send}}
+\index{temp\+\_\+send@{temp\+\_\+send}!temp.\+h@{temp.\+h}}
+\subsubsection{\texorpdfstring{temp\+\_\+send()}{temp\_send()}}
+{\footnotesize\ttfamily void temp\+\_\+send (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The function receives data from the temperature sensor and sends it to the logger task via message queue. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file temp.\+c.
+
+
+
+References g\+\_\+qsem, g\+\_\+uartsem, nrf\+\_\+log\+\_\+mq, T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID, and temp\+\_\+read().
+
+\mbox{\Hypertarget{temp_8h_aa9201c454ce559008000b0e7c63d920d}\label{temp_8h_aa9201c454ce559008000b0e7c63d920d}} 
+\index{temp.\+h@{temp.\+h}!temptask\+\_\+init@{temptask\+\_\+init}}
+\index{temptask\+\_\+init@{temptask\+\_\+init}!temp.\+h@{temp.\+h}}
+\subsubsection{\texorpdfstring{temptask\+\_\+init()}{temptask\_init()}}
+{\footnotesize\ttfamily uint8\+\_\+t temptask\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function creates Temperature Task. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file temp.\+c.
+
+
+
+References L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE.
+

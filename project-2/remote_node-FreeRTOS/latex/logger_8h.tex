@@ -1,0 +1,97 @@
+\hypertarget{logger_8h}{}\section{inc/logger.h File Reference}
+\label{logger_8h}\index{inc/logger.\+h@{inc/logger.\+h}}
+
+
+Header file for \hyperlink{logger_8c}{logger.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{logger_8h_a12207a07f7d1104327eef0ec6414c01d}{nrf\+\_\+loggertask\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em The function creates the Logger Task. \end{DoxyCompactList}\item 
+static void \hyperlink{logger_8h_a6fd3a4c3045fef6becc60273283b062d}{nrf\+\_\+logger} (void $\ast$pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em The Callback function for Logger Task. \end{DoxyCompactList}\item 
+void \hyperlink{logger_8h_aca1670b34ed04c48055d6d9d02111f7e}{nrf\+\_\+log} (void)
+\begin{DoxyCompactList}\small\item\em This function receives all the data from other tasks via message queues and logs the data to the host console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{logger_8c}{logger.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to logging functionality. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/13/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{logger_8h_aca1670b34ed04c48055d6d9d02111f7e}\label{logger_8h_aca1670b34ed04c48055d6d9d02111f7e}} 
+\index{logger.\+h@{logger.\+h}!nrf\+\_\+log@{nrf\+\_\+log}}
+\index{nrf\+\_\+log@{nrf\+\_\+log}!logger.\+h@{logger.\+h}}
+\subsubsection{\texorpdfstring{nrf\+\_\+log()}{nrf\_log()}}
+{\footnotesize\ttfamily void nrf\+\_\+log (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function receives all the data from other tasks via message queues and logs the data to the host console. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file logger.\+c.
+
+
+
+References g\+\_\+uartsem, L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID, nrf\+\_\+log\+\_\+mq, R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID, and T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID.
+
+
+
+Referenced by nrf\+\_\+logger().
+
+\mbox{\Hypertarget{logger_8h_a6fd3a4c3045fef6becc60273283b062d}\label{logger_8h_a6fd3a4c3045fef6becc60273283b062d}} 
+\index{logger.\+h@{logger.\+h}!nrf\+\_\+logger@{nrf\+\_\+logger}}
+\index{nrf\+\_\+logger@{nrf\+\_\+logger}!logger.\+h@{logger.\+h}}
+\subsubsection{\texorpdfstring{nrf\+\_\+logger()}{nrf\_logger()}}
+{\footnotesize\ttfamily static void nrf\+\_\+logger (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The Callback function for Logger Task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameters} & Not in use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{logger_8h_a12207a07f7d1104327eef0ec6414c01d}\label{logger_8h_a12207a07f7d1104327eef0ec6414c01d}} 
+\index{logger.\+h@{logger.\+h}!nrf\+\_\+loggertask\+\_\+init@{nrf\+\_\+loggertask\+\_\+init}}
+\index{nrf\+\_\+loggertask\+\_\+init@{nrf\+\_\+loggertask\+\_\+init}!logger.\+h@{logger.\+h}}
+\subsubsection{\texorpdfstring{nrf\+\_\+loggertask\+\_\+init()}{nrf\_loggertask\_init()}}
+{\footnotesize\ttfamily uint8\+\_\+t nrf\+\_\+loggertask\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The function creates the Logger Task. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Returns if the Task initialization is successful. 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file logger.\+c.
+
+
+
+References L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE, and nrf\+\_\+logger().
+

@@ -1,0 +1,413 @@
+\hypertarget{nrf__driver_8c}{}\section{src/nrf\+\_\+driver.c File Reference}
+\label{nrf__driver_8c}\index{src/nrf\+\_\+driver.\+c@{src/nrf\+\_\+driver.\+c}}
+
+
+This file consists of all the functions required for N\+R\+F24\+L01+ driver.  
+
+
+{\ttfamily \#include \char`\"{}inc/nrf\+\_\+driver.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{nrf__driver_8c_a46a2f3ab198a79f223d1eb9483e9eb8d}{nrf\+\_\+gpio\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes all the G\+P\+I\+Os required by the N\+R\+F25\+L01+. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a9a325080cf41867628e5d95097963c27}{nrf\+\_\+interrupt\+\_\+enable} (void)
+\begin{DoxyCompactList}\small\item\em This function configures and enables the G\+P\+IO interrupt for N\+R\+F24\+L01+. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a583af0cd7ef2bb6563f469e219b2c249}{nrf\+\_\+write\+\_\+reg} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi, uint8\+\_\+t reg, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em This function writes to a register in the N\+R\+F24\+L01+. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{nrf__driver_8c_aa7813f43e890c1f61a06f24865aa71b4}{nrf\+\_\+read\+\_\+reg} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em This function reads the value from the register specified by the parameter {\bfseries reg}. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_ae49e3dc1dba04af38b5bbf26baf0937e}{nrf\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em This function configures the register value for N\+R\+F24\+L01+. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a846ef214cd629b9fd4da0d3a4c1b091c}{nrf\+\_\+config\+\_\+mode} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi, \hyperlink{nrf__driver_8h_a8eed5a50145baadb7eb8bf497dbb06e3}{modes\+\_\+t} mode)
+\begin{DoxyCompactList}\small\item\em This function configures the N\+R\+F24\+L01+ in \hyperlink{struct_t_x}{TX} or \hyperlink{struct_r_x}{RX} Mode. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a9c6bbb5f30692a640260860af7219104}{nrf\+\_\+packet\+\_\+send} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi)
+\begin{DoxyCompactList}\small\item\em This function sends the packet data. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a4099fc2fef18753a0d5cf3012dcbcab2}{nrf\+\_\+packet\+\_\+rcv} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi)
+\begin{DoxyCompactList}\small\item\em This function receives the packet data. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_adce2e0ca73ee6899d2bd0049a552f58c}{nrf\+\_\+write\+\_\+\+T\+Xaddr} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi, \hyperlink{struct_t_x}{TX} addr)
+\begin{DoxyCompactList}\small\item\em This function assigns the specified \hyperlink{struct_t_x}{TX} pipe address. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a232161e29bfe81695558a7d84e82680f}{nrf\+\_\+read\+\_\+\+T\+Xaddr} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi)
+\begin{DoxyCompactList}\small\item\em This function reads the specified \hyperlink{struct_t_x}{TX} Pipe address. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a55c3570ff7fe5fc1ce765816903a93b3}{nrf\+\_\+write\+\_\+\+R\+Xaddr} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi, uint8\+\_\+t reg, \hyperlink{struct_r_x}{RX} addr)
+\begin{DoxyCompactList}\small\item\em This function assigns the specified \hyperlink{struct_r_x}{RX} pipe address. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_af974a92ab834aaa7575da7c612ee768b}{nrf\+\_\+read\+\_\+\+R\+Xaddr} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi, uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em This function reads the specified \hyperlink{struct_r_x}{RX} pipe address. \end{DoxyCompactList}\item 
+void \hyperlink{nrf__driver_8c_a073806e85c367bf6737859eba2d82314}{nrf\+\_\+irqhandler} (void)
+\begin{DoxyCompactList}\small\item\em Callback Function for N\+R\+F24\+L01+ Interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for N\+R\+F24\+L01+ driver. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/12/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{nrf__driver_8c_ae49e3dc1dba04af38b5bbf26baf0937e}\label{nrf__driver_8c_ae49e3dc1dba04af38b5bbf26baf0937e}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+config@{nrf\+\_\+config}}
+\index{nrf\+\_\+config@{nrf\+\_\+config}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+config()}{nrf\_config()}}
+{\footnotesize\ttfamily void nrf\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function configures the register value for N\+R\+F24\+L01+. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file nrf\+\_\+driver.\+c.
+
+
+
+References mode\+\_\+tx, nrf\+\_\+config\+\_\+mode(), N\+R\+F\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+R\+X\+P\+I\+P\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+R\+EG, nrf\+\_\+read\+\_\+reg(), nrf\+\_\+read\+\_\+\+R\+Xaddr(), nrf\+\_\+read\+\_\+\+T\+Xaddr(), N\+R\+F\+\_\+\+R\+X\+\_\+\+A\+D\+D\+R\+\_\+\+P0\+\_\+\+R\+EG, N\+R\+F\+\_\+\+R\+X\+\_\+\+B\+Y\+T\+E\+S\+\_\+\+P0\+\_\+\+R\+EG, nrf\+\_\+write\+\_\+reg(), nrf\+\_\+write\+\_\+\+R\+Xaddr(), nrf\+\_\+write\+\_\+\+T\+Xaddr(), printf, R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD, R\+X\+::rx\+\_\+pipe\+\_\+address, S\+P\+I2, T\+X\+::tx\+\_\+pipe\+\_\+address, and W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD.
+
+\mbox{\Hypertarget{nrf__driver_8c_a846ef214cd629b9fd4da0d3a4c1b091c}\label{nrf__driver_8c_a846ef214cd629b9fd4da0d3a4c1b091c}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+config\+\_\+mode@{nrf\+\_\+config\+\_\+mode}}
+\index{nrf\+\_\+config\+\_\+mode@{nrf\+\_\+config\+\_\+mode}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+config\+\_\+mode()}{nrf\_config\_mode()}}
+{\footnotesize\ttfamily void nrf\+\_\+config\+\_\+mode (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi,  }\item[{\hyperlink{nrf__driver_8h_a8eed5a50145baadb7eb8bf497dbb06e3}{modes\+\_\+t}}]{mode }\end{DoxyParamCaption})}
+
+
+
+This function configures the N\+R\+F24\+L01+ in \hyperlink{struct_t_x}{TX} or \hyperlink{struct_r_x}{RX} Mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+{\em mode} & The mode specified by the user. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 190 of file nrf\+\_\+driver.\+c.
+
+
+
+References ce\+\_\+status(), F\+L\+U\+S\+H\+\_\+\+R\+X\+\_\+\+C\+MD, F\+L\+U\+S\+H\+\_\+\+T\+X\+\_\+\+C\+MD, H\+I\+GH, mode\+\_\+rx, mode\+\_\+tx, N\+R\+F\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+R\+EG, N\+R\+F\+\_\+\+E\+N\+\_\+\+A\+A\+\_\+\+R\+EG, nrf\+\_\+packet\+\_\+send(), nrf\+\_\+read\+\_\+reg(), nrf\+\_\+write\+\_\+cmd(), nrf\+\_\+write\+\_\+reg(), printf, R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD, S\+P\+I2, and W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD.
+
+
+
+Referenced by nrf\+\_\+config().
+
+\mbox{\Hypertarget{nrf__driver_8c_a46a2f3ab198a79f223d1eb9483e9eb8d}\label{nrf__driver_8c_a46a2f3ab198a79f223d1eb9483e9eb8d}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+gpio\+\_\+init@{nrf\+\_\+gpio\+\_\+init}}
+\index{nrf\+\_\+gpio\+\_\+init@{nrf\+\_\+gpio\+\_\+init}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+gpio\+\_\+init()}{nrf\_gpio\_init()}}
+{\footnotesize\ttfamily void nrf\+\_\+gpio\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes all the G\+P\+I\+Os required by the N\+R\+F25\+L01+. 
+
+The Pins are\+: Chip Enable, Chip Select and I\+RQ pin. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file nrf\+\_\+driver.\+c.
+
+
+
+References N\+R\+F\+\_\+\+C\+H\+I\+P\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+P\+IN, N\+R\+F\+\_\+\+C\+H\+I\+P\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+P\+O\+RT, N\+R\+F\+\_\+\+C\+H\+I\+P\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+P\+IN, N\+R\+F\+\_\+\+C\+H\+I\+P\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+P\+O\+RT, and nrf\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{nrf__driver_8c_a9a325080cf41867628e5d95097963c27}\label{nrf__driver_8c_a9a325080cf41867628e5d95097963c27}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+interrupt\+\_\+enable@{nrf\+\_\+interrupt\+\_\+enable}}
+\index{nrf\+\_\+interrupt\+\_\+enable@{nrf\+\_\+interrupt\+\_\+enable}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+interrupt\+\_\+enable()}{nrf\_interrupt\_enable()}}
+{\footnotesize\ttfamily void nrf\+\_\+interrupt\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function configures and enables the G\+P\+IO interrupt for N\+R\+F24\+L01+. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file nrf\+\_\+driver.\+c.
+
+
+
+References N\+R\+F\+\_\+\+I\+R\+Q\+\_\+\+P\+IN, N\+R\+F\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, and nrf\+\_\+irqhandler().
+
+
+
+Referenced by nrf\+\_\+gpio\+\_\+init().
+
+\mbox{\Hypertarget{nrf__driver_8c_a073806e85c367bf6737859eba2d82314}\label{nrf__driver_8c_a073806e85c367bf6737859eba2d82314}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+irqhandler@{nrf\+\_\+irqhandler}}
+\index{nrf\+\_\+irqhandler@{nrf\+\_\+irqhandler}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+irqhandler()}{nrf\_irqhandler()}}
+{\footnotesize\ttfamily void nrf\+\_\+irqhandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Callback Function for N\+R\+F24\+L01+ Interrupt. 
+
+This function is called whenever there is an interrupt on the I\+RQ pin of N\+R\+F24\+L01+. The interrupt is due to data received and transmitted. \begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 369 of file nrf\+\_\+driver.\+c.
+
+
+
+References N\+R\+F\+\_\+\+I\+R\+Q\+\_\+\+P\+O\+RT, N\+R\+F\+\_\+\+M\+A\+X\+\_\+\+R\+T\+\_\+\+M\+A\+SK, nrf\+\_\+packet\+\_\+rcv(), nrf\+\_\+read\+\_\+reg(), N\+R\+F\+\_\+\+R\+X\+\_\+\+D\+R\+\_\+\+M\+A\+SK, N\+R\+F\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+EG, N\+R\+F\+\_\+\+T\+X\+\_\+\+D\+S\+\_\+\+M\+A\+SK, nrf\+\_\+write\+\_\+reg(), printf, R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD, R\+\_\+\+R\+X\+\_\+\+P\+A\+Y\+L\+O\+D\+\_\+\+C\+MD, S\+P\+I2, spi\+\_\+dummy\+\_\+transfer(), spi\+\_\+transfer(), and W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD.
+
+
+
+Referenced by nrf\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{nrf__driver_8c_a4099fc2fef18753a0d5cf3012dcbcab2}\label{nrf__driver_8c_a4099fc2fef18753a0d5cf3012dcbcab2}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+packet\+\_\+rcv@{nrf\+\_\+packet\+\_\+rcv}}
+\index{nrf\+\_\+packet\+\_\+rcv@{nrf\+\_\+packet\+\_\+rcv}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+packet\+\_\+rcv()}{nrf\_packet\_rcv()}}
+{\footnotesize\ttfamily void nrf\+\_\+packet\+\_\+rcv (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi }\end{DoxyParamCaption})}
+
+
+
+This function receives the packet data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 281 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, printf, R\+\_\+\+R\+X\+\_\+\+P\+A\+Y\+L\+O\+D\+\_\+\+C\+MD, S\+P\+I2, and spi\+\_\+transfer().
+
+
+
+Referenced by nrf\+\_\+irqhandler().
+
+\mbox{\Hypertarget{nrf__driver_8c_a9c6bbb5f30692a640260860af7219104}\label{nrf__driver_8c_a9c6bbb5f30692a640260860af7219104}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+packet\+\_\+send@{nrf\+\_\+packet\+\_\+send}}
+\index{nrf\+\_\+packet\+\_\+send@{nrf\+\_\+packet\+\_\+send}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+packet\+\_\+send()}{nrf\_packet\_send()}}
+{\footnotesize\ttfamily void nrf\+\_\+packet\+\_\+send (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi }\end{DoxyParamCaption})}
+
+
+
+This function sends the packet data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 248 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, spi\+\_\+transfer(), and W\+\_\+\+T\+X\+\_\+\+P\+A\+Y\+L\+O\+D\+\_\+\+C\+MD.
+
+
+
+Referenced by nrf\+\_\+config\+\_\+mode().
+
+\mbox{\Hypertarget{nrf__driver_8c_aa7813f43e890c1f61a06f24865aa71b4}\label{nrf__driver_8c_aa7813f43e890c1f61a06f24865aa71b4}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+read\+\_\+reg@{nrf\+\_\+read\+\_\+reg}}
+\index{nrf\+\_\+read\+\_\+reg@{nrf\+\_\+read\+\_\+reg}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+read\+\_\+reg()}{nrf\_read\_reg()}}
+{\footnotesize\ttfamily uint8\+\_\+t nrf\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi,  }\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+
+
+This function reads the value from the register specified by the parameter {\bfseries reg}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+{\em reg} & The Register value to read data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The value read from the register {\bfseries reg}. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, spi\+\_\+dummy\+\_\+transfer(), and spi\+\_\+transfer().
+
+
+
+Referenced by nrf\+\_\+config(), nrf\+\_\+config\+\_\+mode(), and nrf\+\_\+irqhandler().
+
+\mbox{\Hypertarget{nrf__driver_8c_af974a92ab834aaa7575da7c612ee768b}\label{nrf__driver_8c_af974a92ab834aaa7575da7c612ee768b}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+read\+\_\+\+R\+Xaddr@{nrf\+\_\+read\+\_\+\+R\+Xaddr}}
+\index{nrf\+\_\+read\+\_\+\+R\+Xaddr@{nrf\+\_\+read\+\_\+\+R\+Xaddr}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+read\+\_\+\+R\+Xaddr()}{nrf\_read\_RXaddr()}}
+{\footnotesize\ttfamily void nrf\+\_\+read\+\_\+\+R\+Xaddr (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi,  }\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+
+
+This function reads the specified \hyperlink{struct_r_x}{RX} pipe address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+{\em reg} & The Register address of the P\+I\+PE. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 350 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, printf, R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD, spi\+\_\+dummy\+\_\+transfer(), and spi\+\_\+transfer().
+
+
+
+Referenced by nrf\+\_\+config().
+
+\mbox{\Hypertarget{nrf__driver_8c_a232161e29bfe81695558a7d84e82680f}\label{nrf__driver_8c_a232161e29bfe81695558a7d84e82680f}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+read\+\_\+\+T\+Xaddr@{nrf\+\_\+read\+\_\+\+T\+Xaddr}}
+\index{nrf\+\_\+read\+\_\+\+T\+Xaddr@{nrf\+\_\+read\+\_\+\+T\+Xaddr}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+read\+\_\+\+T\+Xaddr()}{nrf\_read\_TXaddr()}}
+{\footnotesize\ttfamily void nrf\+\_\+read\+\_\+\+T\+Xaddr (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi }\end{DoxyParamCaption})}
+
+
+
+This function reads the specified \hyperlink{struct_t_x}{TX} Pipe address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 315 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, N\+R\+F\+\_\+\+T\+X\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG, printf, R\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD, spi\+\_\+dummy\+\_\+transfer(), and spi\+\_\+transfer().
+
+
+
+Referenced by nrf\+\_\+config().
+
+\mbox{\Hypertarget{nrf__driver_8c_a583af0cd7ef2bb6563f469e219b2c249}\label{nrf__driver_8c_a583af0cd7ef2bb6563f469e219b2c249}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+write\+\_\+reg@{nrf\+\_\+write\+\_\+reg}}
+\index{nrf\+\_\+write\+\_\+reg@{nrf\+\_\+write\+\_\+reg}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+write\+\_\+reg()}{nrf\_write\_reg()}}
+{\footnotesize\ttfamily void nrf\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi,  }\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+This function writes to a register in the N\+R\+F24\+L01+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+{\em reg} & The Register value to write to. \\
+\hline
+{\em value} & The value to write to the Register. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, and spi\+\_\+transfer().
+
+
+
+Referenced by nrf\+\_\+config(), nrf\+\_\+config\+\_\+mode(), and nrf\+\_\+irqhandler().
+
+\mbox{\Hypertarget{nrf__driver_8c_a55c3570ff7fe5fc1ce765816903a93b3}\label{nrf__driver_8c_a55c3570ff7fe5fc1ce765816903a93b3}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+write\+\_\+\+R\+Xaddr@{nrf\+\_\+write\+\_\+\+R\+Xaddr}}
+\index{nrf\+\_\+write\+\_\+\+R\+Xaddr@{nrf\+\_\+write\+\_\+\+R\+Xaddr}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+write\+\_\+\+R\+Xaddr()}{nrf\_write\_RXaddr()}}
+{\footnotesize\ttfamily void nrf\+\_\+write\+\_\+\+R\+Xaddr (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi,  }\item[{uint8\+\_\+t}]{reg,  }\item[{\hyperlink{struct_r_x}{RX}}]{addr }\end{DoxyParamCaption})}
+
+
+
+This function assigns the specified \hyperlink{struct_r_x}{RX} pipe address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+{\em reg} & The Register address of the P\+I\+PE. \\
+\hline
+{\em addr} & The object of structure \hyperlink{struct_r_x}{RX}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 333 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, R\+X\+::rx\+\_\+pipe\+\_\+address, spi\+\_\+transfer(), and W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD.
+
+
+
+Referenced by nrf\+\_\+config().
+
+\mbox{\Hypertarget{nrf__driver_8c_adce2e0ca73ee6899d2bd0049a552f58c}\label{nrf__driver_8c_adce2e0ca73ee6899d2bd0049a552f58c}} 
+\index{nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}!nrf\+\_\+write\+\_\+\+T\+Xaddr@{nrf\+\_\+write\+\_\+\+T\+Xaddr}}
+\index{nrf\+\_\+write\+\_\+\+T\+Xaddr@{nrf\+\_\+write\+\_\+\+T\+Xaddr}!nrf\+\_\+driver.\+c@{nrf\+\_\+driver.\+c}}
+\subsubsection{\texorpdfstring{nrf\+\_\+write\+\_\+\+T\+Xaddr()}{nrf\_write\_TXaddr()}}
+{\footnotesize\ttfamily void nrf\+\_\+write\+\_\+\+T\+Xaddr (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi,  }\item[{\hyperlink{struct_t_x}{TX}}]{addr }\end{DoxyParamCaption})}
+
+
+
+This function assigns the specified \hyperlink{struct_t_x}{TX} pipe address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used \\
+\hline
+{\em addr} & The object of structure \hyperlink{struct_t_x}{TX}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 299 of file nrf\+\_\+driver.\+c.
+
+
+
+References csn\+\_\+status(), H\+I\+GH, L\+OW, N\+R\+F\+\_\+\+T\+X\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG, spi\+\_\+transfer(), T\+X\+::tx\+\_\+pipe\+\_\+address, and W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+C\+MD.
+
+
+
+Referenced by nrf\+\_\+config().
+

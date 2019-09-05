@@ -1,0 +1,152 @@
+\hypertarget{spi_8c}{}\section{src/spi.c File Reference}
+\label{spi_8c}\index{src/spi.\+c@{src/spi.\+c}}
+
+
+This file consists of all the functions required for S\+PI interfacing.  
+
+
+{\ttfamily \#include \char`\"{}inc/spi.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{spi_8c_a7dbbafb70cebe270ca4f8494c17d958d}{spi\+\_\+config} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} ssi\+\_\+x)
+\begin{DoxyCompactList}\small\item\em This function configures the S\+PI line as per the parameters. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{spi_8c_a405efb20abca5d728ba32aba56723102}{spi\+\_\+transfer} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em This function transfers a value on the M\+O\+SI line and reads the data on the M\+I\+SO line. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{spi_8c_a33d0c312bb3d752f8e48abba2eedddab}{spi\+\_\+dummy\+\_\+transfer} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi)
+\begin{DoxyCompactList}\small\item\em This function transfers a NO O\+P\+E\+R\+A\+T\+I\+ON Command and reads data from the M\+I\+SO line. \end{DoxyCompactList}\item 
+void \hyperlink{spi_8c_a410917834e60f39dd58213a9db49937a}{spi\+\_\+busy} (\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t} spi)
+\begin{DoxyCompactList}\small\item\em This function checks the S\+PI line if it is busy or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for S\+PI interfacing. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/16/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{spi_8c_a410917834e60f39dd58213a9db49937a}\label{spi_8c_a410917834e60f39dd58213a9db49937a}} 
+\index{spi.\+c@{spi.\+c}!spi\+\_\+busy@{spi\+\_\+busy}}
+\index{spi\+\_\+busy@{spi\+\_\+busy}!spi.\+c@{spi.\+c}}
+\subsubsection{\texorpdfstring{spi\+\_\+busy()}{spi\_busy()}}
+{\footnotesize\ttfamily void spi\+\_\+busy (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function checks the S\+PI line if it is busy or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file spi.\+c.
+
+
+
+Referenced by spi\+\_\+transfer().
+
+\mbox{\Hypertarget{spi_8c_a7dbbafb70cebe270ca4f8494c17d958d}\label{spi_8c_a7dbbafb70cebe270ca4f8494c17d958d}} 
+\index{spi.\+c@{spi.\+c}!spi\+\_\+config@{spi\+\_\+config}}
+\index{spi\+\_\+config@{spi\+\_\+config}!spi.\+c@{spi.\+c}}
+\subsubsection{\texorpdfstring{spi\+\_\+config()}{spi\_config()}}
+{\footnotesize\ttfamily void spi\+\_\+config (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{ssi\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+This function configures the S\+PI line as per the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ssi\+\_\+x} & The S\+PI line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file spi.\+c.
+
+
+
+References g\+\_\+ui32\+Sys\+Clock, S\+P\+I0, S\+P\+I1, and S\+P\+I2.
+
+\mbox{\Hypertarget{spi_8c_a33d0c312bb3d752f8e48abba2eedddab}\label{spi_8c_a33d0c312bb3d752f8e48abba2eedddab}} 
+\index{spi.\+c@{spi.\+c}!spi\+\_\+dummy\+\_\+transfer@{spi\+\_\+dummy\+\_\+transfer}}
+\index{spi\+\_\+dummy\+\_\+transfer@{spi\+\_\+dummy\+\_\+transfer}!spi.\+c@{spi.\+c}}
+\subsubsection{\texorpdfstring{spi\+\_\+dummy\+\_\+transfer()}{spi\_dummy\_transfer()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+dummy\+\_\+transfer (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi }\end{DoxyParamCaption})}
+
+
+
+This function transfers a NO O\+P\+E\+R\+A\+T\+I\+ON Command and reads data from the M\+I\+SO line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The value read from the M\+I\+SO line on the specified S\+PI. 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file spi.\+c.
+
+
+
+References spi\+\_\+transfer().
+
+
+
+Referenced by nrf\+\_\+get\+\_\+statusreg(), nrf\+\_\+irqhandler(), nrf\+\_\+read\+\_\+reg(), nrf\+\_\+read\+\_\+\+R\+Xaddr(), nrf\+\_\+read\+\_\+\+T\+Xaddr(), and nrf\+\_\+write\+\_\+cmd().
+
+\mbox{\Hypertarget{spi_8c_a405efb20abca5d728ba32aba56723102}\label{spi_8c_a405efb20abca5d728ba32aba56723102}} 
+\index{spi.\+c@{spi.\+c}!spi\+\_\+transfer@{spi\+\_\+transfer}}
+\index{spi\+\_\+transfer@{spi\+\_\+transfer}!spi.\+c@{spi.\+c}}
+\subsubsection{\texorpdfstring{spi\+\_\+transfer()}{spi\_transfer()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+transfer (\begin{DoxyParamCaption}\item[{\hyperlink{spi_8h_a4c4c3893bd4169998937dd7199875d64}{spi\+\_\+t}}]{spi,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+This function transfers a value on the M\+O\+SI line and reads the data on the M\+I\+SO line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spi} & The S\+PI line used. \\
+\hline
+{\em value} & The value transfered on the S\+PI line. This can be a register address or the value to be written to the register value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The value read from the M\+I\+SO line on the specified S\+PI. 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file spi.\+c.
+
+
+
+References S\+P\+I2, and spi\+\_\+busy().
+
+
+
+Referenced by nrf\+\_\+irqhandler(), nrf\+\_\+packet\+\_\+rcv(), nrf\+\_\+packet\+\_\+send(), nrf\+\_\+read\+\_\+reg(), nrf\+\_\+read\+\_\+\+R\+Xaddr(), nrf\+\_\+read\+\_\+\+T\+Xaddr(), nrf\+\_\+write\+\_\+cmd(), nrf\+\_\+write\+\_\+reg(), nrf\+\_\+write\+\_\+\+R\+Xaddr(), nrf\+\_\+write\+\_\+\+T\+Xaddr(), and spi\+\_\+dummy\+\_\+transfer().
+

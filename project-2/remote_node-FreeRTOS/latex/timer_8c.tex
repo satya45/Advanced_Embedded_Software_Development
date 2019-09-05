@@ -1,0 +1,201 @@
+\hypertarget{timer_8c}{}\section{src/timer.c File Reference}
+\label{timer_8c}\index{src/timer.\+c@{src/timer.\+c}}
+
+
+This file consists of all the functions required for Timer initialization, enable and callback functions.  
+
+
+{\ttfamily \#include \char`\"{}inc/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/sync\+\_\+objects.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/keypad.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/delay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/fingerprint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/lcd.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{timer_8c_ad3d424835cdf3dc00ecb5b192eb9d4cb}{timer\+\_\+config} (\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t} timer, uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em This function creates, initializes and enables T\+I\+M\+E\+R0A and T\+I\+M\+E\+R1A. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_aeac25b893d3d7db83d6e9aa8b776fb78}{enable\+\_\+timer\+\_\+int} (\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t} timer)
+\begin{DoxyCompactList}\small\item\em This function enbale the Timer Interrupts. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a9a3c50abbb820b8264d89517258bdda1}{disable\+\_\+timer} (\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t} timer)
+\begin{DoxyCompactList}\small\item\em This function disables the timer and resets it. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a7a48b799a011e757e09e2b045e08324e}{reset\+\_\+timer} (\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t} timer, uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em This function resets the timer to the specified time. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a68c6c6317b4606f2d571a18bbb77bf10}{timer0handler} (void)
+\begin{DoxyCompactList}\small\item\em Callback Function for Temperature Timer(\+T\+I\+M\+E\+R0\+A). \end{DoxyCompactList}\item 
+void \hyperlink{timer_8c_a45687a76d85bc9cff275eb680b7d4ff5}{timer1handler} (void)
+\begin{DoxyCompactList}\small\item\em Callback Function for L\+ED Timer(\+T\+I\+M\+E\+R0\+A). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for Timer initialization, enable and callback functions. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/13/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{timer_8c_a9a3c50abbb820b8264d89517258bdda1}\label{timer_8c_a9a3c50abbb820b8264d89517258bdda1}} 
+\index{timer.\+c@{timer.\+c}!disable\+\_\+timer@{disable\+\_\+timer}}
+\index{disable\+\_\+timer@{disable\+\_\+timer}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{disable\+\_\+timer()}{disable\_timer()}}
+{\footnotesize\ttfamily void disable\+\_\+timer (\begin{DoxyParamCaption}\item[{\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t}}]{timer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function disables the timer and resets it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The enum of type timer\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file timer.\+c.
+
+
+
+Referenced by timer0handler(), timer1handler(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{timer_8c_aeac25b893d3d7db83d6e9aa8b776fb78}\label{timer_8c_aeac25b893d3d7db83d6e9aa8b776fb78}} 
+\index{timer.\+c@{timer.\+c}!enable\+\_\+timer\+\_\+int@{enable\+\_\+timer\+\_\+int}}
+\index{enable\+\_\+timer\+\_\+int@{enable\+\_\+timer\+\_\+int}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{enable\+\_\+timer\+\_\+int()}{enable\_timer\_int()}}
+{\footnotesize\ttfamily void enable\+\_\+timer\+\_\+int (\begin{DoxyParamCaption}\item[{\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t}}]{timer }\end{DoxyParamCaption})}
+
+
+
+This function enbale the Timer Interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The enum of type timer\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file timer.\+c.
+
+
+
+Referenced by packet\+\_\+send\+\_\+uart(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{timer_8c_a7a48b799a011e757e09e2b045e08324e}\label{timer_8c_a7a48b799a011e757e09e2b045e08324e}} 
+\index{timer.\+c@{timer.\+c}!reset\+\_\+timer@{reset\+\_\+timer}}
+\index{reset\+\_\+timer@{reset\+\_\+timer}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{reset\+\_\+timer()}{reset\_timer()}}
+{\footnotesize\ttfamily void reset\+\_\+timer (\begin{DoxyParamCaption}\item[{\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t}}]{timer,  }\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function resets the timer to the specified time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The enum of type timer\+\_\+t. \\
+\hline
+{\em ms} & Timer Period in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file timer.\+c.
+
+
+
+References g\+\_\+ui32\+Sys\+Clock.
+
+
+
+Referenced by timer0handler(), timer1handler(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{timer_8c_a68c6c6317b4606f2d571a18bbb77bf10}\label{timer_8c_a68c6c6317b4606f2d571a18bbb77bf10}} 
+\index{timer.\+c@{timer.\+c}!timer0handler@{timer0handler}}
+\index{timer0handler@{timer0handler}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{timer0handler()}{timer0handler()}}
+{\footnotesize\ttfamily void timer0handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Callback Function for Temperature Timer(\+T\+I\+M\+E\+R0\+A). 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file timer.\+c.
+
+
+
+References disable\+\_\+timer(), P\+A\+C\+K\+E\+T\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+C\+O\+U\+NT, P\+A\+C\+K\+E\+T\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+T\+I\+ME, printf, reset\+\_\+timer(), send\+\_\+failcount, and timer\+\_\+retry.
+
+\mbox{\Hypertarget{timer_8c_a45687a76d85bc9cff275eb680b7d4ff5}\label{timer_8c_a45687a76d85bc9cff275eb680b7d4ff5}} 
+\index{timer.\+c@{timer.\+c}!timer1handler@{timer1handler}}
+\index{timer1handler@{timer1handler}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{timer1handler()}{timer1handler()}}
+{\footnotesize\ttfamily void timer1handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Callback Function for L\+ED Timer(\+T\+I\+M\+E\+R0\+A). 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file timer.\+c.
+
+
+
+References delay\+\_\+ms(), disable\+\_\+timer(), fp\+\_\+interrupt\+\_\+enable(), L\+C\+D\+\_\+write(), otp\+\_\+arr, otp\+\_\+count, otp\+\_\+flag, O\+T\+P\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+I\+ME, printf, reset\+\_\+timer(), and timer\+\_\+otp.
+
+\mbox{\Hypertarget{timer_8c_ad3d424835cdf3dc00ecb5b192eb9d4cb}\label{timer_8c_ad3d424835cdf3dc00ecb5b192eb9d4cb}} 
+\index{timer.\+c@{timer.\+c}!timer\+\_\+config@{timer\+\_\+config}}
+\index{timer\+\_\+config@{timer\+\_\+config}!timer.\+c@{timer.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+config()}{timer\_config()}}
+{\footnotesize\ttfamily void timer\+\_\+config (\begin{DoxyParamCaption}\item[{\hyperlink{timer_8h_a764f517e2e45ad48bcd8b88590ab5276}{timer\+\_\+t}}]{timer,  }\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+
+
+This function creates, initializes and enables T\+I\+M\+E\+R0A and T\+I\+M\+E\+R1A. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & The enum of type timer\+\_\+t. \\
+\hline
+{\em ms} & Timer Period in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file timer.\+c.
+
+
+
+References g\+\_\+ui32\+Sys\+Clock, timer\+\_\+otp, and timer\+\_\+retry.
+

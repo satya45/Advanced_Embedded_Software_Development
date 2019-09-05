@@ -1,0 +1,194 @@
+\hypertarget{keypad_8c}{}\section{src/keypad.c File Reference}
+\label{keypad_8c}\index{src/keypad.\+c@{src/keypad.\+c}}
+
+
+This file consists of all the functions required for the Keypad.  
+
+
+{\ttfamily \#include \char`\"{}inc/keypad.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/delay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/myuart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/packet.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{keypad_8c_a461094c217cbf5c373a5fddba480c585}{keypad\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes G\+P\+I\+Os and the required interrupts. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8c_af6315f72e41186cb737334eb1d52f0c8}{keypad\+\_\+interrupt\+\_\+enable} (void)
+\begin{DoxyCompactList}\small\item\em Enable Interrupts for Keypad Functionality. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8c_ac8764725e4f54346cfa11d2731dfb797}{keypad\+\_\+interrupt\+\_\+disable} (void)
+\begin{DoxyCompactList}\small\item\em Disable Interrupts for Keypad Functionality. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8c_a195b3865aa3f88ac9a559933e218704e}{column\+\_\+handler} (void)
+\begin{DoxyCompactList}\small\item\em Callback function of Column 1 Interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8c_a90abe7784469be2383f343d7e9513904}{keypad\+\_\+button\+\_\+detect} (uint32\+\_\+t column\+\_\+port, uint32\+\_\+t column\+\_\+pin, char \hyperlink{keypad_8c_a3936f089c1aa0cf6b76edb1db84980b0}{keypad\+\_\+digits}\mbox{[}\hyperlink{keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}\mbox{]}\mbox{[}\hyperlink{keypad_8h_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}\mbox{]}, uint8\+\_\+t column)
+\begin{DoxyCompactList}\small\item\em This function detects which key is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{keypad_8c_a3936f089c1aa0cf6b76edb1db84980b0}{keypad\+\_\+digits} \mbox{[}\hyperlink{keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}\mbox{]}\mbox{[}\hyperlink{keypad_8h_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}\mbox{]} = \{\{\textquotesingle{}1\textquotesingle{},\textquotesingle{}2\textquotesingle{},\textquotesingle{}3\textquotesingle{},\textquotesingle{}A\textquotesingle{}\},\{\textquotesingle{}4\textquotesingle{},\textquotesingle{}5\textquotesingle{},\textquotesingle{}6\textquotesingle{},\textquotesingle{}B\textquotesingle{}\},\{\textquotesingle{}7\textquotesingle{},\textquotesingle{}8\textquotesingle{},\textquotesingle{}9\textquotesingle{},\textquotesingle{}C\textquotesingle{}\},\{\textquotesingle{}$\ast$\textquotesingle{},\textquotesingle{}0\textquotesingle{},\textquotesingle{}\#\textquotesingle{},\textquotesingle{}D\textquotesingle{}\}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for the Keypad. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/19/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{keypad_8c_a195b3865aa3f88ac9a559933e218704e}\label{keypad_8c_a195b3865aa3f88ac9a559933e218704e}} 
+\index{keypad.\+c@{keypad.\+c}!column\+\_\+handler@{column\+\_\+handler}}
+\index{column\+\_\+handler@{column\+\_\+handler}!keypad.\+c@{keypad.\+c}}
+\subsubsection{\texorpdfstring{column\+\_\+handler()}{column\_handler()}}
+{\footnotesize\ttfamily void column\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Callback function of Column 1 Interrupt. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1, C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT, C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT, delay\+\_\+ms(), keypad\+\_\+button\+\_\+detect(), keypad\+\_\+digits, L\+C\+D\+\_\+write(), otp\+\_\+arr, otp\+\_\+count, otp\+\_\+flag, O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID, packet\+\_\+make(), packet\+\_\+send\+\_\+uart(), printf, T\+R\+UE, and U\+A\+R\+T\+\_\+\+B\+BG.
+
+
+
+Referenced by keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8c_a90abe7784469be2383f343d7e9513904}\label{keypad_8c_a90abe7784469be2383f343d7e9513904}} 
+\index{keypad.\+c@{keypad.\+c}!keypad\+\_\+button\+\_\+detect@{keypad\+\_\+button\+\_\+detect}}
+\index{keypad\+\_\+button\+\_\+detect@{keypad\+\_\+button\+\_\+detect}!keypad.\+c@{keypad.\+c}}
+\subsubsection{\texorpdfstring{keypad\+\_\+button\+\_\+detect()}{keypad\_button\_detect()}}
+{\footnotesize\ttfamily void keypad\+\_\+button\+\_\+detect (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{column\+\_\+port,  }\item[{uint32\+\_\+t}]{column\+\_\+pin,  }\item[{char}]{keypad\+\_\+digits\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+U\+M\+N\+S\mbox{]},  }\item[{uint8\+\_\+t}]{column }\end{DoxyParamCaption})}
+
+
+
+This function detects which key is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+\_\+port} & The Column Port being checked. \\
+\hline
+{\em column\+\_\+pin} & The Column Pin being checked. \\
+\hline
+{\em keypad\+\_\+digits} & The array storing character data. \\
+\hline
+{\em column} & The column being examined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 166 of file keypad.\+c.
+
+
+
+References keypad\+\_\+digits, lcd\+\_\+write\+\_\+data(), otp\+\_\+arr, otp\+\_\+count, printf, R\+O\+W1\+\_\+\+P\+IN, R\+O\+W1\+\_\+\+P\+O\+RT, R\+O\+W2\+\_\+\+P\+IN, R\+O\+W2\+\_\+\+P\+O\+RT, R\+O\+W3\+\_\+\+P\+IN, R\+O\+W3\+\_\+\+P\+O\+RT, R\+O\+W4\+\_\+\+P\+IN, and R\+O\+W4\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by column\+\_\+handler().
+
+\mbox{\Hypertarget{keypad_8c_a461094c217cbf5c373a5fddba480c585}\label{keypad_8c_a461094c217cbf5c373a5fddba480c585}} 
+\index{keypad.\+c@{keypad.\+c}!keypad\+\_\+config@{keypad\+\_\+config}}
+\index{keypad\+\_\+config@{keypad\+\_\+config}!keypad.\+c@{keypad.\+c}}
+\subsubsection{\texorpdfstring{keypad\+\_\+config()}{keypad\_config()}}
+{\footnotesize\ttfamily void keypad\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes G\+P\+I\+Os and the required interrupts. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT, column\+\_\+handler(), C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT, R\+O\+W1\+\_\+\+P\+IN, R\+O\+W1\+\_\+\+P\+O\+RT, R\+O\+W2\+\_\+\+P\+IN, R\+O\+W2\+\_\+\+P\+O\+RT, R\+O\+W3\+\_\+\+P\+IN, R\+O\+W3\+\_\+\+P\+O\+RT, R\+O\+W4\+\_\+\+P\+IN, and R\+O\+W4\+\_\+\+P\+O\+RT.
+
+\mbox{\Hypertarget{keypad_8c_ac8764725e4f54346cfa11d2731dfb797}\label{keypad_8c_ac8764725e4f54346cfa11d2731dfb797}} 
+\index{keypad.\+c@{keypad.\+c}!keypad\+\_\+interrupt\+\_\+disable@{keypad\+\_\+interrupt\+\_\+disable}}
+\index{keypad\+\_\+interrupt\+\_\+disable@{keypad\+\_\+interrupt\+\_\+disable}!keypad.\+c@{keypad.\+c}}
+\subsubsection{\texorpdfstring{keypad\+\_\+interrupt\+\_\+disable()}{keypad\_interrupt\_disable()}}
+{\footnotesize\ttfamily void keypad\+\_\+interrupt\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable Interrupts for Keypad Functionality. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, and C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT.
+
+\mbox{\Hypertarget{keypad_8c_af6315f72e41186cb737334eb1d52f0c8}\label{keypad_8c_af6315f72e41186cb737334eb1d52f0c8}} 
+\index{keypad.\+c@{keypad.\+c}!keypad\+\_\+interrupt\+\_\+enable@{keypad\+\_\+interrupt\+\_\+enable}}
+\index{keypad\+\_\+interrupt\+\_\+enable@{keypad\+\_\+interrupt\+\_\+enable}!keypad.\+c@{keypad.\+c}}
+\subsubsection{\texorpdfstring{keypad\+\_\+interrupt\+\_\+enable()}{keypad\_interrupt\_enable()}}
+{\footnotesize\ttfamily void keypad\+\_\+interrupt\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable Interrupts for Keypad Functionality. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, and C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{keypad_8c_a3936f089c1aa0cf6b76edb1db84980b0}\label{keypad_8c_a3936f089c1aa0cf6b76edb1db84980b0}} 
+\index{keypad.\+c@{keypad.\+c}!keypad\+\_\+digits@{keypad\+\_\+digits}}
+\index{keypad\+\_\+digits@{keypad\+\_\+digits}!keypad.\+c@{keypad.\+c}}
+\subsubsection{\texorpdfstring{keypad\+\_\+digits}{keypad\_digits}}
+{\footnotesize\ttfamily char keypad\+\_\+digits\mbox{[}\hyperlink{keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}\mbox{]}\mbox{[}\hyperlink{keypad_8h_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}\mbox{]} = \{\{\textquotesingle{}1\textquotesingle{},\textquotesingle{}2\textquotesingle{},\textquotesingle{}3\textquotesingle{},\textquotesingle{}A\textquotesingle{}\},\{\textquotesingle{}4\textquotesingle{},\textquotesingle{}5\textquotesingle{},\textquotesingle{}6\textquotesingle{},\textquotesingle{}B\textquotesingle{}\},\{\textquotesingle{}7\textquotesingle{},\textquotesingle{}8\textquotesingle{},\textquotesingle{}9\textquotesingle{},\textquotesingle{}C\textquotesingle{}\},\{\textquotesingle{}$\ast$\textquotesingle{},\textquotesingle{}0\textquotesingle{},\textquotesingle{}\#\textquotesingle{},\textquotesingle{}D\textquotesingle{}\}\}}
+
+
+
+Definition at line 24 of file keypad.\+c.
+
+
+
+Referenced by column\+\_\+handler(), and keypad\+\_\+button\+\_\+detect().
+

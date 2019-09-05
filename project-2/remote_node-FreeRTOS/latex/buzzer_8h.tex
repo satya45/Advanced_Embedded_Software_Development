@@ -1,0 +1,206 @@
+\hypertarget{buzzer_8h}{}\section{inc/buzzer.h File Reference}
+\label{buzzer_8h}\index{inc/buzzer.\+h@{inc/buzzer.\+h}}
+
+
+Header file for \hyperlink{buzzer_8c}{buzzer.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{buzzer_8h_abf0d28f731e836936a87086ea8b798da}{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+G\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{buzzer_8h_ab61d0981ed42df9e18211b273d22cfcd}{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0)
+\item 
+\#define \hyperlink{buzzer_8h_a9f1abe07c4d92ce70925be770153bb5d}{M\+A\+X\+\_\+\+F\+R\+EQ}~(2048)
+\item 
+\#define \hyperlink{buzzer_8h_aa565aa189a77d0d560f3332bdc6953bb}{F\+R\+E\+Q\+\_\+1}~()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{buzzer_8h_aaf7694a405bbc7615cfba2bbb9617d20}{buzzer\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em This function configures the G\+P\+I\+Os required for the buzzer. \end{DoxyCompactList}\item 
+void \hyperlink{buzzer_8h_a57252bda220a4a6d2f4f6d97e3c72421}{buzzer\+\_\+dutycycle} (uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em This function sets the duty cycle of the buzzer. \end{DoxyCompactList}\item 
+void \hyperlink{buzzer_8h_a6e797d1ee6fb7eeeeb6b19f00582ff84}{buzzer\+\_\+onoff} (bool state)
+\begin{DoxyCompactList}\small\item\em This function switches the buzzer on/off. \end{DoxyCompactList}\item 
+void \hyperlink{buzzer_8h_adbe05ac182d3221b807e66725eb95fa7}{buzzer\+\_\+test} (void)
+\begin{DoxyCompactList}\small\item\em This function is used for testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{buzzer_8c}{buzzer.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to Buzzer. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/19/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{buzzer_8h_ab61d0981ed42df9e18211b273d22cfcd}\label{buzzer_8h_ab61d0981ed42df9e18211b273d22cfcd}} 
+\index{buzzer.\+h@{buzzer.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN@{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN@{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN}{BUZZER\_PIN}}
+{\footnotesize\ttfamily \#define B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0)}
+
+G\+P\+IO pin for buzzer 
+
+Definition at line 26 of file buzzer.\+h.
+
+
+
+Referenced by buzzer\+\_\+config().
+
+\mbox{\Hypertarget{buzzer_8h_abf0d28f731e836936a87086ea8b798da}\label{buzzer_8h_abf0d28f731e836936a87086ea8b798da}} 
+\index{buzzer.\+h@{buzzer.\+h}!B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT@{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT}}
+\index{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT@{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT}{BUZZER\_PORT}}
+{\footnotesize\ttfamily \#define B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+G\+\_\+\+B\+A\+SE)}
+
+G\+P\+IO port for buzzer 
+
+Definition at line 25 of file buzzer.\+h.
+
+
+
+Referenced by buzzer\+\_\+config().
+
+\mbox{\Hypertarget{buzzer_8h_aa565aa189a77d0d560f3332bdc6953bb}\label{buzzer_8h_aa565aa189a77d0d560f3332bdc6953bb}} 
+\index{buzzer.\+h@{buzzer.\+h}!F\+R\+E\+Q\+\_\+1@{F\+R\+E\+Q\+\_\+1}}
+\index{F\+R\+E\+Q\+\_\+1@{F\+R\+E\+Q\+\_\+1}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{F\+R\+E\+Q\+\_\+1}{FREQ\_1}}
+{\footnotesize\ttfamily \#define F\+R\+E\+Q\+\_\+1~()}
+
+
+
+Definition at line 34 of file buzzer.\+h.
+
+\mbox{\Hypertarget{buzzer_8h_a9f1abe07c4d92ce70925be770153bb5d}\label{buzzer_8h_a9f1abe07c4d92ce70925be770153bb5d}} 
+\index{buzzer.\+h@{buzzer.\+h}!M\+A\+X\+\_\+\+F\+R\+EQ@{M\+A\+X\+\_\+\+F\+R\+EQ}}
+\index{M\+A\+X\+\_\+\+F\+R\+EQ@{M\+A\+X\+\_\+\+F\+R\+EQ}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+F\+R\+EQ}{MAX\_FREQ}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+F\+R\+EQ~(2048)}
+
+This is the maximum frequency value for the buffer 
+
+Definition at line 33 of file buzzer.\+h.
+
+
+
+Referenced by buzzer\+\_\+test().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{buzzer_8h_aaf7694a405bbc7615cfba2bbb9617d20}\label{buzzer_8h_aaf7694a405bbc7615cfba2bbb9617d20}} 
+\index{buzzer.\+h@{buzzer.\+h}!buzzer\+\_\+config@{buzzer\+\_\+config}}
+\index{buzzer\+\_\+config@{buzzer\+\_\+config}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+config()}{buzzer\_config()}}
+{\footnotesize\ttfamily void buzzer\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function configures the G\+P\+I\+Os required for the buzzer. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file buzzer.\+c.
+
+
+
+References B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN, and B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by buzzer\+\_\+test().
+
+\mbox{\Hypertarget{buzzer_8h_a57252bda220a4a6d2f4f6d97e3c72421}\label{buzzer_8h_a57252bda220a4a6d2f4f6d97e3c72421}} 
+\index{buzzer.\+h@{buzzer.\+h}!buzzer\+\_\+dutycycle@{buzzer\+\_\+dutycycle}}
+\index{buzzer\+\_\+dutycycle@{buzzer\+\_\+dutycycle}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+dutycycle()}{buzzer\_dutycycle()}}
+{\footnotesize\ttfamily void buzzer\+\_\+dutycycle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+This function sets the duty cycle of the buzzer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & The frequency value provided for the buzzer to vary sound. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file buzzer.\+c.
+
+
+
+References g\+\_\+ui32\+Sys\+Clock.
+
+
+
+Referenced by buzzer\+\_\+test().
+
+\mbox{\Hypertarget{buzzer_8h_a6e797d1ee6fb7eeeeb6b19f00582ff84}\label{buzzer_8h_a6e797d1ee6fb7eeeeb6b19f00582ff84}} 
+\index{buzzer.\+h@{buzzer.\+h}!buzzer\+\_\+onoff@{buzzer\+\_\+onoff}}
+\index{buzzer\+\_\+onoff@{buzzer\+\_\+onoff}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+onoff()}{buzzer\_onoff()}}
+{\footnotesize\ttfamily void buzzer\+\_\+onoff (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+This function switches the buzzer on/off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state parameter represents on or off. Non-\/zero value represents ON, Zero represents O\+FF. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file buzzer.\+c.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{buzzer_8h_adbe05ac182d3221b807e66725eb95fa7}\label{buzzer_8h_adbe05ac182d3221b807e66725eb95fa7}} 
+\index{buzzer.\+h@{buzzer.\+h}!buzzer\+\_\+test@{buzzer\+\_\+test}}
+\index{buzzer\+\_\+test@{buzzer\+\_\+test}!buzzer.\+h@{buzzer.\+h}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+test()}{buzzer\_test()}}
+{\footnotesize\ttfamily void buzzer\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used for testing. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file buzzer.\+c.
+
+
+
+References buzzer\+\_\+config(), buzzer\+\_\+dutycycle(), and M\+A\+X\+\_\+\+F\+R\+EQ.
+

@@ -1,0 +1,195 @@
+\hypertarget{uart__comm__bbg_8h}{}\section{inc/uart\+\_\+comm\+\_\+bbg.h File Reference}
+\label{uart__comm__bbg_8h}\index{inc/uart\+\_\+comm\+\_\+bbg.\+h@{inc/uart\+\_\+comm\+\_\+bbg.\+h}}
+
+
+Header file for \hyperlink{uart__comm__bbg_8c}{uart\+\_\+comm\+\_\+bbg.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/myuart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/packet.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{uart__comm__bbg_8h_a91d2287d55c6cb78d48c853ac69870af}{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG}~(115200)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart__comm__bbg_8h_a8bcf99b346a1db866c5c96bfba061f61}{configure\+U\+A\+R\+T\+\_\+bbg} (void)
+\begin{DoxyCompactList}\small\item\em This function configures the U\+A\+RT to communicate with beaglebone. \end{DoxyCompactList}\item 
+void \hyperlink{uart__comm__bbg_8h_af2ba56c50ecfd4c67c3ed7cea1c90914}{uart\+\_\+packet\+\_\+handler} (\hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet} datap\+\_\+rcv)
+\begin{DoxyCompactList}\small\item\em This function handles the received packet. \end{DoxyCompactList}\item 
+void \hyperlink{uart__comm__bbg_8h_a007b15f62c7cddbebcdf95b9b6509045}{uart\+\_\+commhandler} (void)
+\begin{DoxyCompactList}\small\item\em Interrupt Handler for U\+A\+RT Communication with B\+BG. \end{DoxyCompactList}\item 
+void \hyperlink{uart__comm__bbg_8h_aee4827e75b9bf6e2c3e30da1abf96eba}{uart\+\_\+bbg\+\_\+test} (void)
+\begin{DoxyCompactList}\small\item\em This function is used for testing U\+A\+RT communication with beaglebone. \end{DoxyCompactList}\item 
+void \hyperlink{uart__comm__bbg_8h_ac4c065cdf663a32b9dfd8c0373be5daa}{ack\+\_\+send\+\_\+uart} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function sends an acknowledgment for the receoved packet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{uart__comm__bbg_8c}{uart\+\_\+comm\+\_\+bbg.\+c}. 
+
+The file consists of all the function declarations, macros and datatype declarations for U\+A\+RT Communication. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/20/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{uart__comm__bbg_8h_a91d2287d55c6cb78d48c853ac69870af}\label{uart__comm__bbg_8h_a91d2287d55c6cb78d48c853ac69870af}} 
+\index{uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}!B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG@{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG}}
+\index{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG@{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG}!uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}}
+\subsubsection{\texorpdfstring{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG}{BAUDRATE\_BBG}}
+{\footnotesize\ttfamily \#define B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG~(115200)}
+
+
+
+Definition at line 23 of file uart\+\_\+comm\+\_\+bbg.\+h.
+
+
+
+Referenced by configure\+U\+A\+R\+T\+\_\+bbg().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{uart__comm__bbg_8h_ac4c065cdf663a32b9dfd8c0373be5daa}\label{uart__comm__bbg_8h_ac4c065cdf663a32b9dfd8c0373be5daa}} 
+\index{uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}!ack\+\_\+send\+\_\+uart@{ack\+\_\+send\+\_\+uart}}
+\index{ack\+\_\+send\+\_\+uart@{ack\+\_\+send\+\_\+uart}!uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}}
+\subsubsection{\texorpdfstring{ack\+\_\+send\+\_\+uart()}{ack\_send\_uart()}}
+{\footnotesize\ttfamily void ack\+\_\+send\+\_\+uart (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function sends an acknowledgment for the receoved packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file uart\+\_\+comm\+\_\+bbg.\+h.
+
+
+
+References A\+C\+K\+\_\+\+ID, D\+O\+N\+T\+\_\+\+C\+A\+RE, F\+A\+L\+SE, packet\+\_\+make(), packet\+\_\+send\+\_\+uart(), and U\+A\+R\+T\+\_\+\+B\+BG.
+
+
+
+Referenced by packet\+\_\+rcv\+\_\+uart().
+
+\mbox{\Hypertarget{uart__comm__bbg_8h_a8bcf99b346a1db866c5c96bfba061f61}\label{uart__comm__bbg_8h_a8bcf99b346a1db866c5c96bfba061f61}} 
+\index{uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}!configure\+U\+A\+R\+T\+\_\+bbg@{configure\+U\+A\+R\+T\+\_\+bbg}}
+\index{configure\+U\+A\+R\+T\+\_\+bbg@{configure\+U\+A\+R\+T\+\_\+bbg}!uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}}
+\subsubsection{\texorpdfstring{configure\+U\+A\+R\+T\+\_\+bbg()}{configureUART\_bbg()}}
+{\footnotesize\ttfamily void configure\+U\+A\+R\+T\+\_\+bbg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function configures the U\+A\+RT to communicate with beaglebone. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file uart\+\_\+comm\+\_\+bbg.\+c.
+
+
+
+References B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+B\+BG, C\+L\+O\+CK, U\+A\+R\+T\+\_\+\+B\+BG, uart\+\_\+comm\+\_\+flush\+R\+X(), uart\+\_\+comm\+\_\+flush\+T\+X(), and uart\+\_\+commhandler().
+
+
+
+Referenced by packet\+\_\+loopback\+\_\+test(), and uart\+\_\+bbg\+\_\+test().
+
+\mbox{\Hypertarget{uart__comm__bbg_8h_aee4827e75b9bf6e2c3e30da1abf96eba}\label{uart__comm__bbg_8h_aee4827e75b9bf6e2c3e30da1abf96eba}} 
+\index{uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}!uart\+\_\+bbg\+\_\+test@{uart\+\_\+bbg\+\_\+test}}
+\index{uart\+\_\+bbg\+\_\+test@{uart\+\_\+bbg\+\_\+test}!uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+bbg\+\_\+test()}{uart\_bbg\_test()}}
+{\footnotesize\ttfamily void uart\+\_\+bbg\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used for testing U\+A\+RT communication with beaglebone. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file uart\+\_\+comm\+\_\+bbg.\+c.
+
+
+
+References configure\+U\+A\+R\+T\+\_\+bbg(), printf, U\+A\+R\+T\+\_\+\+B\+BG, and uart\+\_\+send().
+
+\mbox{\Hypertarget{uart__comm__bbg_8h_a007b15f62c7cddbebcdf95b9b6509045}\label{uart__comm__bbg_8h_a007b15f62c7cddbebcdf95b9b6509045}} 
+\index{uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}!uart\+\_\+commhandler@{uart\+\_\+commhandler}}
+\index{uart\+\_\+commhandler@{uart\+\_\+commhandler}!uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+commhandler()}{uart\_commhandler()}}
+{\footnotesize\ttfamily void uart\+\_\+commhandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Interrupt Handler for U\+A\+RT Communication with B\+BG. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file uart\+\_\+comm\+\_\+bbg.\+c.
+
+
+
+References packet\+\_\+rcv\+\_\+uart(), printf, U\+A\+R\+T\+\_\+\+B\+BG, and uart\+\_\+packet\+\_\+handler().
+
+
+
+Referenced by configure\+U\+A\+R\+T\+\_\+bbg().
+
+\mbox{\Hypertarget{uart__comm__bbg_8h_af2ba56c50ecfd4c67c3ed7cea1c90914}\label{uart__comm__bbg_8h_af2ba56c50ecfd4c67c3ed7cea1c90914}} 
+\index{uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}!uart\+\_\+packet\+\_\+handler@{uart\+\_\+packet\+\_\+handler}}
+\index{uart\+\_\+packet\+\_\+handler@{uart\+\_\+packet\+\_\+handler}!uart\+\_\+comm\+\_\+bbg.\+h@{uart\+\_\+comm\+\_\+bbg.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+packet\+\_\+handler()}{uart\_packet\_handler()}}
+{\footnotesize\ttfamily void uart\+\_\+packet\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet}}]{datap\+\_\+rcv }\end{DoxyParamCaption})}
+
+
+
+This function handles the received packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em datap\+\_\+rcv} & The packet structure object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file uart\+\_\+comm\+\_\+bbg.\+c.
+
+
+
+References A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID, A\+C\+K\+\_\+\+ID, add\+\_\+fingerprint(), buzzer\+\_\+onoff(), checksum\+\_\+calc(), disable\+\_\+timer(), enable\+\_\+timer\+\_\+int(), fp\+\_\+deleteall(), fp\+\_\+interrupt\+\_\+disable(), fp\+\_\+interrupt\+\_\+enable(), G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT, G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF, G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON, G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL, G\+U\+I\+\_\+\+ID, G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM, keypad\+\_\+interrupt\+\_\+enable(), L\+C\+D\+\_\+write(), otp\+\_\+arr, otp\+\_\+count, otp\+\_\+flag, O\+T\+P\+\_\+\+I\+N\+P\+U\+T\+\_\+\+T\+I\+ME, O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID, P\+A\+C\+K\+E\+T\+\_\+\+R\+E\+T\+R\+Y\+\_\+\+T\+I\+ME, P\+R\+E\+A\+M\+B\+LE, printf, reset\+\_\+timer(), send\+\_\+failcount, timer\+\_\+otp, timer\+\_\+retry, and U\+A\+R\+T\+\_\+\+FP.
+
+
+
+Referenced by uart\+\_\+commhandler().
+

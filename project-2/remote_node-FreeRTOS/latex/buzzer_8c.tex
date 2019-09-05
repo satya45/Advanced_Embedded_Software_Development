@@ -1,0 +1,141 @@
+\hypertarget{buzzer_8c}{}\section{src/buzzer.c File Reference}
+\label{buzzer_8c}\index{src/buzzer.\+c@{src/buzzer.\+c}}
+
+
+This file consists of all the functions required for the Buzzer.  
+
+
+{\ttfamily \#include \char`\"{}inc/buzzer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/pwm.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{buzzer_8c_aaf7694a405bbc7615cfba2bbb9617d20}{buzzer\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em This function configures the G\+P\+I\+Os required for the buzzer. \end{DoxyCompactList}\item 
+void \hyperlink{buzzer_8c_a57252bda220a4a6d2f4f6d97e3c72421}{buzzer\+\_\+dutycycle} (uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em This function sets the duty cycle of the buzzer. \end{DoxyCompactList}\item 
+void \hyperlink{buzzer_8c_a6e797d1ee6fb7eeeeb6b19f00582ff84}{buzzer\+\_\+onoff} (bool state)
+\begin{DoxyCompactList}\small\item\em This function switches the buzzer on/off. \end{DoxyCompactList}\item 
+void \hyperlink{buzzer_8c_adbe05ac182d3221b807e66725eb95fa7}{buzzer\+\_\+test} (void)
+\begin{DoxyCompactList}\small\item\em This function is used for testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for the Buzzer. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/19/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{buzzer_8c_aaf7694a405bbc7615cfba2bbb9617d20}\label{buzzer_8c_aaf7694a405bbc7615cfba2bbb9617d20}} 
+\index{buzzer.\+c@{buzzer.\+c}!buzzer\+\_\+config@{buzzer\+\_\+config}}
+\index{buzzer\+\_\+config@{buzzer\+\_\+config}!buzzer.\+c@{buzzer.\+c}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+config()}{buzzer\_config()}}
+{\footnotesize\ttfamily void buzzer\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function configures the G\+P\+I\+Os required for the buzzer. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file buzzer.\+c.
+
+
+
+References B\+U\+Z\+Z\+E\+R\+\_\+\+P\+IN, and B\+U\+Z\+Z\+E\+R\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by buzzer\+\_\+test().
+
+\mbox{\Hypertarget{buzzer_8c_a57252bda220a4a6d2f4f6d97e3c72421}\label{buzzer_8c_a57252bda220a4a6d2f4f6d97e3c72421}} 
+\index{buzzer.\+c@{buzzer.\+c}!buzzer\+\_\+dutycycle@{buzzer\+\_\+dutycycle}}
+\index{buzzer\+\_\+dutycycle@{buzzer\+\_\+dutycycle}!buzzer.\+c@{buzzer.\+c}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+dutycycle()}{buzzer\_dutycycle()}}
+{\footnotesize\ttfamily void buzzer\+\_\+dutycycle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+This function sets the duty cycle of the buzzer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & The frequency value provided for the buzzer to vary sound. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file buzzer.\+c.
+
+
+
+References g\+\_\+ui32\+Sys\+Clock.
+
+
+
+Referenced by buzzer\+\_\+test().
+
+\mbox{\Hypertarget{buzzer_8c_a6e797d1ee6fb7eeeeb6b19f00582ff84}\label{buzzer_8c_a6e797d1ee6fb7eeeeb6b19f00582ff84}} 
+\index{buzzer.\+c@{buzzer.\+c}!buzzer\+\_\+onoff@{buzzer\+\_\+onoff}}
+\index{buzzer\+\_\+onoff@{buzzer\+\_\+onoff}!buzzer.\+c@{buzzer.\+c}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+onoff()}{buzzer\_onoff()}}
+{\footnotesize\ttfamily void buzzer\+\_\+onoff (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+This function switches the buzzer on/off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state parameter represents on or off. Non-\/zero value represents ON, Zero represents O\+FF. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file buzzer.\+c.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{buzzer_8c_adbe05ac182d3221b807e66725eb95fa7}\label{buzzer_8c_adbe05ac182d3221b807e66725eb95fa7}} 
+\index{buzzer.\+c@{buzzer.\+c}!buzzer\+\_\+test@{buzzer\+\_\+test}}
+\index{buzzer\+\_\+test@{buzzer\+\_\+test}!buzzer.\+c@{buzzer.\+c}}
+\subsubsection{\texorpdfstring{buzzer\+\_\+test()}{buzzer\_test()}}
+{\footnotesize\ttfamily void buzzer\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used for testing. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file buzzer.\+c.
+
+
+
+References buzzer\+\_\+config(), buzzer\+\_\+dutycycle(), and M\+A\+X\+\_\+\+F\+R\+EQ.
+

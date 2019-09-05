@@ -1,0 +1,139 @@
+\hypertarget{temp_8c}{}\section{src/temp.c File Reference}
+\label{temp_8c}\index{src/temp.\+c@{src/temp.\+c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/temp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/msg\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/sync\+\_\+objects.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{temp_8c_aa9201c454ce559008000b0e7c63d920d}{temptask\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em This function creates Temperature Task. \end{DoxyCompactList}\item 
+void \hyperlink{temp_8c_a21bdff90ebcb335e156a06ce4f48f3ed}{temp\+\_\+write} (void)
+\begin{DoxyCompactList}\small\item\em 8 bit write function \end{DoxyCompactList}\item 
+float \hyperlink{temp_8c_ae8d9420e1c899877c46e57e70502336e}{temp\+\_\+read} (void)
+\begin{DoxyCompactList}\small\item\em This function reads 2 byte Temperature register using I2C. \end{DoxyCompactList}\item 
+void \hyperlink{temp_8c_a29ac068fa7284a104f9b6552f4778504}{temp\+\_\+send} (void)
+\begin{DoxyCompactList}\small\item\em The function receives data from the temperature sensor and sends it to the logger task via message queue. \end{DoxyCompactList}\item 
+static void \hyperlink{temp_8c_a41c3eb9071828956881e95910ef6b274}{temp} (void $\ast$pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Callback function for Temperature Task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{temp_8c_a41c3eb9071828956881e95910ef6b274}\label{temp_8c_a41c3eb9071828956881e95910ef6b274}} 
+\index{temp.\+c@{temp.\+c}!temp@{temp}}
+\index{temp@{temp}!temp.\+c@{temp.\+c}}
+\subsubsection{\texorpdfstring{temp()}{temp()}}
+{\footnotesize\ttfamily static void \hyperlink{structtemp}{temp} (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback function for Temperature Task. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file temp.\+c.
+
+
+
+References g\+\_\+qsem, g\+\_\+temp, g\+\_\+uartsem, nrf\+\_\+log\+\_\+mq, and R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID.
+
+
+
+Referenced by fp\+\_\+responsercv(), and temp\+\_\+read().
+
+\mbox{\Hypertarget{temp_8c_ae8d9420e1c899877c46e57e70502336e}\label{temp_8c_ae8d9420e1c899877c46e57e70502336e}} 
+\index{temp.\+c@{temp.\+c}!temp\+\_\+read@{temp\+\_\+read}}
+\index{temp\+\_\+read@{temp\+\_\+read}!temp.\+c@{temp.\+c}}
+\subsubsection{\texorpdfstring{temp\+\_\+read()}{temp\_read()}}
+{\footnotesize\ttfamily float temp\+\_\+read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function reads 2 byte Temperature register using I2C. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file temp.\+c.
+
+
+
+References S\+L\+A\+V\+E\+\_\+\+A\+D\+DR, temp(), and temp\+\_\+write().
+
+
+
+Referenced by temp\+\_\+send().
+
+\mbox{\Hypertarget{temp_8c_a29ac068fa7284a104f9b6552f4778504}\label{temp_8c_a29ac068fa7284a104f9b6552f4778504}} 
+\index{temp.\+c@{temp.\+c}!temp\+\_\+send@{temp\+\_\+send}}
+\index{temp\+\_\+send@{temp\+\_\+send}!temp.\+c@{temp.\+c}}
+\subsubsection{\texorpdfstring{temp\+\_\+send()}{temp\_send()}}
+{\footnotesize\ttfamily void temp\+\_\+send (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The function receives data from the temperature sensor and sends it to the logger task via message queue. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file temp.\+c.
+
+
+
+References g\+\_\+qsem, g\+\_\+uartsem, nrf\+\_\+log\+\_\+mq, T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID, and temp\+\_\+read().
+
+\mbox{\Hypertarget{temp_8c_a21bdff90ebcb335e156a06ce4f48f3ed}\label{temp_8c_a21bdff90ebcb335e156a06ce4f48f3ed}} 
+\index{temp.\+c@{temp.\+c}!temp\+\_\+write@{temp\+\_\+write}}
+\index{temp\+\_\+write@{temp\+\_\+write}!temp.\+c@{temp.\+c}}
+\subsubsection{\texorpdfstring{temp\+\_\+write()}{temp\_write()}}
+{\footnotesize\ttfamily void temp\+\_\+write (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+8 bit write function 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file temp.\+c.
+
+
+
+References C\+O\+N\+F\+I\+G\+\_\+\+T\+E\+MP, and S\+L\+A\+V\+E\+\_\+\+A\+D\+DR.
+
+
+
+Referenced by temp\+\_\+read().
+
+\mbox{\Hypertarget{temp_8c_aa9201c454ce559008000b0e7c63d920d}\label{temp_8c_aa9201c454ce559008000b0e7c63d920d}} 
+\index{temp.\+c@{temp.\+c}!temptask\+\_\+init@{temptask\+\_\+init}}
+\index{temptask\+\_\+init@{temptask\+\_\+init}!temp.\+c@{temp.\+c}}
+\subsubsection{\texorpdfstring{temptask\+\_\+init()}{temptask\_init()}}
+{\footnotesize\ttfamily uint8\+\_\+t temptask\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function creates Temperature Task. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file temp.\+c.
+
+
+
+References L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE.
+

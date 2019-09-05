@@ -1,0 +1,160 @@
+\hypertarget{myuart_8c}{}\section{src/myuart.c File Reference}
+\label{myuart_8c}\index{src/myuart.\+c@{src/myuart.\+c}}
+
+
+This file consists of all the functions required for U\+A\+RT initialization, enable and send/receive functions.  
+
+
+{\ttfamily \#include \char`\"{}inc/myuart.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{myuart_8c_a039ece338f7cef5fa0656613789d48df}{uart\+\_\+configure} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint32\+\_\+t clock, uint32\+\_\+t baudrate, bool irq)
+\begin{DoxyCompactList}\small\item\em Configures the Particular U\+A\+RT required. \end{DoxyCompactList}\item 
+void \hyperlink{myuart_8c_a790c4518a60e75109b5b6550cac3befb}{uart\+\_\+send} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em This function sends data over U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{myuart_8c_aa85d4eb8bdd6cf94b69156d68a689e63}{uart\+\_\+comm\+\_\+flush\+RX} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function flushes the U\+A\+RT \hyperlink{struct_r_x}{RX} F\+I\+FO. \end{DoxyCompactList}\item 
+void \hyperlink{myuart_8c_ac22afb7956589bf2c7e91014aa075ef0}{uart\+\_\+comm\+\_\+flush\+TX} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function flushes the U\+A\+RT \hyperlink{struct_t_x}{TX} F\+I\+FO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for U\+A\+RT initialization, enable and send/receive functions. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/22/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{myuart_8c_aa85d4eb8bdd6cf94b69156d68a689e63}\label{myuart_8c_aa85d4eb8bdd6cf94b69156d68a689e63}} 
+\index{myuart.\+c@{myuart.\+c}!uart\+\_\+comm\+\_\+flush\+RX@{uart\+\_\+comm\+\_\+flush\+RX}}
+\index{uart\+\_\+comm\+\_\+flush\+RX@{uart\+\_\+comm\+\_\+flush\+RX}!myuart.\+c@{myuart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+comm\+\_\+flush\+R\+X()}{uart\_comm\_flushRX()}}
+{\footnotesize\ttfamily void uart\+\_\+comm\+\_\+flush\+RX (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function flushes the U\+A\+RT \hyperlink{struct_r_x}{RX} F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file myuart.\+c.
+
+
+
+Referenced by configure\+U\+A\+R\+T\+\_\+bbg().
+
+\mbox{\Hypertarget{myuart_8c_ac22afb7956589bf2c7e91014aa075ef0}\label{myuart_8c_ac22afb7956589bf2c7e91014aa075ef0}} 
+\index{myuart.\+c@{myuart.\+c}!uart\+\_\+comm\+\_\+flush\+TX@{uart\+\_\+comm\+\_\+flush\+TX}}
+\index{uart\+\_\+comm\+\_\+flush\+TX@{uart\+\_\+comm\+\_\+flush\+TX}!myuart.\+c@{myuart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+comm\+\_\+flush\+T\+X()}{uart\_comm\_flushTX()}}
+{\footnotesize\ttfamily void uart\+\_\+comm\+\_\+flush\+TX (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function flushes the U\+A\+RT \hyperlink{struct_t_x}{TX} F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The U\+A\+RT needs to be enabled again after using this function for the U\+A\+RT to function again. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+U\+A\+R\+T\+Enable(). 
+\end{DoxySeeAlso}
+
+
+Definition at line 94 of file myuart.\+c.
+
+
+
+Referenced by configure\+U\+A\+R\+T\+\_\+bbg().
+
+\mbox{\Hypertarget{myuart_8c_a039ece338f7cef5fa0656613789d48df}\label{myuart_8c_a039ece338f7cef5fa0656613789d48df}} 
+\index{myuart.\+c@{myuart.\+c}!uart\+\_\+configure@{uart\+\_\+configure}}
+\index{uart\+\_\+configure@{uart\+\_\+configure}!myuart.\+c@{myuart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+configure()}{uart\_configure()}}
+{\footnotesize\ttfamily void uart\+\_\+configure (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint32\+\_\+t}]{clock,  }\item[{uint32\+\_\+t}]{baudrate,  }\item[{bool}]{irq }\end{DoxyParamCaption})}
+
+
+
+Configures the Particular U\+A\+RT required. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em clock} & The clock used for the peripheral. The macro is defined is C\+L\+O\+CK IN \hyperlink{main_8h}{main.\+h}. \\
+\hline
+{\em baudrate} & The baudrate defined for the peripheral. \\
+\hline
+{\em irq} & = T\+R\+UE\+: interrupt functionality enabled for U\+A\+RT, F\+A\+L\+SE\+: Interrupt functionality disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file myuart.\+c.
+
+
+
+References U\+A\+R\+T\+\_\+\+FP.
+
+\mbox{\Hypertarget{myuart_8c_a790c4518a60e75109b5b6550cac3befb}\label{myuart_8c_a790c4518a60e75109b5b6550cac3befb}} 
+\index{myuart.\+c@{myuart.\+c}!uart\+\_\+send@{uart\+\_\+send}}
+\index{uart\+\_\+send@{uart\+\_\+send}!myuart.\+c@{myuart.\+c}}
+\subsubsection{\texorpdfstring{uart\+\_\+send()}{uart\_send()}}
+{\footnotesize\ttfamily void uart\+\_\+send (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+This function sends data over U\+A\+RT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line being used. \\
+\hline
+{\em value} & The value to be sent on U\+A\+RT. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file myuart.\+c.
+
+
+
+References uart\+\_\+busy().
+
+
+
+Referenced by packet\+\_\+send\+\_\+uart(), and uart\+\_\+bbg\+\_\+test().
+

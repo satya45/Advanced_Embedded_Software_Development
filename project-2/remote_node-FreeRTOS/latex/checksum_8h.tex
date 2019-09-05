@@ -1,0 +1,184 @@
+\hypertarget{checksum_8h}{}\section{inc/checksum.h File Reference}
+\label{checksum_8h}\index{inc/checksum.\+h@{inc/checksum.\+h}}
+
+
+Header file for \hyperlink{checksum_8c}{checksum.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{checksum_8h_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH}~(8 $\ast$ sizeof(\hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc}))
+\item 
+\#define \hyperlink{checksum_8h_a118ad552670dbefa1df0ba72d147f5e1}{T\+O\+P\+B\+IT}~(1 $<$$<$ (\hyperlink{checksum_8h_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH} -\/ 1))
+\item 
+\#define \hyperlink{checksum_8h_ae13d91fe6e514f0aa1caba701ef1ff92}{P\+O\+L\+Y\+N\+O\+M\+I\+AL}~(0x\+D8)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint16\+\_\+t \hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{checksum_8h_ae1e3b3bacf1809578c36db6ab9d79aa3}{checksum\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes the Checksum functionality and stores all the possible combinations in a table. \end{DoxyCompactList}\item 
+\hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc} \hyperlink{checksum_8h_a0d196fa8d223843c0afa22e43ca1f737}{checksum\+\_\+calc} (uint8\+\_\+t const message\mbox{[}$\,$\mbox{]}, int n\+Bytes)
+\begin{DoxyCompactList}\small\item\em This function calculates the Checksum for the specified data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc} \hyperlink{checksum_8h_aa0b98c402a809d26602bb9a693083720}{crc\+Table} \mbox{[}256\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{checksum_8c}{checksum.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to Checksum. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/20/2019 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\href{https://barrgroup.com/Embedded-Systems/How-To/CRC-Calculation-C-Code}{\tt https\+://barrgroup.\+com/\+Embedded-\/\+Systems/\+How-\/\+To/\+C\+R\+C-\/\+Calculation-\/\+C-\/\+Code}
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{checksum_8h_ae13d91fe6e514f0aa1caba701ef1ff92}\label{checksum_8h_ae13d91fe6e514f0aa1caba701ef1ff92}} 
+\index{checksum.\+h@{checksum.\+h}!P\+O\+L\+Y\+N\+O\+M\+I\+AL@{P\+O\+L\+Y\+N\+O\+M\+I\+AL}}
+\index{P\+O\+L\+Y\+N\+O\+M\+I\+AL@{P\+O\+L\+Y\+N\+O\+M\+I\+AL}!checksum.\+h@{checksum.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+L\+Y\+N\+O\+M\+I\+AL}{POLYNOMIAL}}
+{\footnotesize\ttfamily \#define P\+O\+L\+Y\+N\+O\+M\+I\+AL~(0x\+D8)}
+
+
+
+Definition at line 27 of file checksum.\+h.
+
+
+
+Referenced by checksum\+\_\+init().
+
+\mbox{\Hypertarget{checksum_8h_a118ad552670dbefa1df0ba72d147f5e1}\label{checksum_8h_a118ad552670dbefa1df0ba72d147f5e1}} 
+\index{checksum.\+h@{checksum.\+h}!T\+O\+P\+B\+IT@{T\+O\+P\+B\+IT}}
+\index{T\+O\+P\+B\+IT@{T\+O\+P\+B\+IT}!checksum.\+h@{checksum.\+h}}
+\subsubsection{\texorpdfstring{T\+O\+P\+B\+IT}{TOPBIT}}
+{\footnotesize\ttfamily \#define T\+O\+P\+B\+IT~(1 $<$$<$ (\hyperlink{checksum_8h_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH} -\/ 1))}
+
+
+
+Definition at line 26 of file checksum.\+h.
+
+
+
+Referenced by checksum\+\_\+init().
+
+\mbox{\Hypertarget{checksum_8h_a241aeeb764887ae5e3de58b98f04b16d}\label{checksum_8h_a241aeeb764887ae5e3de58b98f04b16d}} 
+\index{checksum.\+h@{checksum.\+h}!W\+I\+D\+TH@{W\+I\+D\+TH}}
+\index{W\+I\+D\+TH@{W\+I\+D\+TH}!checksum.\+h@{checksum.\+h}}
+\subsubsection{\texorpdfstring{W\+I\+D\+TH}{WIDTH}}
+{\footnotesize\ttfamily \#define W\+I\+D\+TH~(8 $\ast$ sizeof(\hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc}))}
+
+
+
+Definition at line 25 of file checksum.\+h.
+
+
+
+Referenced by checksum\+\_\+calc(), and checksum\+\_\+init().
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{checksum_8h_a9cf47739c68628afd8694d19fede61de}\label{checksum_8h_a9cf47739c68628afd8694d19fede61de}} 
+\index{checksum.\+h@{checksum.\+h}!crc@{crc}}
+\index{crc@{crc}!checksum.\+h@{checksum.\+h}}
+\subsubsection{\texorpdfstring{crc}{crc}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc}}
+
+
+
+Definition at line 22 of file checksum.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{checksum_8h_a0d196fa8d223843c0afa22e43ca1f737}\label{checksum_8h_a0d196fa8d223843c0afa22e43ca1f737}} 
+\index{checksum.\+h@{checksum.\+h}!checksum\+\_\+calc@{checksum\+\_\+calc}}
+\index{checksum\+\_\+calc@{checksum\+\_\+calc}!checksum.\+h@{checksum.\+h}}
+\subsubsection{\texorpdfstring{checksum\+\_\+calc()}{checksum\_calc()}}
+{\footnotesize\ttfamily \hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc} checksum\+\_\+calc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t const}]{message\mbox{[}$\,$\mbox{]},  }\item[{int}]{n\+Bytes }\end{DoxyParamCaption})}
+
+
+
+This function calculates the Checksum for the specified data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The array containing the Message Data. \\
+\hline
+{\em n\+Bytes} & The Number of bytes in the Array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+crc. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file checksum.\+c.
+
+
+
+References crc\+Table, and W\+I\+D\+TH.
+
+
+
+Referenced by packet\+\_\+make(), packet\+\_\+rcv\+\_\+uart(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{checksum_8h_ae1e3b3bacf1809578c36db6ab9d79aa3}\label{checksum_8h_ae1e3b3bacf1809578c36db6ab9d79aa3}} 
+\index{checksum.\+h@{checksum.\+h}!checksum\+\_\+init@{checksum\+\_\+init}}
+\index{checksum\+\_\+init@{checksum\+\_\+init}!checksum.\+h@{checksum.\+h}}
+\subsubsection{\texorpdfstring{checksum\+\_\+init()}{checksum\_init()}}
+{\footnotesize\ttfamily void checksum\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes the Checksum functionality and stores all the possible combinations in a table. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file checksum.\+c.
+
+
+
+References crc\+Table, P\+O\+L\+Y\+N\+O\+M\+I\+AL, T\+O\+P\+B\+IT, and W\+I\+D\+TH.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{checksum_8h_aa0b98c402a809d26602bb9a693083720}\label{checksum_8h_aa0b98c402a809d26602bb9a693083720}} 
+\index{checksum.\+h@{checksum.\+h}!crc\+Table@{crc\+Table}}
+\index{crc\+Table@{crc\+Table}!checksum.\+h@{checksum.\+h}}
+\subsubsection{\texorpdfstring{crc\+Table}{crcTable}}
+{\footnotesize\ttfamily \hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc} crc\+Table\mbox{[}256\mbox{]}}
+
+
+
+Definition at line 23 of file checksum.\+h.
+
+
+
+Referenced by checksum\+\_\+calc(), and checksum\+\_\+init().
+

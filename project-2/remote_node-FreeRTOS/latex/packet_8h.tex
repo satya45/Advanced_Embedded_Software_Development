@@ -1,0 +1,257 @@
+\hypertarget{packet_8h}{}\section{inc/packet.h File Reference}
+\label{packet_8h}\index{inc/packet.\+h@{inc/packet.\+h}}
+
+
+Header file for \hyperlink{packet_8c}{packet.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/myuart.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{packet_8h_a8aac8c5098aaf915463fb31715efa09f}{P\+R\+E\+A\+M\+B\+LE}~(0x\+A\+B)
+\item 
+\#define \hyperlink{packet_8h_a3db11f1267ec689581edd7b923e88376}{P\+O\+S\+T\+A\+M\+B\+LE}~(0x\+B\+A)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{packet_8h_ad09246453a4dabd919c7541484046a87}{\+\_\+\+\_\+attribute\+\_\+\+\_\+} ((\+\_\+\+\_\+packed\+\_\+\+\_\+))
+\item 
+\hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet} \hyperlink{packet_8h_a35bd6694176addd021564bfa2208ea7d}{packet\+\_\+make} (uint8\+\_\+t event\+\_\+id, uint8\+\_\+t $\ast$payload, uint16\+\_\+t size, uint8\+\_\+t ack)
+\begin{DoxyCompactList}\small\item\em This function populates the structure with payload to send to beaglebone. \end{DoxyCompactList}\item 
+void \hyperlink{packet_8h_afde893719c488142c19516842401102e}{packet\+\_\+send\+\_\+uart} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, \hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet} data\+\_\+send)
+\begin{DoxyCompactList}\small\item\em This function sends the packet over the specified U\+A\+RT line and starts timer for packet acknowledgment retries. \end{DoxyCompactList}\item 
+\hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet} \hyperlink{packet_8h_ad12399423ebc6ce70670cf9f68e23fd1}{packet\+\_\+rcv\+\_\+uart} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function receives the packet and populates the received data in a Packet structure and sends acknowledgement if ack bit is set. \end{DoxyCompactList}\item 
+void \hyperlink{packet_8h_a742a5027332e4ea0f5aa7d5c3881a689}{packet\+\_\+msglog\+\_\+uart} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t $\ast$msg\+\_\+log)
+\begin{DoxyCompactList}\small\item\em This function sends a message to be logged to the Beaglebone (Control Node). \end{DoxyCompactList}\item 
+void \hyperlink{packet_8h_acd916a18dc47df91a044f6ca4c440ac7}{packet\+\_\+loopback\+\_\+test} (void)
+\begin{DoxyCompactList}\small\item\em This function is used to test send and receive data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{packet_8c}{packet.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to Creating packet structure. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/26/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{packet_8h_a3db11f1267ec689581edd7b923e88376}\label{packet_8h_a3db11f1267ec689581edd7b923e88376}} 
+\index{packet.\+h@{packet.\+h}!P\+O\+S\+T\+A\+M\+B\+LE@{P\+O\+S\+T\+A\+M\+B\+LE}}
+\index{P\+O\+S\+T\+A\+M\+B\+LE@{P\+O\+S\+T\+A\+M\+B\+LE}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+T\+A\+M\+B\+LE}{POSTAMBLE}}
+{\footnotesize\ttfamily \#define P\+O\+S\+T\+A\+M\+B\+LE~(0x\+B\+A)}
+
+
+
+Definition at line 27 of file packet.\+h.
+
+
+
+Referenced by packet\+\_\+make().
+
+\mbox{\Hypertarget{packet_8h_a8aac8c5098aaf915463fb31715efa09f}\label{packet_8h_a8aac8c5098aaf915463fb31715efa09f}} 
+\index{packet.\+h@{packet.\+h}!P\+R\+E\+A\+M\+B\+LE@{P\+R\+E\+A\+M\+B\+LE}}
+\index{P\+R\+E\+A\+M\+B\+LE@{P\+R\+E\+A\+M\+B\+LE}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+E\+A\+M\+B\+LE}{PREAMBLE}}
+{\footnotesize\ttfamily \#define P\+R\+E\+A\+M\+B\+LE~(0x\+A\+B)}
+
+
+
+Definition at line 26 of file packet.\+h.
+
+
+
+Referenced by packet\+\_\+make(), and uart\+\_\+packet\+\_\+handler().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{packet_8h_ad09246453a4dabd919c7541484046a87}\label{packet_8h_ad09246453a4dabd919c7541484046a87}} 
+\index{packet.\+h@{packet.\+h}!\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+attribute\+\_\+\+\_\+@{\+\_\+\+\_\+attribute\+\_\+\+\_\+}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+attribute\+\_\+\+\_\+()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily struct \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(\+\_\+\+\_\+packed\+\_\+\+\_\+)}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file packet.\+h.
+
+\mbox{\Hypertarget{packet_8h_acd916a18dc47df91a044f6ca4c440ac7}\label{packet_8h_acd916a18dc47df91a044f6ca4c440ac7}} 
+\index{packet.\+h@{packet.\+h}!packet\+\_\+loopback\+\_\+test@{packet\+\_\+loopback\+\_\+test}}
+\index{packet\+\_\+loopback\+\_\+test@{packet\+\_\+loopback\+\_\+test}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{packet\+\_\+loopback\+\_\+test()}{packet\_loopback\_test()}}
+{\footnotesize\ttfamily void packet\+\_\+loopback\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to test send and receive data. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file packet.\+c.
+
+
+
+References configure\+U\+A\+R\+T\+\_\+bbg(), delay\+\_\+ms(), packet, packet\+\_\+make(), packet\+\_\+rcv\+\_\+uart(), packet\+\_\+send\+\_\+uart(), and U\+A\+R\+T\+\_\+\+B\+BG.
+
+\mbox{\Hypertarget{packet_8h_a35bd6694176addd021564bfa2208ea7d}\label{packet_8h_a35bd6694176addd021564bfa2208ea7d}} 
+\index{packet.\+h@{packet.\+h}!packet\+\_\+make@{packet\+\_\+make}}
+\index{packet\+\_\+make@{packet\+\_\+make}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{packet\+\_\+make()}{packet\_make()}}
+{\footnotesize\ttfamily \hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet} packet\+\_\+make (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{event\+\_\+id,  }\item[{uint8\+\_\+t $\ast$}]{payload,  }\item[{uint16\+\_\+t}]{size,  }\item[{uint8\+\_\+t}]{ack }\end{DoxyParamCaption})}
+
+
+
+This function populates the structure with payload to send to beaglebone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+id} & This event signifies the type of data contained by the payload. \\
+\hline
+{\em payload} & The data that needs to be passed via payload. \\
+\hline
+{\em size} & The size of the array. \\
+\hline
+{\em ack} & This bit is set if acknowledge feature is enabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+packet The packet structure. 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file packet.\+c.
+
+
+
+References checksum\+\_\+calc(), packet, P\+O\+S\+T\+A\+M\+B\+LE, P\+R\+E\+A\+M\+B\+LE, and printf.
+
+
+
+Referenced by ack\+\_\+send\+\_\+uart(), column\+\_\+handler(), fp\+\_\+access\+\_\+handle(), packet\+\_\+loopback\+\_\+test(), and packet\+\_\+msglog\+\_\+uart().
+
+\mbox{\Hypertarget{packet_8h_a742a5027332e4ea0f5aa7d5c3881a689}\label{packet_8h_a742a5027332e4ea0f5aa7d5c3881a689}} 
+\index{packet.\+h@{packet.\+h}!packet\+\_\+msglog\+\_\+uart@{packet\+\_\+msglog\+\_\+uart}}
+\index{packet\+\_\+msglog\+\_\+uart@{packet\+\_\+msglog\+\_\+uart}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{packet\+\_\+msglog\+\_\+uart()}{packet\_msglog\_uart()}}
+{\footnotesize\ttfamily void packet\+\_\+msglog\+\_\+uart (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t $\ast$}]{msg\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+This function sends a message to be logged to the Beaglebone (Control Node). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em msg\+\_\+log} & The String to send to the Control Node. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file packet.\+c.
+
+
+
+References M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID, packet\+\_\+make(), packet\+\_\+send\+\_\+uart(), and T\+R\+UE.
+
+\mbox{\Hypertarget{packet_8h_ad12399423ebc6ce70670cf9f68e23fd1}\label{packet_8h_ad12399423ebc6ce70670cf9f68e23fd1}} 
+\index{packet.\+h@{packet.\+h}!packet\+\_\+rcv\+\_\+uart@{packet\+\_\+rcv\+\_\+uart}}
+\index{packet\+\_\+rcv\+\_\+uart@{packet\+\_\+rcv\+\_\+uart}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{packet\+\_\+rcv\+\_\+uart()}{packet\_rcv\_uart()}}
+{\footnotesize\ttfamily \hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet} packet\+\_\+rcv\+\_\+uart (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function receives the packet and populates the received data in a Packet structure and sends acknowledgement if ack bit is set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+Rt line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+packet The packet structure in which the data has been populated. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file packet.\+c.
+
+
+
+References ack\+\_\+send\+\_\+uart(), checksum\+\_\+calc(), packet, printf, and U\+A\+R\+T\+\_\+\+B\+BG.
+
+
+
+Referenced by packet\+\_\+loopback\+\_\+test(), and uart\+\_\+commhandler().
+
+\mbox{\Hypertarget{packet_8h_afde893719c488142c19516842401102e}\label{packet_8h_afde893719c488142c19516842401102e}} 
+\index{packet.\+h@{packet.\+h}!packet\+\_\+send\+\_\+uart@{packet\+\_\+send\+\_\+uart}}
+\index{packet\+\_\+send\+\_\+uart@{packet\+\_\+send\+\_\+uart}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{packet\+\_\+send\+\_\+uart()}{packet\_send\_uart()}}
+{\footnotesize\ttfamily void packet\+\_\+send\+\_\+uart (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{\hyperlink{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}{packet}}]{data\+\_\+send }\end{DoxyParamCaption})}
+
+
+
+This function sends the packet over the specified U\+A\+RT line and starts timer for packet acknowledgment retries. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+Rt line used. \\
+\hline
+{\em data\+\_\+send} & The packet structure object to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file packet.\+c.
+
+
+
+References enable\+\_\+timer\+\_\+int(), timer\+\_\+retry, and uart\+\_\+send().
+
+
+
+Referenced by ack\+\_\+send\+\_\+uart(), column\+\_\+handler(), fp\+\_\+access\+\_\+handle(), packet\+\_\+loopback\+\_\+test(), and packet\+\_\+msglog\+\_\+uart().
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}\label{packet_8h_a658c47ed7e61ab41375618fb3ebd2fd4}} 
+\index{packet.\+h@{packet.\+h}!packet@{packet}}
+\index{packet@{packet}!packet.\+h@{packet.\+h}}
+\subsubsection{\texorpdfstring{packet}{packet}}
+{\footnotesize\ttfamily packet}
+
+
+
+Definition at line 41 of file packet.\+h.
+
+
+
+Referenced by packet\+\_\+loopback\+\_\+test(), packet\+\_\+make(), and packet\+\_\+rcv\+\_\+uart().
+

@@ -1,0 +1,196 @@
+\hypertarget{lcd_8c}{}\section{src/lcd.c File Reference}
+\label{lcd_8c}\index{src/lcd.\+c@{src/lcd.\+c}}
+
+
+This file consists of all the functions required for the L\+CD.  
+
+
+{\ttfamily \#include \char`\"{}inc/lcd.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lcd_8c_ac23e73124dc9fabae95671fe71d074a6}{lcd\+\_\+init} ()
+\item 
+void \hyperlink{lcd_8c_a734e586564c172485a22c9bbe09943f2}{lcd\+\_\+write\+\_\+cmd} (uint8\+\_\+t command)
+\item 
+void \hyperlink{lcd_8c_a9958d5441d79af42a23a03f6229de09d}{lcd\+\_\+write\+\_\+data} (uint8\+\_\+t data)
+\item 
+void \hyperlink{lcd_8c_a6c7cb85b348a958620121356d897af40}{L\+C\+D\+\_\+write} (char $\ast$string)
+\item 
+void \hyperlink{lcd_8c_a581fdaac2307073740f3635c1470e007}{lcd\+\_\+goto} (uint8\+\_\+t addr)
+\item 
+void \hyperlink{lcd_8c_aee3a4fab811cc1cd370ea87b6c88fc00}{lcdgotoxy} (uint8\+\_\+t row, uint8\+\_\+t column)
+\item 
+uint8\+\_\+t \hyperlink{lcd_8c_aea283b9035a95b2d148cd7ff6676793b}{lcd\+\_\+read\+\_\+address} (void)
+\item 
+void \hyperlink{lcd_8c_a3cd3b869666a4b6cd673bc92493f1c8c}{lcd\+\_\+test} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{lcd_8c_ab414058e30ea48885853ee19a9d64f2d}{row\+\_\+address} \mbox{[}4\mbox{]} = \{0x00, 0x40, 0x10, 0x50\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for the L\+CD. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/20/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{lcd_8c_a581fdaac2307073740f3635c1470e007}\label{lcd_8c_a581fdaac2307073740f3635c1470e007}} 
+\index{lcd.\+c@{lcd.\+c}!lcd\+\_\+goto@{lcd\+\_\+goto}}
+\index{lcd\+\_\+goto@{lcd\+\_\+goto}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{lcd\+\_\+goto()}{lcd\_goto()}}
+{\footnotesize\ttfamily void lcd\+\_\+goto (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file lcd.\+c.
+
+
+
+References lcd\+\_\+write\+\_\+cmd().
+
+
+
+Referenced by lcdgotoxy().
+
+\mbox{\Hypertarget{lcd_8c_ac23e73124dc9fabae95671fe71d074a6}\label{lcd_8c_ac23e73124dc9fabae95671fe71d074a6}} 
+\index{lcd.\+c@{lcd.\+c}!lcd\+\_\+init@{lcd\+\_\+init}}
+\index{lcd\+\_\+init@{lcd\+\_\+init}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{lcd\+\_\+init()}{lcd\_init()}}
+{\footnotesize\ttfamily void lcd\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file lcd.\+c.
+
+
+
+References A\+L\+L\+\_\+\+C\+M\+D\+\_\+\+P\+I\+NS, A\+L\+L\+\_\+\+D\+A\+T\+A\+\_\+\+P\+I\+NS, C\+L\+E\+A\+R\+\_\+\+D\+I\+S\+P\+L\+AY, D\+I\+S\+P\+L\+A\+Y\+\_\+\+ON, E, L\+C\+D\+\_\+\+I\+N\+C\+R\+E\+M\+E\+NT, L\+C\+D\+\_\+\+S\+E\+T\+\_\+2\+\_\+\+L\+I\+N\+ES, lcd\+\_\+write\+\_\+cmd(), RS, and S\+E\+T\+\_\+4\+\_\+\+B\+IT.
+
+\mbox{\Hypertarget{lcd_8c_aea283b9035a95b2d148cd7ff6676793b}\label{lcd_8c_aea283b9035a95b2d148cd7ff6676793b}} 
+\index{lcd.\+c@{lcd.\+c}!lcd\+\_\+read\+\_\+address@{lcd\+\_\+read\+\_\+address}}
+\index{lcd\+\_\+read\+\_\+address@{lcd\+\_\+read\+\_\+address}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{lcd\+\_\+read\+\_\+address()}{lcd\_read\_address()}}
+{\footnotesize\ttfamily uint8\+\_\+t lcd\+\_\+read\+\_\+address (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 106 of file lcd.\+c.
+
+
+
+References A\+L\+L\+\_\+\+D\+A\+T\+A\+\_\+\+P\+I\+NS, E, RS, and RW.
+
+\mbox{\Hypertarget{lcd_8c_a3cd3b869666a4b6cd673bc92493f1c8c}\label{lcd_8c_a3cd3b869666a4b6cd673bc92493f1c8c}} 
+\index{lcd.\+c@{lcd.\+c}!lcd\+\_\+test@{lcd\+\_\+test}}
+\index{lcd\+\_\+test@{lcd\+\_\+test}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{lcd\+\_\+test()}{lcd\_test()}}
+{\footnotesize\ttfamily void lcd\+\_\+test (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file lcd.\+c.
+
+
+
+References L\+C\+D\+\_\+write().
+
+\mbox{\Hypertarget{lcd_8c_a6c7cb85b348a958620121356d897af40}\label{lcd_8c_a6c7cb85b348a958620121356d897af40}} 
+\index{lcd.\+c@{lcd.\+c}!L\+C\+D\+\_\+write@{L\+C\+D\+\_\+write}}
+\index{L\+C\+D\+\_\+write@{L\+C\+D\+\_\+write}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+write()}{LCD\_write()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+write (\begin{DoxyParamCaption}\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file lcd.\+c.
+
+
+
+References C\+L\+E\+A\+R\+\_\+\+D\+I\+S\+P\+L\+AY, lcd\+\_\+write\+\_\+cmd(), and lcd\+\_\+write\+\_\+data().
+
+
+
+Referenced by column\+\_\+handler(), fp\+\_\+access\+\_\+handle(), lcd\+\_\+test(), timer1handler(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{lcd_8c_a734e586564c172485a22c9bbe09943f2}\label{lcd_8c_a734e586564c172485a22c9bbe09943f2}} 
+\index{lcd.\+c@{lcd.\+c}!lcd\+\_\+write\+\_\+cmd@{lcd\+\_\+write\+\_\+cmd}}
+\index{lcd\+\_\+write\+\_\+cmd@{lcd\+\_\+write\+\_\+cmd}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{lcd\+\_\+write\+\_\+cmd()}{lcd\_write\_cmd()}}
+{\footnotesize\ttfamily void lcd\+\_\+write\+\_\+cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file lcd.\+c.
+
+
+
+References A\+L\+L\+\_\+\+D\+A\+T\+A\+\_\+\+P\+I\+NS, E, RS, and RW.
+
+
+
+Referenced by lcd\+\_\+clear(), lcd\+\_\+goto(), lcd\+\_\+init(), and L\+C\+D\+\_\+write().
+
+\mbox{\Hypertarget{lcd_8c_a9958d5441d79af42a23a03f6229de09d}\label{lcd_8c_a9958d5441d79af42a23a03f6229de09d}} 
+\index{lcd.\+c@{lcd.\+c}!lcd\+\_\+write\+\_\+data@{lcd\+\_\+write\+\_\+data}}
+\index{lcd\+\_\+write\+\_\+data@{lcd\+\_\+write\+\_\+data}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{lcd\+\_\+write\+\_\+data()}{lcd\_write\_data()}}
+{\footnotesize\ttfamily void lcd\+\_\+write\+\_\+data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file lcd.\+c.
+
+
+
+References A\+L\+L\+\_\+\+D\+A\+T\+A\+\_\+\+P\+I\+NS, E, RS, and RW.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and L\+C\+D\+\_\+write().
+
+\mbox{\Hypertarget{lcd_8c_aee3a4fab811cc1cd370ea87b6c88fc00}\label{lcd_8c_aee3a4fab811cc1cd370ea87b6c88fc00}} 
+\index{lcd.\+c@{lcd.\+c}!lcdgotoxy@{lcdgotoxy}}
+\index{lcdgotoxy@{lcdgotoxy}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{lcdgotoxy()}{lcdgotoxy()}}
+{\footnotesize\ttfamily void lcdgotoxy (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{row,  }\item[{uint8\+\_\+t}]{column }\end{DoxyParamCaption})}
+
+
+
+Definition at line 100 of file lcd.\+c.
+
+
+
+References lcd\+\_\+goto(), and row\+\_\+address.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{lcd_8c_ab414058e30ea48885853ee19a9d64f2d}\label{lcd_8c_ab414058e30ea48885853ee19a9d64f2d}} 
+\index{lcd.\+c@{lcd.\+c}!row\+\_\+address@{row\+\_\+address}}
+\index{row\+\_\+address@{row\+\_\+address}!lcd.\+c@{lcd.\+c}}
+\subsubsection{\texorpdfstring{row\+\_\+address}{row\_address}}
+{\footnotesize\ttfamily uint8\+\_\+t row\+\_\+address\mbox{[}4\mbox{]} = \{0x00, 0x40, 0x10, 0x50\}}
+
+
+
+Definition at line 16 of file lcd.\+c.
+
+
+
+Referenced by lcdgotoxy().
+

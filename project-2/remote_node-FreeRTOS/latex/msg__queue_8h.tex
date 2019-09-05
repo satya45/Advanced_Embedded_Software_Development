@@ -1,0 +1,97 @@
+\hypertarget{msg__queue_8h}{}\section{inc/msg\+\_\+queue.h File Reference}
+\label{msg__queue_8h}\index{inc/msg\+\_\+queue.\+h@{inc/msg\+\_\+queue.\+h}}
+
+
+Header file for \hyperlink{msg__queue_8c}{msg\+\_\+queue.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{msg__queue_8h_a75e6d7c7e954860072172f01abb2212c}{M\+Q\+\_\+\+S\+I\+ZE}~(10)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{msg__queue_8h_a553f3c27dec1d717b06f29199744ffc7}{queue\+\_\+create} (void)
+\begin{DoxyCompactList}\small\item\em This function creates the required Message Queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Queue\+Handle\+\_\+t \hyperlink{msg__queue_8h_acae5d515bd118763754d8f08f4dedca1}{nrf\+\_\+log\+\_\+mq}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{msg__queue_8c}{msg\+\_\+queue.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to message queue functionality. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/12/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{msg__queue_8h_a75e6d7c7e954860072172f01abb2212c}\label{msg__queue_8h_a75e6d7c7e954860072172f01abb2212c}} 
+\index{msg\+\_\+queue.\+h@{msg\+\_\+queue.\+h}!M\+Q\+\_\+\+S\+I\+ZE@{M\+Q\+\_\+\+S\+I\+ZE}}
+\index{M\+Q\+\_\+\+S\+I\+ZE@{M\+Q\+\_\+\+S\+I\+ZE}!msg\+\_\+queue.\+h@{msg\+\_\+queue.\+h}}
+\subsubsection{\texorpdfstring{M\+Q\+\_\+\+S\+I\+ZE}{MQ\_SIZE}}
+{\footnotesize\ttfamily \#define M\+Q\+\_\+\+S\+I\+ZE~(10)}
+
+Size of the message queue 
+
+Definition at line 24 of file msg\+\_\+queue.\+h.
+
+
+
+Referenced by queue\+\_\+create().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{msg__queue_8h_a553f3c27dec1d717b06f29199744ffc7}\label{msg__queue_8h_a553f3c27dec1d717b06f29199744ffc7}} 
+\index{msg\+\_\+queue.\+h@{msg\+\_\+queue.\+h}!queue\+\_\+create@{queue\+\_\+create}}
+\index{queue\+\_\+create@{queue\+\_\+create}!msg\+\_\+queue.\+h@{msg\+\_\+queue.\+h}}
+\subsubsection{\texorpdfstring{queue\+\_\+create()}{queue\_create()}}
+{\footnotesize\ttfamily void queue\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function creates the required Message Queues. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file msg\+\_\+queue.\+c.
+
+
+
+References M\+Q\+\_\+\+S\+I\+ZE, and nrf\+\_\+log\+\_\+mq.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{msg__queue_8h_acae5d515bd118763754d8f08f4dedca1}\label{msg__queue_8h_acae5d515bd118763754d8f08f4dedca1}} 
+\index{msg\+\_\+queue.\+h@{msg\+\_\+queue.\+h}!nrf\+\_\+log\+\_\+mq@{nrf\+\_\+log\+\_\+mq}}
+\index{nrf\+\_\+log\+\_\+mq@{nrf\+\_\+log\+\_\+mq}!msg\+\_\+queue.\+h@{msg\+\_\+queue.\+h}}
+\subsubsection{\texorpdfstring{nrf\+\_\+log\+\_\+mq}{nrf\_log\_mq}}
+{\footnotesize\ttfamily Queue\+Handle\+\_\+t nrf\+\_\+log\+\_\+mq}
+
+
+
+Definition at line 30 of file msg\+\_\+queue.\+h.
+
+
+
+Referenced by nrf\+\_\+log(), queue\+\_\+create(), temp(), and temp\+\_\+send().
+

@@ -1,0 +1,146 @@
+\hypertarget{sync__objects_8h}{}\section{inc/sync\+\_\+objects.h File Reference}
+\label{sync__objects_8h}\index{inc/sync\+\_\+objects.\+h@{inc/sync\+\_\+objects.\+h}}
+
+
+Header file for \hyperlink{sync__objects_8c}{sync\+\_\+objects.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sync__objects_8h_a16242c93769e5c5b88cc48c39a635d5a}{sem\+\_\+create} (void)
+\begin{DoxyCompactList}\small\item\em This function creates the required Semaphores. \end{DoxyCompactList}\item 
+void \hyperlink{sync__objects_8h_afb95a6886b67a64eccb27294bdfd5eeb}{mutex\+\_\+create} (void)
+\begin{DoxyCompactList}\small\item\em This function creates the required Mutexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+x\+Semaphore\+Handle \hyperlink{sync__objects_8h_af5a6ac6fa4e436448795f7f65a26069a}{g\+\_\+uartsem}
+\item 
+x\+Semaphore\+Handle \hyperlink{sync__objects_8h_ab70ea115a56f3030cbe8e18e81ce10ed}{g\+\_\+qsem}
+\item 
+x\+Semaphore\+Handle \hyperlink{sync__objects_8h_a6beba4fd52ab4450ace824d80f7d302a}{g\+\_\+temp}
+\item 
+x\+Semaphore\+Handle \hyperlink{sync__objects_8h_a15ff766ded960691eeba8e72c31b8bb1}{g\+\_\+led}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{sync__objects_8c}{sync\+\_\+objects.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to logging functionality. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/13/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sync__objects_8h_afb95a6886b67a64eccb27294bdfd5eeb}\label{sync__objects_8h_afb95a6886b67a64eccb27294bdfd5eeb}} 
+\index{sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}!mutex\+\_\+create@{mutex\+\_\+create}}
+\index{mutex\+\_\+create@{mutex\+\_\+create}!sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}}
+\subsubsection{\texorpdfstring{mutex\+\_\+create()}{mutex\_create()}}
+{\footnotesize\ttfamily void mutex\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function creates the required Mutexes. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file sync\+\_\+objects.\+c.
+
+
+
+References g\+\_\+qsem, and g\+\_\+uartsem.
+
+\mbox{\Hypertarget{sync__objects_8h_a16242c93769e5c5b88cc48c39a635d5a}\label{sync__objects_8h_a16242c93769e5c5b88cc48c39a635d5a}} 
+\index{sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}!sem\+\_\+create@{sem\+\_\+create}}
+\index{sem\+\_\+create@{sem\+\_\+create}!sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}}
+\subsubsection{\texorpdfstring{sem\+\_\+create()}{sem\_create()}}
+{\footnotesize\ttfamily void sem\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function creates the required Semaphores. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file sync\+\_\+objects.\+c.
+
+
+
+References g\+\_\+led, and g\+\_\+temp.
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{sync__objects_8h_a15ff766ded960691eeba8e72c31b8bb1}\label{sync__objects_8h_a15ff766ded960691eeba8e72c31b8bb1}} 
+\index{sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}!g\+\_\+led@{g\+\_\+led}}
+\index{g\+\_\+led@{g\+\_\+led}!sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+led}{g\_led}}
+{\footnotesize\ttfamily x\+Semaphore\+Handle g\+\_\+led}
+
+Semaphore to release L\+ED Task 
+
+Definition at line 32 of file sync\+\_\+objects.\+h.
+
+
+
+Referenced by sem\+\_\+create().
+
+\mbox{\Hypertarget{sync__objects_8h_ab70ea115a56f3030cbe8e18e81ce10ed}\label{sync__objects_8h_ab70ea115a56f3030cbe8e18e81ce10ed}} 
+\index{sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}!g\+\_\+qsem@{g\+\_\+qsem}}
+\index{g\+\_\+qsem@{g\+\_\+qsem}!sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+qsem}{g\_qsem}}
+{\footnotesize\ttfamily x\+Semaphore\+Handle g\+\_\+qsem}
+
+Mutex to protect queue writes from simultaneous access from two threads 
+
+Definition at line 26 of file sync\+\_\+objects.\+h.
+
+
+
+Referenced by mutex\+\_\+create(), temp(), and temp\+\_\+send().
+
+\mbox{\Hypertarget{sync__objects_8h_a6beba4fd52ab4450ace824d80f7d302a}\label{sync__objects_8h_a6beba4fd52ab4450ace824d80f7d302a}} 
+\index{sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}!g\+\_\+temp@{g\+\_\+temp}}
+\index{g\+\_\+temp@{g\+\_\+temp}!sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+temp}{g\_temp}}
+{\footnotesize\ttfamily x\+Semaphore\+Handle g\+\_\+temp}
+
+Semaphore to release Temperature Task 
+
+Definition at line 31 of file sync\+\_\+objects.\+h.
+
+
+
+Referenced by sem\+\_\+create(), and temp().
+
+\mbox{\Hypertarget{sync__objects_8h_af5a6ac6fa4e436448795f7f65a26069a}\label{sync__objects_8h_af5a6ac6fa4e436448795f7f65a26069a}} 
+\index{sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}!g\+\_\+uartsem@{g\+\_\+uartsem}}
+\index{g\+\_\+uartsem@{g\+\_\+uartsem}!sync\+\_\+objects.\+h@{sync\+\_\+objects.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+uartsem}{g\_uartsem}}
+{\footnotesize\ttfamily x\+Semaphore\+Handle g\+\_\+uartsem}
+
+Mutex for U\+A\+RT 
+
+Definition at line 25 of file sync\+\_\+objects.\+h.
+
+
+
+Referenced by mutex\+\_\+create(), nrf\+\_\+log(), temp(), and temp\+\_\+send().
+

@@ -1,0 +1,702 @@
+\hypertarget{keypad_8h}{}\section{inc/keypad.h File Reference}
+\label{keypad_8h}\index{inc/keypad.\+h@{inc/keypad.\+h}}
+
+
+Header file for \hyperlink{keypad_8c}{keypad.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{keypad_8h_ae3f472fe2803691079dcef464d66e62f}{C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_a9206e6aac9d25e3acef4cac353b0ea41}{C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_a89358c5ceecc77b81e907e94d80ff426}{C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0)
+\item 
+\#define \hyperlink{keypad_8h_a943d0d66c6f6c21c816f627ce1637588}{C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_a34d4b5366d0f6003afd683413c727d5b}{C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1)
+\item 
+\#define \hyperlink{keypad_8h_ae597a6849b48502994840d5459ac9221}{C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_a074d73613afafebe8d33b08c764c2b3d}{C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2)
+\item 
+\#define \hyperlink{keypad_8h_a2229d5564be9cb61f5abdda10eb1331e}{C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_aabf521afbf978a21afad3a32b312bcd5}{C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+6)
+\item 
+\#define \hyperlink{keypad_8h_a5b59deb936e0331bd1afbc71ff499890}{R\+O\+W1\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_ac6ee61281da53701763dea10edccaf75}{R\+O\+W1\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0)
+\item 
+\#define \hyperlink{keypad_8h_ab28530e81b140e1fb89dbcc054d1f330}{R\+O\+W2\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_a987b3cb089c6abb5d2eb883a2c026510}{R\+O\+W2\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2)
+\item 
+\#define \hyperlink{keypad_8h_a5f6a8821d0064dbb3e2f2dcac5485950}{R\+O\+W3\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_a1dd5c62d3b14f72c5afc8564dccfb73a}{R\+O\+W3\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3)
+\item 
+\#define \hyperlink{keypad_8h_a0816beca8829df317badb5907b309005}{R\+O\+W4\+\_\+\+P\+O\+RT}~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)
+\item 
+\#define \hyperlink{keypad_8h_ad27125633a41d58307598ced9efba0bd}{R\+O\+W4\+\_\+\+P\+IN}~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1)
+\item 
+\#define \hyperlink{keypad_8h_ae076b9ba506b3e89665ae9623e0085aa}{C\+O\+L\+U\+M\+N4}~(0)
+\item 
+\#define \hyperlink{keypad_8h_aa1f5ecc2f7755b935441ce0ff2b0bca3}{C\+O\+L\+U\+M\+N3}~(1)
+\item 
+\#define \hyperlink{keypad_8h_a038c9e790ec4a8d9c58731646099cfb0}{C\+O\+L\+U\+M\+N2}~(2)
+\item 
+\#define \hyperlink{keypad_8h_a3ee020e35578dc5ad6b7bca4cac7a962}{C\+O\+L\+U\+M\+N1}~(3)
+\item 
+\#define \hyperlink{keypad_8h_a4d8afe85a98a6ca9064effbc809fbf32}{C\+H\+A\+R\+\_\+0}~(0)
+\item 
+\#define \hyperlink{keypad_8h_afdc02ac7f7b425a16561cde116ebc899}{C\+H\+A\+R\+\_\+1}~(1)
+\item 
+\#define \hyperlink{keypad_8h_af3fd85c8f904e7b9c74fcffe4b99ef8e}{C\+H\+A\+R\+\_\+2}~(2)
+\item 
+\#define \hyperlink{keypad_8h_a541d9ea488f11a0551325f0e84123099}{C\+H\+A\+R\+\_\+3}~(3)
+\item 
+\#define \hyperlink{keypad_8h_a4e3f1e4b815860ca339e3599484e5978}{C\+H\+A\+R\+\_\+4}~(4)
+\item 
+\#define \hyperlink{keypad_8h_a466b9c3615f39f1733a3a096f13f503d}{C\+H\+A\+R\+\_\+5}~(5)
+\item 
+\#define \hyperlink{keypad_8h_a561e84cf2058b761d54807ace0a5cc45}{C\+H\+A\+R\+\_\+6}~(6)
+\item 
+\#define \hyperlink{keypad_8h_af1e236b4cdffbd1c31c7570216878b0f}{C\+H\+A\+R\+\_\+7}~(7)
+\item 
+\#define \hyperlink{keypad_8h_ad33e202f082b17a3dbe2b342f6da8225}{C\+H\+A\+R\+\_\+8}~(8)
+\item 
+\#define \hyperlink{keypad_8h_a33f45bac79ff2e66844c105f771f280a}{C\+H\+A\+R\+\_\+9}~(9)
+\item 
+\#define \hyperlink{keypad_8h_a940131027965330aa49247d8b93eb6bd}{C\+H\+A\+R\+\_\+A}~(A)
+\item 
+\#define \hyperlink{keypad_8h_acf6e1f9b4b6d5d61d45707d96d641c2f}{C\+H\+A\+R\+\_\+B}~(B)
+\item 
+\#define \hyperlink{keypad_8h_a424e82f644816d9654d16ed6d7a54140}{C\+H\+A\+R\+\_\+C}~(C)
+\item 
+\#define \hyperlink{keypad_8h_af803a2f1366cc12218a7c36b19bf0b07}{C\+H\+A\+R\+\_\+D}~(D)
+\item 
+\#define \hyperlink{keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}~(4)
+\item 
+\#define \hyperlink{keypad_8h_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}~(4)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{keypad_8h_a461094c217cbf5c373a5fddba480c585}{keypad\+\_\+config} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes G\+P\+I\+Os and the required interrupts. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8h_af6315f72e41186cb737334eb1d52f0c8}{keypad\+\_\+interrupt\+\_\+enable} (void)
+\begin{DoxyCompactList}\small\item\em Enable Interrupts for Keypad Functionality. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8h_ac8764725e4f54346cfa11d2731dfb797}{keypad\+\_\+interrupt\+\_\+disable} (void)
+\begin{DoxyCompactList}\small\item\em Disable Interrupts for Keypad Functionality. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8h_a195b3865aa3f88ac9a559933e218704e}{column\+\_\+handler} (void)
+\begin{DoxyCompactList}\small\item\em Callback function of Column 1 Interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{keypad_8h_a90abe7784469be2383f343d7e9513904}{keypad\+\_\+button\+\_\+detect} (uint32\+\_\+t column\+\_\+port, uint32\+\_\+t column\+\_\+pin, char \hyperlink{keypad_8c_a3936f089c1aa0cf6b76edb1db84980b0}{keypad\+\_\+digits}\mbox{[}\hyperlink{keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}\mbox{]}\mbox{[}\hyperlink{keypad_8h_a06c6c391fc11d106e9909f0401b255b1}{C\+O\+L\+U\+M\+NS}\mbox{]}, uint8\+\_\+t column)
+\begin{DoxyCompactList}\small\item\em This function detects which key is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{keypad_8c}{keypad.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to Keypad functionality. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/20/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{keypad_8h_a4d8afe85a98a6ca9064effbc809fbf32}\label{keypad_8h_a4d8afe85a98a6ca9064effbc809fbf32}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+0@{C\+H\+A\+R\+\_\+0}}
+\index{C\+H\+A\+R\+\_\+0@{C\+H\+A\+R\+\_\+0}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+0}{CHAR\_0}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+0~(0)}
+
+
+
+Definition at line 56 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_afdc02ac7f7b425a16561cde116ebc899}\label{keypad_8h_afdc02ac7f7b425a16561cde116ebc899}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+1@{C\+H\+A\+R\+\_\+1}}
+\index{C\+H\+A\+R\+\_\+1@{C\+H\+A\+R\+\_\+1}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+1}{CHAR\_1}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+1~(1)}
+
+
+
+Definition at line 57 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_af3fd85c8f904e7b9c74fcffe4b99ef8e}\label{keypad_8h_af3fd85c8f904e7b9c74fcffe4b99ef8e}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+2@{C\+H\+A\+R\+\_\+2}}
+\index{C\+H\+A\+R\+\_\+2@{C\+H\+A\+R\+\_\+2}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+2}{CHAR\_2}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+2~(2)}
+
+
+
+Definition at line 58 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a541d9ea488f11a0551325f0e84123099}\label{keypad_8h_a541d9ea488f11a0551325f0e84123099}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+3@{C\+H\+A\+R\+\_\+3}}
+\index{C\+H\+A\+R\+\_\+3@{C\+H\+A\+R\+\_\+3}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+3}{CHAR\_3}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+3~(3)}
+
+
+
+Definition at line 59 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a4e3f1e4b815860ca339e3599484e5978}\label{keypad_8h_a4e3f1e4b815860ca339e3599484e5978}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+4@{C\+H\+A\+R\+\_\+4}}
+\index{C\+H\+A\+R\+\_\+4@{C\+H\+A\+R\+\_\+4}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+4}{CHAR\_4}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+4~(4)}
+
+
+
+Definition at line 60 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a466b9c3615f39f1733a3a096f13f503d}\label{keypad_8h_a466b9c3615f39f1733a3a096f13f503d}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+5@{C\+H\+A\+R\+\_\+5}}
+\index{C\+H\+A\+R\+\_\+5@{C\+H\+A\+R\+\_\+5}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+5}{CHAR\_5}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+5~(5)}
+
+
+
+Definition at line 61 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a561e84cf2058b761d54807ace0a5cc45}\label{keypad_8h_a561e84cf2058b761d54807ace0a5cc45}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+6@{C\+H\+A\+R\+\_\+6}}
+\index{C\+H\+A\+R\+\_\+6@{C\+H\+A\+R\+\_\+6}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+6}{CHAR\_6}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+6~(6)}
+
+
+
+Definition at line 62 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_af1e236b4cdffbd1c31c7570216878b0f}\label{keypad_8h_af1e236b4cdffbd1c31c7570216878b0f}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+7@{C\+H\+A\+R\+\_\+7}}
+\index{C\+H\+A\+R\+\_\+7@{C\+H\+A\+R\+\_\+7}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+7}{CHAR\_7}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+7~(7)}
+
+
+
+Definition at line 63 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_ad33e202f082b17a3dbe2b342f6da8225}\label{keypad_8h_ad33e202f082b17a3dbe2b342f6da8225}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+8@{C\+H\+A\+R\+\_\+8}}
+\index{C\+H\+A\+R\+\_\+8@{C\+H\+A\+R\+\_\+8}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+8}{CHAR\_8}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+8~(8)}
+
+
+
+Definition at line 64 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a33f45bac79ff2e66844c105f771f280a}\label{keypad_8h_a33f45bac79ff2e66844c105f771f280a}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+9@{C\+H\+A\+R\+\_\+9}}
+\index{C\+H\+A\+R\+\_\+9@{C\+H\+A\+R\+\_\+9}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+9}{CHAR\_9}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+9~(9)}
+
+
+
+Definition at line 65 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a940131027965330aa49247d8b93eb6bd}\label{keypad_8h_a940131027965330aa49247d8b93eb6bd}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+A@{C\+H\+A\+R\+\_\+A}}
+\index{C\+H\+A\+R\+\_\+A@{C\+H\+A\+R\+\_\+A}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+A}{CHAR\_A}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+A~(A)}
+
+
+
+Definition at line 66 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_acf6e1f9b4b6d5d61d45707d96d641c2f}\label{keypad_8h_acf6e1f9b4b6d5d61d45707d96d641c2f}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+B@{C\+H\+A\+R\+\_\+B}}
+\index{C\+H\+A\+R\+\_\+B@{C\+H\+A\+R\+\_\+B}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+B}{CHAR\_B}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+B~(B)}
+
+
+
+Definition at line 67 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a424e82f644816d9654d16ed6d7a54140}\label{keypad_8h_a424e82f644816d9654d16ed6d7a54140}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+C@{C\+H\+A\+R\+\_\+C}}
+\index{C\+H\+A\+R\+\_\+C@{C\+H\+A\+R\+\_\+C}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+C}{CHAR\_C}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+C~(C)}
+
+
+
+Definition at line 68 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_af803a2f1366cc12218a7c36b19bf0b07}\label{keypad_8h_af803a2f1366cc12218a7c36b19bf0b07}} 
+\index{keypad.\+h@{keypad.\+h}!C\+H\+A\+R\+\_\+D@{C\+H\+A\+R\+\_\+D}}
+\index{C\+H\+A\+R\+\_\+D@{C\+H\+A\+R\+\_\+D}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+H\+A\+R\+\_\+D}{CHAR\_D}}
+{\footnotesize\ttfamily \#define C\+H\+A\+R\+\_\+D~(D)}
+
+
+
+Definition at line 69 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_a3ee020e35578dc5ad6b7bca4cac7a962}\label{keypad_8h_a3ee020e35578dc5ad6b7bca4cac7a962}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N1@{C\+O\+L\+U\+M\+N1}}
+\index{C\+O\+L\+U\+M\+N1@{C\+O\+L\+U\+M\+N1}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N1}{COLUMN1}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N1~(3)}
+
+
+
+Definition at line 48 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler().
+
+\mbox{\Hypertarget{keypad_8h_a89358c5ceecc77b81e907e94d80ff426}\label{keypad_8h_a89358c5ceecc77b81e907e94d80ff426}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN}}
+\index{C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN}{COLUMN1\_PIN}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0)}
+
+G\+P\+IO pin for Column 1 
+
+Definition at line 26 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_a9206e6aac9d25e3acef4cac353b0ea41}\label{keypad_8h_a9206e6aac9d25e3acef4cac353b0ea41}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT}}
+\index{C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT}{COLUMN1\_PORT}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)}
+
+Column 1 from right 
+
+Definition at line 25 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_a038c9e790ec4a8d9c58731646099cfb0}\label{keypad_8h_a038c9e790ec4a8d9c58731646099cfb0}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N2@{C\+O\+L\+U\+M\+N2}}
+\index{C\+O\+L\+U\+M\+N2@{C\+O\+L\+U\+M\+N2}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N2}{COLUMN2}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N2~(2)}
+
+
+
+Definition at line 47 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler().
+
+\mbox{\Hypertarget{keypad_8h_a34d4b5366d0f6003afd683413c727d5b}\label{keypad_8h_a34d4b5366d0f6003afd683413c727d5b}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN}}
+\index{C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN}{COLUMN2\_PIN}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1)}
+
+G\+P\+IO pin for Column 2 
+
+Definition at line 28 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_a943d0d66c6f6c21c816f627ce1637588}\label{keypad_8h_a943d0d66c6f6c21c816f627ce1637588}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT}}
+\index{C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT}{COLUMN2\_PORT}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)}
+
+Column 2 from right 
+
+Definition at line 27 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_aa1f5ecc2f7755b935441ce0ff2b0bca3}\label{keypad_8h_aa1f5ecc2f7755b935441ce0ff2b0bca3}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N3@{C\+O\+L\+U\+M\+N3}}
+\index{C\+O\+L\+U\+M\+N3@{C\+O\+L\+U\+M\+N3}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N3}{COLUMN3}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N3~(1)}
+
+
+
+Definition at line 46 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler().
+
+\mbox{\Hypertarget{keypad_8h_a074d73613afafebe8d33b08c764c2b3d}\label{keypad_8h_a074d73613afafebe8d33b08c764c2b3d}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN}}
+\index{C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN}{COLUMN3\_PIN}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2)}
+
+G\+P\+IO pin for Column 3 
+
+Definition at line 30 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_ae597a6849b48502994840d5459ac9221}\label{keypad_8h_ae597a6849b48502994840d5459ac9221}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT}}
+\index{C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT}{COLUMN3\_PORT}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)}
+
+Column 3 from right 
+
+Definition at line 29 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_ae076b9ba506b3e89665ae9623e0085aa}\label{keypad_8h_ae076b9ba506b3e89665ae9623e0085aa}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N4@{C\+O\+L\+U\+M\+N4}}
+\index{C\+O\+L\+U\+M\+N4@{C\+O\+L\+U\+M\+N4}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N4}{COLUMN4}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N4~(0)}
+
+
+
+Definition at line 45 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler().
+
+\mbox{\Hypertarget{keypad_8h_aabf521afbf978a21afad3a32b312bcd5}\label{keypad_8h_aabf521afbf978a21afad3a32b312bcd5}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN}}
+\index{C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN@{C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN}{COLUMN4\_PIN}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+6)}
+
+G\+P\+IO pin for Column 4 
+
+Definition at line 32 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_a2229d5564be9cb61f5abdda10eb1331e}\label{keypad_8h_a2229d5564be9cb61f5abdda10eb1331e}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT}}
+\index{C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT@{C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT}{COLUMN4\_PORT}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)}
+
+Column 4 from right 
+
+Definition at line 31 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+config(), keypad\+\_\+interrupt\+\_\+disable(), and keypad\+\_\+interrupt\+\_\+enable().
+
+\mbox{\Hypertarget{keypad_8h_a06c6c391fc11d106e9909f0401b255b1}\label{keypad_8h_a06c6c391fc11d106e9909f0401b255b1}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+L\+U\+M\+NS@{C\+O\+L\+U\+M\+NS}}
+\index{C\+O\+L\+U\+M\+NS@{C\+O\+L\+U\+M\+NS}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+M\+NS}{COLUMNS}}
+{\footnotesize\ttfamily \#define C\+O\+L\+U\+M\+NS~(4)}
+
+Number of Columns in Keypad 
+
+Definition at line 74 of file keypad.\+h.
+
+\mbox{\Hypertarget{keypad_8h_ae3f472fe2803691079dcef464d66e62f}\label{keypad_8h_ae3f472fe2803691079dcef464d66e62f}} 
+\index{keypad.\+h@{keypad.\+h}!C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT@{C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT}}
+\index{C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT@{C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT}{COMMON\_COLUMN\_PORT}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+M\+\_\+\+B\+A\+SE)}
+
+Common Port for all Interrupts 
+
+Definition at line 24 of file keypad.\+h.
+
+
+
+Referenced by column\+\_\+handler(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_ac6ee61281da53701763dea10edccaf75}\label{keypad_8h_ac6ee61281da53701763dea10edccaf75}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W1\+\_\+\+P\+IN@{R\+O\+W1\+\_\+\+P\+IN}}
+\index{R\+O\+W1\+\_\+\+P\+IN@{R\+O\+W1\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W1\+\_\+\+P\+IN}{ROW1\_PIN}}
+{\footnotesize\ttfamily \#define R\+O\+W1\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0)}
+
+G\+P\+IO pin for Row 1 
+
+Definition at line 36 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_a5b59deb936e0331bd1afbc71ff499890}\label{keypad_8h_a5b59deb936e0331bd1afbc71ff499890}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W1\+\_\+\+P\+O\+RT@{R\+O\+W1\+\_\+\+P\+O\+RT}}
+\index{R\+O\+W1\+\_\+\+P\+O\+RT@{R\+O\+W1\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W1\+\_\+\+P\+O\+RT}{ROW1\_PORT}}
+{\footnotesize\ttfamily \#define R\+O\+W1\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)}
+
+Row 1 from Top 
+
+Definition at line 35 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_a987b3cb089c6abb5d2eb883a2c026510}\label{keypad_8h_a987b3cb089c6abb5d2eb883a2c026510}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W2\+\_\+\+P\+IN@{R\+O\+W2\+\_\+\+P\+IN}}
+\index{R\+O\+W2\+\_\+\+P\+IN@{R\+O\+W2\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W2\+\_\+\+P\+IN}{ROW2\_PIN}}
+{\footnotesize\ttfamily \#define R\+O\+W2\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+2)}
+
+G\+P\+IO pin for Row 2 
+
+Definition at line 38 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_ab28530e81b140e1fb89dbcc054d1f330}\label{keypad_8h_ab28530e81b140e1fb89dbcc054d1f330}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W2\+\_\+\+P\+O\+RT@{R\+O\+W2\+\_\+\+P\+O\+RT}}
+\index{R\+O\+W2\+\_\+\+P\+O\+RT@{R\+O\+W2\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W2\+\_\+\+P\+O\+RT}{ROW2\_PORT}}
+{\footnotesize\ttfamily \#define R\+O\+W2\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)}
+
+Row 2 from Top 
+
+Definition at line 37 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_a1dd5c62d3b14f72c5afc8564dccfb73a}\label{keypad_8h_a1dd5c62d3b14f72c5afc8564dccfb73a}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W3\+\_\+\+P\+IN@{R\+O\+W3\+\_\+\+P\+IN}}
+\index{R\+O\+W3\+\_\+\+P\+IN@{R\+O\+W3\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W3\+\_\+\+P\+IN}{ROW3\_PIN}}
+{\footnotesize\ttfamily \#define R\+O\+W3\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+3)}
+
+G\+P\+IO pin for Row 3 
+
+Definition at line 40 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_a5f6a8821d0064dbb3e2f2dcac5485950}\label{keypad_8h_a5f6a8821d0064dbb3e2f2dcac5485950}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W3\+\_\+\+P\+O\+RT@{R\+O\+W3\+\_\+\+P\+O\+RT}}
+\index{R\+O\+W3\+\_\+\+P\+O\+RT@{R\+O\+W3\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W3\+\_\+\+P\+O\+RT}{ROW3\_PORT}}
+{\footnotesize\ttfamily \#define R\+O\+W3\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)}
+
+Row 3 from Top 
+
+Definition at line 39 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_ad27125633a41d58307598ced9efba0bd}\label{keypad_8h_ad27125633a41d58307598ced9efba0bd}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W4\+\_\+\+P\+IN@{R\+O\+W4\+\_\+\+P\+IN}}
+\index{R\+O\+W4\+\_\+\+P\+IN@{R\+O\+W4\+\_\+\+P\+IN}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W4\+\_\+\+P\+IN}{ROW4\_PIN}}
+{\footnotesize\ttfamily \#define R\+O\+W4\+\_\+\+P\+IN~(G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1)}
+
+G\+P\+IO pin for Row 4 
+
+Definition at line 42 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_a0816beca8829df317badb5907b309005}\label{keypad_8h_a0816beca8829df317badb5907b309005}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+W4\+\_\+\+P\+O\+RT@{R\+O\+W4\+\_\+\+P\+O\+RT}}
+\index{R\+O\+W4\+\_\+\+P\+O\+RT@{R\+O\+W4\+\_\+\+P\+O\+RT}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+W4\+\_\+\+P\+O\+RT}{ROW4\_PORT}}
+{\footnotesize\ttfamily \#define R\+O\+W4\+\_\+\+P\+O\+RT~(G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+Q\+\_\+\+B\+A\+SE)}
+
+Row 4 from Top 
+
+Definition at line 41 of file keypad.\+h.
+
+
+
+Referenced by keypad\+\_\+button\+\_\+detect(), and keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}\label{keypad_8h_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{keypad.\+h@{keypad.\+h}!R\+O\+WS@{R\+O\+WS}}
+\index{R\+O\+WS@{R\+O\+WS}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+WS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~(4)}
+
+Number of Rows in Keypad 
+
+Definition at line 73 of file keypad.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{keypad_8h_a195b3865aa3f88ac9a559933e218704e}\label{keypad_8h_a195b3865aa3f88ac9a559933e218704e}} 
+\index{keypad.\+h@{keypad.\+h}!column\+\_\+handler@{column\+\_\+handler}}
+\index{column\+\_\+handler@{column\+\_\+handler}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{column\+\_\+handler()}{column\_handler()}}
+{\footnotesize\ttfamily void column\+\_\+handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Callback function of Column 1 Interrupt. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1, C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT, C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT, delay\+\_\+ms(), keypad\+\_\+button\+\_\+detect(), keypad\+\_\+digits, L\+C\+D\+\_\+write(), otp\+\_\+arr, otp\+\_\+count, otp\+\_\+flag, O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID, packet\+\_\+make(), packet\+\_\+send\+\_\+uart(), printf, T\+R\+UE, and U\+A\+R\+T\+\_\+\+B\+BG.
+
+
+
+Referenced by keypad\+\_\+config().
+
+\mbox{\Hypertarget{keypad_8h_a90abe7784469be2383f343d7e9513904}\label{keypad_8h_a90abe7784469be2383f343d7e9513904}} 
+\index{keypad.\+h@{keypad.\+h}!keypad\+\_\+button\+\_\+detect@{keypad\+\_\+button\+\_\+detect}}
+\index{keypad\+\_\+button\+\_\+detect@{keypad\+\_\+button\+\_\+detect}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{keypad\+\_\+button\+\_\+detect()}{keypad\_button\_detect()}}
+{\footnotesize\ttfamily void keypad\+\_\+button\+\_\+detect (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{column\+\_\+port,  }\item[{uint32\+\_\+t}]{column\+\_\+pin,  }\item[{char}]{keypad\+\_\+digits\mbox{[}\+R\+O\+W\+S\mbox{]}\mbox{[}\+C\+O\+L\+U\+M\+N\+S\mbox{]},  }\item[{uint8\+\_\+t}]{column }\end{DoxyParamCaption})}
+
+
+
+This function detects which key is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+\_\+port} & The Column Port being checked. \\
+\hline
+{\em column\+\_\+pin} & The Column Pin being checked. \\
+\hline
+{\em keypad\+\_\+digits} & The array storing character data. \\
+\hline
+{\em column} & The column being examined. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 166 of file keypad.\+c.
+
+
+
+References keypad\+\_\+digits, lcd\+\_\+write\+\_\+data(), otp\+\_\+arr, otp\+\_\+count, printf, R\+O\+W1\+\_\+\+P\+IN, R\+O\+W1\+\_\+\+P\+O\+RT, R\+O\+W2\+\_\+\+P\+IN, R\+O\+W2\+\_\+\+P\+O\+RT, R\+O\+W3\+\_\+\+P\+IN, R\+O\+W3\+\_\+\+P\+O\+RT, R\+O\+W4\+\_\+\+P\+IN, and R\+O\+W4\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by column\+\_\+handler().
+
+\mbox{\Hypertarget{keypad_8h_a461094c217cbf5c373a5fddba480c585}\label{keypad_8h_a461094c217cbf5c373a5fddba480c585}} 
+\index{keypad.\+h@{keypad.\+h}!keypad\+\_\+config@{keypad\+\_\+config}}
+\index{keypad\+\_\+config@{keypad\+\_\+config}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{keypad\+\_\+config()}{keypad\_config()}}
+{\footnotesize\ttfamily void keypad\+\_\+config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes G\+P\+I\+Os and the required interrupts. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT, column\+\_\+handler(), C\+O\+M\+M\+O\+N\+\_\+\+C\+O\+L\+U\+M\+N\+\_\+\+P\+O\+RT, R\+O\+W1\+\_\+\+P\+IN, R\+O\+W1\+\_\+\+P\+O\+RT, R\+O\+W2\+\_\+\+P\+IN, R\+O\+W2\+\_\+\+P\+O\+RT, R\+O\+W3\+\_\+\+P\+IN, R\+O\+W3\+\_\+\+P\+O\+RT, R\+O\+W4\+\_\+\+P\+IN, and R\+O\+W4\+\_\+\+P\+O\+RT.
+
+\mbox{\Hypertarget{keypad_8h_ac8764725e4f54346cfa11d2731dfb797}\label{keypad_8h_ac8764725e4f54346cfa11d2731dfb797}} 
+\index{keypad.\+h@{keypad.\+h}!keypad\+\_\+interrupt\+\_\+disable@{keypad\+\_\+interrupt\+\_\+disable}}
+\index{keypad\+\_\+interrupt\+\_\+disable@{keypad\+\_\+interrupt\+\_\+disable}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{keypad\+\_\+interrupt\+\_\+disable()}{keypad\_interrupt\_disable()}}
+{\footnotesize\ttfamily void keypad\+\_\+interrupt\+\_\+disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable Interrupts for Keypad Functionality. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, and C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT.
+
+\mbox{\Hypertarget{keypad_8h_af6315f72e41186cb737334eb1d52f0c8}\label{keypad_8h_af6315f72e41186cb737334eb1d52f0c8}} 
+\index{keypad.\+h@{keypad.\+h}!keypad\+\_\+interrupt\+\_\+enable@{keypad\+\_\+interrupt\+\_\+enable}}
+\index{keypad\+\_\+interrupt\+\_\+enable@{keypad\+\_\+interrupt\+\_\+enable}!keypad.\+h@{keypad.\+h}}
+\subsubsection{\texorpdfstring{keypad\+\_\+interrupt\+\_\+enable()}{keypad\_interrupt\_enable()}}
+{\footnotesize\ttfamily void keypad\+\_\+interrupt\+\_\+enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable Interrupts for Keypad Functionality. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file keypad.\+c.
+
+
+
+References C\+O\+L\+U\+M\+N1\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N1\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N2\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N2\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N3\+\_\+\+P\+IN, C\+O\+L\+U\+M\+N3\+\_\+\+P\+O\+RT, C\+O\+L\+U\+M\+N4\+\_\+\+P\+IN, and C\+O\+L\+U\+M\+N4\+\_\+\+P\+O\+RT.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+

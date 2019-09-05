@@ -1,0 +1,519 @@
+\hypertarget{main_8h}{}\section{inc/main.h File Reference}
+\label{main_8h}\index{inc/main.\+h@{inc/main.\+h}}
+
+
+Header file for main.\+c.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+ints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/pin\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/rom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/rom\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sensorlib/i2cm\+\_\+drv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/uartstdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}semphr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/pinout.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}drivers/buttons.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtemp}{temp}
+\item 
+struct \hyperlink{structevent}{event}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8h_ae46715b8c3e3e175b44e3d0f2aecd7bb}{L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE}~(128)
+\item 
+\#define \hyperlink{main_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}{printf}~(U\+A\+R\+Tprintf)
+\item 
+\#define \hyperlink{main_8h_a3be7ef61d339af381862a81d4b363efb}{C\+L\+O\+CK}~(16000000)
+\item 
+\#define \hyperlink{main_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\+R\+UE}~(1)
+\item 
+\#define \hyperlink{main_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\+A\+L\+SE}~(0)
+\item 
+\#define \hyperlink{main_8h_ae0f5cca356880fc7f86d8763582b5a56}{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED}~(1)
+\item 
+\#define \hyperlink{main_8h_a4252dabccdc8c921bf610bee7d87b786}{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED}~(0)
+\item 
+\#define \hyperlink{main_8h_afdc326bd5037b2251e62f398ab1b48d1}{D\+O\+N\+T\+\_\+\+C\+A\+RE}~(0)
+\item 
+\#define \hyperlink{main_8h_ae42fcded76d6550261dac91cb89e0c9e}{R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID}~(0)
+\item 
+\#define \hyperlink{main_8h_ad370db17eb107182d15ece815b46e67a}{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID}~(1)
+\item 
+\#define \hyperlink{main_8h_abe8df89752561e21facf04bcec072872}{O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID}~(2)
+\item 
+\#define \hyperlink{main_8h_a03eb64e18a3335a85856fa179461bfb0}{O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID}~(3)
+\item 
+\#define \hyperlink{main_8h_a5d4c419de1383046732b74fe87560f73}{A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID}~(4)
+\item 
+\#define \hyperlink{main_8h_a9b82beafa7974d437b933d2aab55a605}{M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID}~(5)
+\item 
+\#define \hyperlink{main_8h_a36bd53ccb55197de3f84dace6c394be5}{A\+C\+K\+\_\+\+ID}~(6)
+\item 
+\#define \hyperlink{main_8h_a0359769f59cc52c10cb409ed5754006d}{G\+U\+I\+\_\+\+ID}~(7)
+\item 
+\#define \hyperlink{main_8h_a1dfc06b020ba4038f330e714a620644a}{T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID}~(10)
+\item 
+\#define \hyperlink{main_8h_ac2a9918e6ef6f34da1839788a161b794}{L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID}~(11)
+\item 
+\#define \hyperlink{main_8h_a931b8fc4767a05ad3e476f9fa0f44cb3}{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}~(1)
+\item 
+\#define \hyperlink{main_8h_ad7b20c1c179e8a3da3b8809eb452d9fd}{G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT}~(2)
+\item 
+\#define \hyperlink{main_8h_a8f1049e3627fb4fc9b4c9a8fb7498c26}{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON}~(3)
+\item 
+\#define \hyperlink{main_8h_a8375673833f6e8677cdcf225949a6604}{G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL}~(4)
+\item 
+\#define \hyperlink{main_8h_acc8ac7cfd08fb89b1c1d25806aa7ca5a}{G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM}~(5)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8h_a5f60b6a60802eccd1ae9526e776a476c}{Configure\+U\+A\+RT} (void)
+\begin{DoxyCompactList}\small\item\em Configures the U\+A\+RT and its pins.\+This must be called before U\+A\+R\+Tprintf(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{main_8h_a85ea8ca26e195a17da88e70e7e4ddf82}{g\+\_\+ui32\+Sys\+Clock}
+\item 
+volatile uint8\+\_\+t \hyperlink{main_8h_a2b4e3bab201a01e073d7547c75f2c818}{otp\+\_\+flag}
+\item 
+volatile uint8\+\_\+t \hyperlink{main_8h_ada8361483dd5ab067abcf88162b07b65}{otp\+\_\+count}
+\item 
+uint8\+\_\+t \hyperlink{main_8h_ab5bbd30029e626af8b4182b43bd62e15}{otp\+\_\+arr} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for main.\+c. 
+
+The file consists of all the function declarations, macros and datatype declarations. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/16/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8h_a5d4c419de1383046732b74fe87560f73}\label{main_8h_a5d4c419de1383046732b74fe87560f73}} 
+\index{main.\+h@{main.\+h}!A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID@{A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID}}
+\index{A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID@{A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID}{ACCESS\_STATUS\_RCV\_ID}}
+{\footnotesize\ttfamily \#define A\+C\+C\+E\+S\+S\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+C\+V\+\_\+\+ID~(4)}
+
+
+
+Definition at line 61 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a36bd53ccb55197de3f84dace6c394be5}\label{main_8h_a36bd53ccb55197de3f84dace6c394be5}} 
+\index{main.\+h@{main.\+h}!A\+C\+K\+\_\+\+ID@{A\+C\+K\+\_\+\+ID}}
+\index{A\+C\+K\+\_\+\+ID@{A\+C\+K\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{A\+C\+K\+\_\+\+ID}{ACK\_ID}}
+{\footnotesize\ttfamily \#define A\+C\+K\+\_\+\+ID~(6)}
+
+
+
+Definition at line 63 of file main.\+h.
+
+
+
+Referenced by ack\+\_\+send\+\_\+uart(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a3be7ef61d339af381862a81d4b363efb}\label{main_8h_a3be7ef61d339af381862a81d4b363efb}} 
+\index{main.\+h@{main.\+h}!C\+L\+O\+CK@{C\+L\+O\+CK}}
+\index{C\+L\+O\+CK@{C\+L\+O\+CK}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{C\+L\+O\+CK}{CLOCK}}
+{\footnotesize\ttfamily \#define C\+L\+O\+CK~(16000000)}
+
+
+
+Definition at line 47 of file main.\+h.
+
+
+
+Referenced by configure\+U\+A\+R\+T\+\_\+bbg().
+
+\mbox{\Hypertarget{main_8h_afdc326bd5037b2251e62f398ab1b48d1}\label{main_8h_afdc326bd5037b2251e62f398ab1b48d1}} 
+\index{main.\+h@{main.\+h}!D\+O\+N\+T\+\_\+\+C\+A\+RE@{D\+O\+N\+T\+\_\+\+C\+A\+RE}}
+\index{D\+O\+N\+T\+\_\+\+C\+A\+RE@{D\+O\+N\+T\+\_\+\+C\+A\+RE}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{D\+O\+N\+T\+\_\+\+C\+A\+RE}{DONT\_CARE}}
+{\footnotesize\ttfamily \#define D\+O\+N\+T\+\_\+\+C\+A\+RE~(0)}
+
+
+
+Definition at line 52 of file main.\+h.
+
+
+
+Referenced by ack\+\_\+send\+\_\+uart(), and fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{main_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{main_8h_aa93f0eb578d23995850d61f7d61c55c1}} 
+\index{main.\+h@{main.\+h}!F\+A\+L\+SE@{F\+A\+L\+SE}}
+\index{F\+A\+L\+SE@{F\+A\+L\+SE}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{F\+A\+L\+SE}{FALSE}}
+{\footnotesize\ttfamily \#define F\+A\+L\+SE~(0)}
+
+
+
+Definition at line 49 of file main.\+h.
+
+
+
+Referenced by ack\+\_\+send\+\_\+uart().
+
+\mbox{\Hypertarget{main_8h_ad370db17eb107182d15ece815b46e67a}\label{main_8h_ad370db17eb107182d15ece815b46e67a}} 
+\index{main.\+h@{main.\+h}!F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID@{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID}}
+\index{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID@{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID}{FINGERPRINT\_ID}}
+{\footnotesize\ttfamily \#define F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+ID~(1)}
+
+
+
+Definition at line 58 of file main.\+h.
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{main_8h_ae0f5cca356880fc7f86d8763582b5a56}\label{main_8h_ae0f5cca356880fc7f86d8763582b5a56}} 
+\index{main.\+h@{main.\+h}!F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED@{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED}}
+\index{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED@{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED}{FINGERPRINT\_MATCHED}}
+{\footnotesize\ttfamily \#define F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+M\+A\+T\+C\+H\+ED~(1)}
+
+
+
+Definition at line 50 of file main.\+h.
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{main_8h_a4252dabccdc8c921bf610bee7d87b786}\label{main_8h_a4252dabccdc8c921bf610bee7d87b786}} 
+\index{main.\+h@{main.\+h}!F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED@{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED}}
+\index{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED@{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED}{FINGERPRINT\_NOTMATCHED}}
+{\footnotesize\ttfamily \#define F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+N\+O\+T\+M\+A\+T\+C\+H\+ED~(0)}
+
+
+
+Definition at line 51 of file main.\+h.
+
+
+
+Referenced by fp\+\_\+access\+\_\+handle().
+
+\mbox{\Hypertarget{main_8h_ad7b20c1c179e8a3da3b8809eb452d9fd}\label{main_8h_ad7b20c1c179e8a3da3b8809eb452d9fd}} 
+\index{main.\+h@{main.\+h}!G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT@{G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT}}
+\index{G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT@{G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT}{GUI\_ADD\_FINGERPRINT}}
+{\footnotesize\ttfamily \#define G\+U\+I\+\_\+\+A\+D\+D\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT~(2)}
+
+Add Fingerprint Request from B\+BG G\+UI 
+
+Definition at line 73 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a931b8fc4767a05ad3e476f9fa0f44cb3}\label{main_8h_a931b8fc4767a05ad3e476f9fa0f44cb3}} 
+\index{main.\+h@{main.\+h}!G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF@{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}}
+\index{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF@{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF}{GUI\_BUZZER\_OFF}}
+{\footnotesize\ttfamily \#define G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+O\+FF~(1)}
+
+Buzzer O\+FF Request from B\+BG G\+UI 
+
+Definition at line 72 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a8f1049e3627fb4fc9b4c9a8fb7498c26}\label{main_8h_a8f1049e3627fb4fc9b4c9a8fb7498c26}} 
+\index{main.\+h@{main.\+h}!G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON@{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON}}
+\index{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON@{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON}{GUI\_BUZZER\_ON}}
+{\footnotesize\ttfamily \#define G\+U\+I\+\_\+\+B\+U\+Z\+Z\+E\+R\+\_\+\+ON~(3)}
+
+Buzzer ON Request from B\+BG G\+UI 
+
+Definition at line 74 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a8375673833f6e8677cdcf225949a6604}\label{main_8h_a8375673833f6e8677cdcf225949a6604}} 
+\index{main.\+h@{main.\+h}!G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL@{G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL}}
+\index{G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL@{G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL}{GUI\_DELETE\_FINGERPRINT\_ALL}}
+{\footnotesize\ttfamily \#define G\+U\+I\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+N\+T\+\_\+\+A\+LL~(4)}
+
+Delete Fingerprint Request from B\+BG G\+UI 
+
+Definition at line 75 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a0359769f59cc52c10cb409ed5754006d}\label{main_8h_a0359769f59cc52c10cb409ed5754006d}} 
+\index{main.\+h@{main.\+h}!G\+U\+I\+\_\+\+ID@{G\+U\+I\+\_\+\+ID}}
+\index{G\+U\+I\+\_\+\+ID@{G\+U\+I\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{G\+U\+I\+\_\+\+ID}{GUI\_ID}}
+{\footnotesize\ttfamily \#define G\+U\+I\+\_\+\+ID~(7)}
+
+
+
+Definition at line 64 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_acc8ac7cfd08fb89b1c1d25806aa7ca5a}\label{main_8h_acc8ac7cfd08fb89b1c1d25806aa7ca5a}} 
+\index{main.\+h@{main.\+h}!G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM@{G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM}}
+\index{G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM@{G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM}{GUI\_RESET\_SYSTEM}}
+{\footnotesize\ttfamily \#define G\+U\+I\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+Y\+S\+T\+EM~(5)}
+
+Reset System Request from G\+UI 
+
+Definition at line 76 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_ac2a9918e6ef6f34da1839788a161b794}\label{main_8h_ac2a9918e6ef6f34da1839788a161b794}} 
+\index{main.\+h@{main.\+h}!L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID@{L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID}}
+\index{L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID@{L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID}{LED\_RCV\_ID}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+R\+C\+V\+\_\+\+ID~(11)}
+
+
+
+Definition at line 66 of file main.\+h.
+
+
+
+Referenced by nrf\+\_\+log().
+
+\mbox{\Hypertarget{main_8h_ae46715b8c3e3e175b44e3d0f2aecd7bb}\label{main_8h_ae46715b8c3e3e175b44e3d0f2aecd7bb}} 
+\index{main.\+h@{main.\+h}!L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE@{L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE}}
+\index{L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE@{L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE}{LEDTASKSTACKSIZE}}
+{\footnotesize\ttfamily \#define L\+E\+D\+T\+A\+S\+K\+S\+T\+A\+C\+K\+S\+I\+ZE~(128)}
+
+
+
+Definition at line 45 of file main.\+h.
+
+
+
+Referenced by nrf\+\_\+loggertask\+\_\+init(), and temptask\+\_\+init().
+
+\mbox{\Hypertarget{main_8h_a9b82beafa7974d437b933d2aab55a605}\label{main_8h_a9b82beafa7974d437b933d2aab55a605}} 
+\index{main.\+h@{main.\+h}!M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID@{M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID}}
+\index{M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID@{M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID}{MSG\_LOG\_ID}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+L\+O\+G\+\_\+\+ID~(5)}
+
+
+
+Definition at line 62 of file main.\+h.
+
+
+
+Referenced by packet\+\_\+msglog\+\_\+uart().
+
+\mbox{\Hypertarget{main_8h_a03eb64e18a3335a85856fa179461bfb0}\label{main_8h_a03eb64e18a3335a85856fa179461bfb0}} 
+\index{main.\+h@{main.\+h}!O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID@{O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID}}
+\index{O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID@{O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID}{OTP\_SEND\_BBG\_ID}}
+{\footnotesize\ttfamily \#define O\+T\+P\+\_\+\+S\+E\+N\+D\+\_\+\+B\+B\+G\+\_\+\+ID~(3)}
+
+
+
+Definition at line 60 of file main.\+h.
+
+
+
+Referenced by column\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_abe8df89752561e21facf04bcec072872}\label{main_8h_abe8df89752561e21facf04bcec072872}} 
+\index{main.\+h@{main.\+h}!O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID@{O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID}}
+\index{O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID@{O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID}{OTP\_SENT\_USER\_ID}}
+{\footnotesize\ttfamily \#define O\+T\+P\+\_\+\+S\+E\+N\+T\+\_\+\+U\+S\+E\+R\+\_\+\+ID~(2)}
+
+
+
+Definition at line 59 of file main.\+h.
+
+
+
+Referenced by uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}\label{main_8h_a3cb9f0894fab1c8fbb0753c9c7c2a8d9}} 
+\index{main.\+h@{main.\+h}!printf@{printf}}
+\index{printf@{printf}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{printf}{printf}}
+{\footnotesize\ttfamily \#define printf~(U\+A\+R\+Tprintf)}
+
+
+
+Definition at line 46 of file main.\+h.
+
+
+
+Referenced by add\+\_\+fingerprint(), column\+\_\+handler(), fp\+\_\+access\+\_\+handle(), fp\+\_\+enroll(), fp\+\_\+get\+\_\+enrollcount(), fp\+\_\+irqhandler(), keypad\+\_\+button\+\_\+detect(), nrf\+\_\+config(), nrf\+\_\+config\+\_\+mode(), nrf\+\_\+irqhandler(), nrf\+\_\+packet\+\_\+rcv(), nrf\+\_\+read\+\_\+\+R\+Xaddr(), nrf\+\_\+read\+\_\+\+T\+Xaddr(), packet\+\_\+make(), packet\+\_\+rcv\+\_\+uart(), timer0handler(), timer1handler(), uart\+\_\+bbg\+\_\+test(), uart\+\_\+commhandler(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_ae42fcded76d6550261dac91cb89e0c9e}\label{main_8h_ae42fcded76d6550261dac91cb89e0c9e}} 
+\index{main.\+h@{main.\+h}!R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID@{R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID}}
+\index{R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID@{R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID}{RANDOM\_TEST\_ID}}
+{\footnotesize\ttfamily \#define R\+A\+N\+D\+O\+M\+\_\+\+T\+E\+S\+T\+\_\+\+ID~(0)}
+
+
+
+Definition at line 57 of file main.\+h.
+
+
+
+Referenced by nrf\+\_\+log(), and temp().
+
+\mbox{\Hypertarget{main_8h_a1dfc06b020ba4038f330e714a620644a}\label{main_8h_a1dfc06b020ba4038f330e714a620644a}} 
+\index{main.\+h@{main.\+h}!T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID@{T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID}}
+\index{T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID@{T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID}{TEMP\_RCV\_ID}}
+{\footnotesize\ttfamily \#define T\+E\+M\+P\+\_\+\+R\+C\+V\+\_\+\+ID~(10)}
+
+
+
+Definition at line 65 of file main.\+h.
+
+
+
+Referenced by nrf\+\_\+log(), and temp\+\_\+send().
+
+\mbox{\Hypertarget{main_8h_aa8cecfc5c5c054d2875c03e77b7be15d}\label{main_8h_aa8cecfc5c5c054d2875c03e77b7be15d}} 
+\index{main.\+h@{main.\+h}!T\+R\+UE@{T\+R\+UE}}
+\index{T\+R\+UE@{T\+R\+UE}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{T\+R\+UE}{TRUE}}
+{\footnotesize\ttfamily \#define T\+R\+UE~(1)}
+
+
+
+Definition at line 48 of file main.\+h.
+
+
+
+Referenced by column\+\_\+handler(), fp\+\_\+access\+\_\+handle(), and packet\+\_\+msglog\+\_\+uart().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8h_a5f60b6a60802eccd1ae9526e776a476c}\label{main_8h_a5f60b6a60802eccd1ae9526e776a476c}} 
+\index{main.\+h@{main.\+h}!Configure\+U\+A\+RT@{Configure\+U\+A\+RT}}
+\index{Configure\+U\+A\+RT@{Configure\+U\+A\+RT}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{Configure\+U\+A\+R\+T()}{ConfigureUART()}}
+{\footnotesize\ttfamily void Configure\+U\+A\+RT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures the U\+A\+RT and its pins.\+This must be called before U\+A\+R\+Tprintf(). 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8h_a85ea8ca26e195a17da88e70e7e4ddf82}\label{main_8h_a85ea8ca26e195a17da88e70e7e4ddf82}} 
+\index{main.\+h@{main.\+h}!g\+\_\+ui32\+Sys\+Clock@{g\+\_\+ui32\+Sys\+Clock}}
+\index{g\+\_\+ui32\+Sys\+Clock@{g\+\_\+ui32\+Sys\+Clock}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{g\+\_\+ui32\+Sys\+Clock}{g\_ui32SysClock}}
+{\footnotesize\ttfamily uint32\+\_\+t g\+\_\+ui32\+Sys\+Clock}
+
+This variable holds the system clock 
+
+Definition at line 82 of file main.\+h.
+
+
+
+Referenced by buzzer\+\_\+dutycycle(), delay\+\_\+ms(), delay\+\_\+us(), reset\+\_\+timer(), spi\+\_\+config(), and timer\+\_\+config().
+
+\mbox{\Hypertarget{main_8h_ab5bbd30029e626af8b4182b43bd62e15}\label{main_8h_ab5bbd30029e626af8b4182b43bd62e15}} 
+\index{main.\+h@{main.\+h}!otp\+\_\+arr@{otp\+\_\+arr}}
+\index{otp\+\_\+arr@{otp\+\_\+arr}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{otp\+\_\+arr}{otp\_arr}}
+{\footnotesize\ttfamily uint8\+\_\+t otp\+\_\+arr\mbox{[}4\mbox{]}}
+
+Global array where O\+TP input by user is stored 
+
+Definition at line 85 of file main.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+button\+\_\+detect(), timer1handler(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_ada8361483dd5ab067abcf88162b07b65}\label{main_8h_ada8361483dd5ab067abcf88162b07b65}} 
+\index{main.\+h@{main.\+h}!otp\+\_\+count@{otp\+\_\+count}}
+\index{otp\+\_\+count@{otp\+\_\+count}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{otp\+\_\+count}{otp\_count}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t otp\+\_\+count}
+
+Keeps a Tab on how many digits have been entered 
+
+Definition at line 84 of file main.\+h.
+
+
+
+Referenced by column\+\_\+handler(), keypad\+\_\+button\+\_\+detect(), timer1handler(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{main_8h_a2b4e3bab201a01e073d7547c75f2c818}\label{main_8h_a2b4e3bab201a01e073d7547c75f2c818}} 
+\index{main.\+h@{main.\+h}!otp\+\_\+flag@{otp\+\_\+flag}}
+\index{otp\+\_\+flag@{otp\+\_\+flag}!main.\+h@{main.\+h}}
+\subsubsection{\texorpdfstring{otp\+\_\+flag}{otp\_flag}}
+{\footnotesize\ttfamily volatile uint8\+\_\+t otp\+\_\+flag}
+
+This flag allows data to be stored in the array otp\+\_\+arr only when O\+TP has been sent to user 
+
+Definition at line 83 of file main.\+h.
+
+
+
+Referenced by column\+\_\+handler(), timer1handler(), and uart\+\_\+packet\+\_\+handler().
+

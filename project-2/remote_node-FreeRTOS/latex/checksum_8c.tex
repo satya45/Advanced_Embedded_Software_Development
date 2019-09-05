@@ -1,0 +1,90 @@
+\hypertarget{checksum_8c}{}\section{src/checksum.c File Reference}
+\label{checksum_8c}\index{src/checksum.\+c@{src/checksum.\+c}}
+
+
+This file consists of all the functions required for Checksum.  
+
+
+{\ttfamily \#include \char`\"{}inc/checksum.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{checksum_8c_ae1e3b3bacf1809578c36db6ab9d79aa3}{checksum\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes the Checksum functionality and stores all the possible combinations in a table. \end{DoxyCompactList}\item 
+\hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc} \hyperlink{checksum_8c_a0d196fa8d223843c0afa22e43ca1f737}{checksum\+\_\+calc} (uint8\+\_\+t const message\mbox{[}$\,$\mbox{]}, int n\+Bytes)
+\begin{DoxyCompactList}\small\item\em This function calculates the Checksum for the specified data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions required for Checksum. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/20/2019 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\href{https://barrgroup.com/Embedded-Systems/How-To/CRC-Calculation-C-Code}{\tt https\+://barrgroup.\+com/\+Embedded-\/\+Systems/\+How-\/\+To/\+C\+R\+C-\/\+Calculation-\/\+C-\/\+Code}
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{checksum_8c_a0d196fa8d223843c0afa22e43ca1f737}\label{checksum_8c_a0d196fa8d223843c0afa22e43ca1f737}} 
+\index{checksum.\+c@{checksum.\+c}!checksum\+\_\+calc@{checksum\+\_\+calc}}
+\index{checksum\+\_\+calc@{checksum\+\_\+calc}!checksum.\+c@{checksum.\+c}}
+\subsubsection{\texorpdfstring{checksum\+\_\+calc()}{checksum\_calc()}}
+{\footnotesize\ttfamily \hyperlink{checksum_8h_a9cf47739c68628afd8694d19fede61de}{crc} checksum\+\_\+calc (\begin{DoxyParamCaption}\item[{uint8\+\_\+t const}]{message\mbox{[}$\,$\mbox{]},  }\item[{int}]{n\+Bytes }\end{DoxyParamCaption})}
+
+
+
+This function calculates the Checksum for the specified data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The array containing the Message Data. \\
+\hline
+{\em n\+Bytes} & The Number of bytes in the Array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+crc. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file checksum.\+c.
+
+
+
+References crc\+Table, and W\+I\+D\+TH.
+
+
+
+Referenced by packet\+\_\+make(), packet\+\_\+rcv\+\_\+uart(), and uart\+\_\+packet\+\_\+handler().
+
+\mbox{\Hypertarget{checksum_8c_ae1e3b3bacf1809578c36db6ab9d79aa3}\label{checksum_8c_ae1e3b3bacf1809578c36db6ab9d79aa3}} 
+\index{checksum.\+c@{checksum.\+c}!checksum\+\_\+init@{checksum\+\_\+init}}
+\index{checksum\+\_\+init@{checksum\+\_\+init}!checksum.\+c@{checksum.\+c}}
+\subsubsection{\texorpdfstring{checksum\+\_\+init()}{checksum\_init()}}
+{\footnotesize\ttfamily void checksum\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes the Checksum functionality and stores all the possible combinations in a table. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file checksum.\+c.
+
+
+
+References crc\+Table, P\+O\+L\+Y\+N\+O\+M\+I\+AL, T\+O\+P\+B\+IT, and W\+I\+D\+TH.
+

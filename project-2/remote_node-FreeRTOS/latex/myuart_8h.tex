@@ -1,0 +1,268 @@
+\hypertarget{myuart_8h}{}\section{inc/myuart.h File Reference}
+\label{myuart_8h}\index{inc/myuart.\+h@{inc/myuart.\+h}}
+
+
+Header file for \hyperlink{myuart_8c}{myuart.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{myuart_8h_afb6e3b62acce6882ca209d4ad5b3f5b3}{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+FP}~(9600)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} \{ \newline
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90a9283de1a2e6eea552574a50ca586df8e}{U\+A\+R\+T0} = U\+A\+R\+T0\+\_\+\+B\+A\+SE, 
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90ad78b5dd576e9a3ab80d6c77ff9d1cd27}{U\+A\+R\+T1} = U\+A\+R\+T1\+\_\+\+B\+A\+SE, 
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90ae3d134ce07a572f0b6128fe66077a5be}{U\+A\+R\+T\+\_\+\+FP} = U\+A\+R\+T2\+\_\+\+B\+A\+SE, 
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90aa5335df7c1b2982fb4cdc718bb526d40}{U\+A\+R\+T3} = U\+A\+R\+T3\+\_\+\+B\+A\+SE, 
+\newline
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90a70790e06a56b49460d1b8e081e296599}{U\+A\+R\+T4} = U\+A\+R\+T4\+\_\+\+B\+A\+SE, 
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90a22cb0cc0e8156029a0682a5609156a99}{U\+A\+R\+T5} = U\+A\+R\+T5\+\_\+\+B\+A\+SE, 
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90acc96aab6184a2a090f547606d4103c06}{U\+A\+R\+T\+\_\+\+B\+BG} = U\+A\+R\+T6\+\_\+\+B\+A\+SE, 
+\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90a916e4dd0299968abe223ef90268b9b45}{U\+A\+R\+T7} = U\+A\+R\+T7\+\_\+\+B\+A\+SE
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{myuart_8h_a039ece338f7cef5fa0656613789d48df}{uart\+\_\+configure} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint32\+\_\+t clock, uint32\+\_\+t baudrate, bool irq)
+\begin{DoxyCompactList}\small\item\em Configures the Particular U\+A\+RT required. \end{DoxyCompactList}\item 
+void \hyperlink{myuart_8h_aa85d4eb8bdd6cf94b69156d68a689e63}{uart\+\_\+comm\+\_\+flush\+RX} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function flushes the U\+A\+RT \hyperlink{struct_r_x}{RX} F\+I\+FO. \end{DoxyCompactList}\item 
+void \hyperlink{myuart_8h_ac22afb7956589bf2c7e91014aa075ef0}{uart\+\_\+comm\+\_\+flush\+TX} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function flushes the U\+A\+RT \hyperlink{struct_t_x}{TX} F\+I\+FO. \end{DoxyCompactList}\item 
+void \hyperlink{myuart_8h_a790c4518a60e75109b5b6550cac3befb}{uart\+\_\+send} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em This function sends data over U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{myuart_8h_a5e1fb6f1ff3e974df6dc6b6a7b9127cd}{uart\+\_\+busy} (\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t} uart)
+\begin{DoxyCompactList}\small\item\em This function checks is the specified U\+A\+RT line is busy and waits till it is free. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{myuart_8c}{myuart.\+c}. 
+
+The file consists of all the function declarations, macros and datatype declarations required for U\+A\+RT Communication. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/22/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{myuart_8h_afb6e3b62acce6882ca209d4ad5b3f5b3}\label{myuart_8h_afb6e3b62acce6882ca209d4ad5b3f5b3}} 
+\index{myuart.\+h@{myuart.\+h}!B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+FP@{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+FP}}
+\index{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+FP@{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+FP}!myuart.\+h@{myuart.\+h}}
+\subsubsection{\texorpdfstring{B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+FP}{BAUDRATE\_FP}}
+{\footnotesize\ttfamily \#define B\+A\+U\+D\+R\+A\+T\+E\+\_\+\+FP~(9600)}
+
+
+
+Definition at line 24 of file myuart.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90}} 
+\index{myuart.\+h@{myuart.\+h}!uart\+\_\+t@{uart\+\_\+t}}
+\index{uart\+\_\+t@{uart\+\_\+t}!myuart.\+h@{myuart.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+t}{uart\_t}}
+{\footnotesize\ttfamily enum \hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T0@{U\+A\+R\+T0}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T0@{U\+A\+R\+T0}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90a9283de1a2e6eea552574a50ca586df8e}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90a9283de1a2e6eea552574a50ca586df8e}} 
+U\+A\+R\+T0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T1@{U\+A\+R\+T1}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T1@{U\+A\+R\+T1}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90ad78b5dd576e9a3ab80d6c77ff9d1cd27}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90ad78b5dd576e9a3ab80d6c77ff9d1cd27}} 
+U\+A\+R\+T1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T\+\_\+\+FP@{U\+A\+R\+T\+\_\+\+FP}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T\+\_\+\+FP@{U\+A\+R\+T\+\_\+\+FP}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90ae3d134ce07a572f0b6128fe66077a5be}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90ae3d134ce07a572f0b6128fe66077a5be}} 
+U\+A\+R\+T\+\_\+\+FP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T3@{U\+A\+R\+T3}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T3@{U\+A\+R\+T3}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90aa5335df7c1b2982fb4cdc718bb526d40}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90aa5335df7c1b2982fb4cdc718bb526d40}} 
+U\+A\+R\+T3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T4@{U\+A\+R\+T4}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T4@{U\+A\+R\+T4}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90a70790e06a56b49460d1b8e081e296599}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90a70790e06a56b49460d1b8e081e296599}} 
+U\+A\+R\+T4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T5@{U\+A\+R\+T5}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T5@{U\+A\+R\+T5}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90a22cb0cc0e8156029a0682a5609156a99}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90a22cb0cc0e8156029a0682a5609156a99}} 
+U\+A\+R\+T5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T\+\_\+\+B\+BG@{U\+A\+R\+T\+\_\+\+B\+BG}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T\+\_\+\+B\+BG@{U\+A\+R\+T\+\_\+\+B\+BG}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90acc96aab6184a2a090f547606d4103c06}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90acc96aab6184a2a090f547606d4103c06}} 
+U\+A\+R\+T\+\_\+\+B\+BG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+A\+R\+T7@{U\+A\+R\+T7}!myuart.\+h@{myuart.\+h}}\index{myuart.\+h@{myuart.\+h}!U\+A\+R\+T7@{U\+A\+R\+T7}}}\mbox{\Hypertarget{myuart_8h_ac667bf51474e96f174f2b6568b166c90a916e4dd0299968abe223ef90268b9b45}\label{myuart_8h_ac667bf51474e96f174f2b6568b166c90a916e4dd0299968abe223ef90268b9b45}} 
+U\+A\+R\+T7&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 31 of file myuart.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{myuart_8h_a5e1fb6f1ff3e974df6dc6b6a7b9127cd}\label{myuart_8h_a5e1fb6f1ff3e974df6dc6b6a7b9127cd}} 
+\index{myuart.\+h@{myuart.\+h}!uart\+\_\+busy@{uart\+\_\+busy}}
+\index{uart\+\_\+busy@{uart\+\_\+busy}!myuart.\+h@{myuart.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+busy()}{uart\_busy()}}
+{\footnotesize\ttfamily void uart\+\_\+busy (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function checks is the specified U\+A\+RT line is busy and waits till it is free. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file myuart.\+h.
+
+
+
+Referenced by fp\+\_\+baudrate(), fp\+\_\+cmdsend(), fp\+\_\+deleteid(), fp\+\_\+start\+\_\+enroll(), fp\+\_\+verify(), and uart\+\_\+send().
+
+\mbox{\Hypertarget{myuart_8h_aa85d4eb8bdd6cf94b69156d68a689e63}\label{myuart_8h_aa85d4eb8bdd6cf94b69156d68a689e63}} 
+\index{myuart.\+h@{myuart.\+h}!uart\+\_\+comm\+\_\+flush\+RX@{uart\+\_\+comm\+\_\+flush\+RX}}
+\index{uart\+\_\+comm\+\_\+flush\+RX@{uart\+\_\+comm\+\_\+flush\+RX}!myuart.\+h@{myuart.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+comm\+\_\+flush\+R\+X()}{uart\_comm\_flushRX()}}
+{\footnotesize\ttfamily void uart\+\_\+comm\+\_\+flush\+RX (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function flushes the U\+A\+RT \hyperlink{struct_r_x}{RX} F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file myuart.\+c.
+
+
+
+Referenced by configure\+U\+A\+R\+T\+\_\+bbg().
+
+\mbox{\Hypertarget{myuart_8h_ac22afb7956589bf2c7e91014aa075ef0}\label{myuart_8h_ac22afb7956589bf2c7e91014aa075ef0}} 
+\index{myuart.\+h@{myuart.\+h}!uart\+\_\+comm\+\_\+flush\+TX@{uart\+\_\+comm\+\_\+flush\+TX}}
+\index{uart\+\_\+comm\+\_\+flush\+TX@{uart\+\_\+comm\+\_\+flush\+TX}!myuart.\+h@{myuart.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+comm\+\_\+flush\+T\+X()}{uart\_comm\_flushTX()}}
+{\footnotesize\ttfamily void uart\+\_\+comm\+\_\+flush\+TX (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart }\end{DoxyParamCaption})}
+
+
+
+This function flushes the U\+A\+RT \hyperlink{struct_t_x}{TX} F\+I\+FO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The U\+A\+RT needs to be enabled again after using this function for the U\+A\+RT to function again. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+U\+A\+R\+T\+Enable(). 
+\end{DoxySeeAlso}
+
+
+Definition at line 94 of file myuart.\+c.
+
+
+
+Referenced by configure\+U\+A\+R\+T\+\_\+bbg().
+
+\mbox{\Hypertarget{myuart_8h_a039ece338f7cef5fa0656613789d48df}\label{myuart_8h_a039ece338f7cef5fa0656613789d48df}} 
+\index{myuart.\+h@{myuart.\+h}!uart\+\_\+configure@{uart\+\_\+configure}}
+\index{uart\+\_\+configure@{uart\+\_\+configure}!myuart.\+h@{myuart.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+configure()}{uart\_configure()}}
+{\footnotesize\ttfamily void uart\+\_\+configure (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint32\+\_\+t}]{clock,  }\item[{uint32\+\_\+t}]{baudrate,  }\item[{bool}]{irq }\end{DoxyParamCaption})}
+
+
+
+Configures the Particular U\+A\+RT required. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line used. \\
+\hline
+{\em clock} & The clock used for the peripheral. The macro is defined is C\+L\+O\+CK IN \hyperlink{main_8h}{main.\+h}. \\
+\hline
+{\em baudrate} & The baudrate defined for the peripheral. \\
+\hline
+{\em irq} & = T\+R\+UE\+: interrupt functionality enabled for U\+A\+RT, F\+A\+L\+SE\+: Interrupt functionality disabled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file myuart.\+c.
+
+
+
+References U\+A\+R\+T\+\_\+\+FP.
+
+\mbox{\Hypertarget{myuart_8h_a790c4518a60e75109b5b6550cac3befb}\label{myuart_8h_a790c4518a60e75109b5b6550cac3befb}} 
+\index{myuart.\+h@{myuart.\+h}!uart\+\_\+send@{uart\+\_\+send}}
+\index{uart\+\_\+send@{uart\+\_\+send}!myuart.\+h@{myuart.\+h}}
+\subsubsection{\texorpdfstring{uart\+\_\+send()}{uart\_send()}}
+{\footnotesize\ttfamily void uart\+\_\+send (\begin{DoxyParamCaption}\item[{\hyperlink{myuart_8h_ac667bf51474e96f174f2b6568b166c90}{uart\+\_\+t}}]{uart,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+This function sends data over U\+A\+RT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uart} & The U\+A\+RT line being used. \\
+\hline
+{\em value} & The value to be sent on U\+A\+RT. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file myuart.\+c.
+
+
+
+References uart\+\_\+busy().
+
+
+
+Referenced by packet\+\_\+send\+\_\+uart(), and uart\+\_\+bbg\+\_\+test().
+

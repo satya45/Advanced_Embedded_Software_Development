@@ -1,0 +1,175 @@
+\hypertarget{led_8h}{}\section{inc/led.h File Reference}
+\label{led_8h}\index{inc/led.\+h@{inc/led.\+h}}
+
+
+Header file for \hyperlink{led_8c}{led.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}inc/main.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{led_8h_a8aa85ae9867fabf70ec72cd3bf6fb6b9}{L\+E\+D1}~(1)
+\item 
+\#define \hyperlink{led_8h_ad09fe5bf321b9a2de26bd5e5b9af6424}{L\+E\+D2}~(2)
+\item 
+\#define \hyperlink{led_8h_a4b7ff8e253a7412f83deba3a447028a8}{L\+E\+D3}~(3)
+\item 
+\#define \hyperlink{led_8h_ae048837f20072bed467332b1bd1da9fa}{L\+E\+D4}~(4)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}{led\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes all the G\+P\+I\+Os required for L\+ED functionality. \end{DoxyCompactList}\item 
+void \hyperlink{led_8h_a8a1a7cc3d6801ed463c63127ac4ed627}{led\+\_\+on} (uint8\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em This function turns on the specified L\+ED. \end{DoxyCompactList}\item 
+void \hyperlink{led_8h_aac10c6d29c0a4b744a60e941f002c47f}{led\+\_\+off} (uint8\+\_\+t led)
+\begin{DoxyCompactList}\small\item\em This function turns off the specified L\+ED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{led_8c}{led.\+c}. 
+
+The file consists of all the function declarations, macros and typedefs related to L\+ED functionality. The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/13/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{led_8h_a8aa85ae9867fabf70ec72cd3bf6fb6b9}\label{led_8h_a8aa85ae9867fabf70ec72cd3bf6fb6b9}} 
+\index{led.\+h@{led.\+h}!L\+E\+D1@{L\+E\+D1}}
+\index{L\+E\+D1@{L\+E\+D1}!led.\+h@{led.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D1}{LED1}}
+{\footnotesize\ttfamily \#define L\+E\+D1~(1)}
+
+
+
+Definition at line 24 of file led.\+h.
+
+
+
+Referenced by led\+\_\+off(), and led\+\_\+on().
+
+\mbox{\Hypertarget{led_8h_ad09fe5bf321b9a2de26bd5e5b9af6424}\label{led_8h_ad09fe5bf321b9a2de26bd5e5b9af6424}} 
+\index{led.\+h@{led.\+h}!L\+E\+D2@{L\+E\+D2}}
+\index{L\+E\+D2@{L\+E\+D2}!led.\+h@{led.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D2}{LED2}}
+{\footnotesize\ttfamily \#define L\+E\+D2~(2)}
+
+
+
+Definition at line 25 of file led.\+h.
+
+
+
+Referenced by led\+\_\+off(), and led\+\_\+on().
+
+\mbox{\Hypertarget{led_8h_a4b7ff8e253a7412f83deba3a447028a8}\label{led_8h_a4b7ff8e253a7412f83deba3a447028a8}} 
+\index{led.\+h@{led.\+h}!L\+E\+D3@{L\+E\+D3}}
+\index{L\+E\+D3@{L\+E\+D3}!led.\+h@{led.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D3}{LED3}}
+{\footnotesize\ttfamily \#define L\+E\+D3~(3)}
+
+
+
+Definition at line 26 of file led.\+h.
+
+
+
+Referenced by led\+\_\+off(), and led\+\_\+on().
+
+\mbox{\Hypertarget{led_8h_ae048837f20072bed467332b1bd1da9fa}\label{led_8h_ae048837f20072bed467332b1bd1da9fa}} 
+\index{led.\+h@{led.\+h}!L\+E\+D4@{L\+E\+D4}}
+\index{L\+E\+D4@{L\+E\+D4}!led.\+h@{led.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D4}{LED4}}
+{\footnotesize\ttfamily \#define L\+E\+D4~(4)}
+
+
+
+Definition at line 27 of file led.\+h.
+
+
+
+Referenced by led\+\_\+off(), and led\+\_\+on().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}\label{led_8h_a7eb4d382bdd4b42c57dbb7154d03ac66}} 
+\index{led.\+h@{led.\+h}!led\+\_\+init@{led\+\_\+init}}
+\index{led\+\_\+init@{led\+\_\+init}!led.\+h@{led.\+h}}
+\subsubsection{\texorpdfstring{led\+\_\+init()}{led\_init()}}
+{\footnotesize\ttfamily void led\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes all the G\+P\+I\+Os required for L\+ED functionality. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file led.\+c.
+
+\mbox{\Hypertarget{led_8h_aac10c6d29c0a4b744a60e941f002c47f}\label{led_8h_aac10c6d29c0a4b744a60e941f002c47f}} 
+\index{led.\+h@{led.\+h}!led\+\_\+off@{led\+\_\+off}}
+\index{led\+\_\+off@{led\+\_\+off}!led.\+h@{led.\+h}}
+\subsubsection{\texorpdfstring{led\+\_\+off()}{led\_off()}}
+{\footnotesize\ttfamily void led\+\_\+off (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{led }\end{DoxyParamCaption})}
+
+
+
+This function turns off the specified L\+ED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & The parameter is a macro and can be \+: L\+E\+D1, L\+E\+D2, L\+E\+D3, L\+E\+D4. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file led.\+c.
+
+
+
+References L\+E\+D1, L\+E\+D2, L\+E\+D3, and L\+E\+D4.
+
+\mbox{\Hypertarget{led_8h_a8a1a7cc3d6801ed463c63127ac4ed627}\label{led_8h_a8a1a7cc3d6801ed463c63127ac4ed627}} 
+\index{led.\+h@{led.\+h}!led\+\_\+on@{led\+\_\+on}}
+\index{led\+\_\+on@{led\+\_\+on}!led.\+h@{led.\+h}}
+\subsubsection{\texorpdfstring{led\+\_\+on()}{led\_on()}}
+{\footnotesize\ttfamily void led\+\_\+on (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{led }\end{DoxyParamCaption})}
+
+
+
+This function turns on the specified L\+ED. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & The parameter is a macro and can be \+: L\+E\+D1, L\+E\+D2, L\+E\+D3, L\+E\+D4. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file led.\+c.
+
+
+
+References L\+E\+D1, L\+E\+D2, L\+E\+D3, and L\+E\+D4.
+

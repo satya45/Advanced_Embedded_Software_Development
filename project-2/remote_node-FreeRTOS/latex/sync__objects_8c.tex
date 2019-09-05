@@ -1,0 +1,76 @@
+\hypertarget{sync__objects_8c}{}\section{src/sync\+\_\+objects.c File Reference}
+\label{sync__objects_8c}\index{src/sync\+\_\+objects.\+c@{src/sync\+\_\+objects.\+c}}
+
+
+This file consists of all the functions related to the synchronization primitives such as Semaphores and Mutexes.  
+
+
+{\ttfamily \#include \char`\"{}inc/sync\+\_\+objects.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sync__objects_8c_a16242c93769e5c5b88cc48c39a635d5a}{sem\+\_\+create} (void)
+\begin{DoxyCompactList}\small\item\em This function creates the required Semaphores. \end{DoxyCompactList}\item 
+void \hyperlink{sync__objects_8c_afb95a6886b67a64eccb27294bdfd5eeb}{mutex\+\_\+create} (void)
+\begin{DoxyCompactList}\small\item\em This function creates the required Mutexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file consists of all the functions related to the synchronization primitives such as Semaphores and Mutexes. 
+
+The Code has been executed on T\+I\+VA C Series T\+M4\+C1294\+XL on Free\+R\+T\+OS.
+
+\begin{DoxyAuthor}{Author}
+Siddhant Jajoo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+04/13/2019
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sync__objects_8c_afb95a6886b67a64eccb27294bdfd5eeb}\label{sync__objects_8c_afb95a6886b67a64eccb27294bdfd5eeb}} 
+\index{sync\+\_\+objects.\+c@{sync\+\_\+objects.\+c}!mutex\+\_\+create@{mutex\+\_\+create}}
+\index{mutex\+\_\+create@{mutex\+\_\+create}!sync\+\_\+objects.\+c@{sync\+\_\+objects.\+c}}
+\subsubsection{\texorpdfstring{mutex\+\_\+create()}{mutex\_create()}}
+{\footnotesize\ttfamily void mutex\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function creates the required Mutexes. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file sync\+\_\+objects.\+c.
+
+
+
+References g\+\_\+qsem, and g\+\_\+uartsem.
+
+\mbox{\Hypertarget{sync__objects_8c_a16242c93769e5c5b88cc48c39a635d5a}\label{sync__objects_8c_a16242c93769e5c5b88cc48c39a635d5a}} 
+\index{sync\+\_\+objects.\+c@{sync\+\_\+objects.\+c}!sem\+\_\+create@{sem\+\_\+create}}
+\index{sem\+\_\+create@{sem\+\_\+create}!sync\+\_\+objects.\+c@{sync\+\_\+objects.\+c}}
+\subsubsection{\texorpdfstring{sem\+\_\+create()}{sem\_create()}}
+{\footnotesize\ttfamily void sem\+\_\+create (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function creates the required Semaphores. 
+
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file sync\+\_\+objects.\+c.
+
+
+
+References g\+\_\+led, and g\+\_\+temp.
+
