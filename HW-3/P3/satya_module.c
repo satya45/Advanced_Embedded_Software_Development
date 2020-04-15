@@ -16,7 +16,7 @@ static char *n = "Satya";
 static long time = 0; /*in seconds*/
 int count = 0;
 
-void myfunc(unsigned long s)
+void myfunc(struct timer_list * s)
 {
 	count++;
 	printk("My name is %s and count is %d\n", n, count);
@@ -36,9 +36,8 @@ void myfunc(unsigned long s)
 
 static void timer_init(void)
 {
-	init_timer(&mytimer);
-	mytimer.function = myfunc;
-	mytimer.data = 0;
+	timer_setup(&mytimer, myfunc, 0);
+
 	if(time == 0)
 	{
 		mytimer.expires = (unsigned long)(jiffies + HZ/2);
